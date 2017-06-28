@@ -1,6 +1,7 @@
 app.controller('RecepcionDeProductosController', function($scope, $rootScope, $http, $routeParams, config, ArtisterilIntervalService, $mdToast) { 
 
-    $scope.product_code_length = config.config.product_code_length; 
+    $scope.nefab_code_length = config.config.nefab_code_length;
+    $scope.cable_code_length = config.config.cable_code_length;
     
     var toast = $mdToast.simple()
             .hideDelay(3000)
@@ -11,17 +12,31 @@ app.controller('RecepcionDeProductosController', function($scope, $rootScope, $h
 
     // receive product
 
-    $scope.productId = '';
+    $scope.nefab = '';
+    $scope.cable1 = '';
+    $scope.cable2 = '';
+    $scope.cable3 = '';
+    $scope.cable4 = '';
     $scope.selectedProducts = [];
 
     $scope.receiveProductByInput = function()
     {
-        if (!$scope.productId) {
-            return;
-        }
-
-        $scope.selectedProducts.push($scope.productId);
-        $scope.productId = '';
+        $scope.selectedProducts.push({
+            "Nefab": $scope.nefab,
+            "Cables": {
+                "Cable1": $scope.cable1,
+                "Cable2": $scope.cable2,
+                "Cable3": $scope.cable3,
+                "Cable4": $scope.cable4
+            } 
+        });
+        $scope.nefab = '';
+        $scope.cable1 = '';
+        $scope.cable2 = '';
+        $scope.cable3 = '';
+        $scope.cable4 = '';
+        $scope.productForm.$setPristine();
+        $scope.productForm.$setUntouched();
     }
 
 

@@ -2,7 +2,8 @@ app.controller('BloqueoDeProductosController', function($scope, $rootScope, $htt
 
     $scope.action = '';
 
-    $scope.product_code_length = config.config.product_code_length;
+    $scope.nefab_code_length = config.config.nefab_code_length;
+    $scope.cable_code_length = config.config.cable_code_length;
 
     $scope.setAction = function(value)
     {

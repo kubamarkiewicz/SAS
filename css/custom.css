@@ -868,11 +868,10 @@ body.page-recepcion-de-productos .selected-products .list .item {
 	padding: 4px;
 	width: calc(26%);
 	text-align: center;
-	font-size: 20px;
-	font-weight: bold;
+	font-size: 18px;
 	position: relative;
 	margin: 0 7.3% 4px 0;
-	height: 34px;
+	height: 105px;
 }
 body.page-recepcion-de-productos .selected-products .list .item .remove {
 	position: absolute;
@@ -884,6 +883,11 @@ body.page-recepcion-de-productos .selected-products .list .item .remove {
 	outline: none;
 	background-image: url(../images/remove.gif);
 	background-repeat: no-repeat;
+}
+body.page-recepcion-de-productos .selected-products .list .item .nefab {
+}
+body.page-recepcion-de-productos .selected-products .list .item .cable {
+	font-size: 16px;
 }
 
 

@@ -108,7 +108,8 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             url     : config.webservice.urls.select_action,
             params  : {
                 "action" : $scope.action, 
-                "reader" : JSON.stringify({
+                "reader" : $scope.readerId, 
+                "product" : JSON.stringify({
                     "Nefab": $scope.nefab, 
                     "Cables": {
                         "Cable1": $scope.cable1,
@@ -116,8 +117,7 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
                         "Cable3": $scope.cable3,
                         "Cable4": $scope.cable4
                     }
-                }), 
-                "product" : $scope.productId
+                })
             }
          })
         .then(function(response) {

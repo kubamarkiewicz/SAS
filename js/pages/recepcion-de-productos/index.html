@@ -7,15 +7,42 @@
 			
 			<h2>Selecciona el método de inserción</h2>
 
-			<form ng-submit="receiveProductByInput()">
+			<form name="productForm" ng-submit="receiveProductByInput()">
 				<p>
 					<label>Por teclado</label>
 					<md-input-container md-no-float>
-				        <input type="text" name="productId" ng-model="productId" placeholder="Código de producto"maxlength="{{ product_code_length }}" minlength="{{ product_code_length }}">
+				        <input type="text" name="nefab" ng-model="nefab" placeholder="Código de nefab" maxlength="{{ nefab_code_length }}" minlength="{{ nefab_code_length }}" required>
 				    </md-input-container>
 				    <md-button type="submit" class="receive-product"></md-button>
 				</p>
+				<br>
+				<p>
+					<label></label>
+					<md-input-container md-no-float>
+				        <input type="text" name="cable1" ng-model="cable1" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}" required>
+				    </md-input-container>
+				</p>
+				<p>
+					<label></label>
+					<md-input-container md-no-float>
+				        <input type="text" name="cable2" ng-model="cable2" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
+				    </md-input-container>
+				</p>
+				<p>
+					<label></label>
+					<md-input-container md-no-float>
+				        <input type="text" name="cable3" ng-model="cable3" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
+				    </md-input-container>
+				</p>
+				<p>
+					<label></label>
+					<md-input-container md-no-float>
+				        <input type="text" name="cable4" ng-model="cable4" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
+				    </md-input-container>
+				</p>
 		   	</form>
+
+		   	<br>
 
 			<form ng-submit="selectReader()" class="reader">
 				<p>
@@ -54,7 +81,11 @@
 		<div class="list" flex>
 			<div class="item" ng-repeat="item in selectedProducts track by $index">
 				<div class="remove" ng-click="removeFromSelection(item)"></div>
-				{{ item }}
+				<div class="nefab">{{ item.Nefab }}</div>
+				<div class="cable">{{ item.Cables.Cable1 }}</div>
+				<div class="cable">{{ item.Cables.Cable2 }}</div>
+				<div class="cable">{{ item.Cables.Cable3 }}</div>
+				<div class="cable">{{ item.Cables.Cable4 }}</div>
 			</div>
 		</div>
 
