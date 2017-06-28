@@ -21,13 +21,16 @@ app.controller('RecepcionDeProductosController', function($scope, $rootScope, $h
 
     $scope.receiveProductByInput = function()
     {
-        $scope.selectedProducts.push({
-            "Nefab": $scope.nefab,
-            "Cable1": $scope.cable1,
-            "Cable2": $scope.cable2,
-            "Cable3": $scope.cable3,
-            "Cable4": $scope.cable4
-        });
+        if (!$scope.cable2) $scope.cable2 = '0000000000';
+        if (!$scope.cable3) $scope.cable3 = '0000000000';
+        if (!$scope.cable4) $scope.cable4 = '0000000000';
+        $scope.selectedProducts.push([
+            $scope.nefab,
+            $scope.cable1,
+            $scope.cable2,
+            $scope.cable3,
+            $scope.cable4
+        ]);
         $scope.nefab = '';
         $scope.cable1 = '';
         $scope.cable2 = '';
@@ -40,7 +43,7 @@ app.controller('RecepcionDeProductosController', function($scope, $rootScope, $h
 
     $scope.receiveProducts = function()
     {
-        if (!$scope.selectedProducts) {
+        if (!$scope.selectedProducts.length) {
             return;
         }
 
@@ -132,7 +135,13 @@ app.controller('RecepcionDeProductosController', function($scope, $rootScope, $h
 
             // add products to selection
             if (response.data.get_reader_readingResult) {
-                $scope.selectedProducts.push(response.data.get_reader_readingResult);
+                $scope.selectedProducts.push([
+                    response.data.get_reader_readingResult.Nefab,
+                    response.data.get_reader_readingResult.Cable1,
+                    response.data.get_reader_readingResult.Cable2,
+                    response.data.get_reader_readingResult.Cable3,
+                    response.data.get_reader_readingResult.Cable4
+                ]);
             }
         });
     }

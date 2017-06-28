@@ -1,9 +1,1 @@
-{
-    "get_reader_readingResult" : {
-    	"Nefab" : "123456789012",
-		"Cable1" : "1234567890",
-		"Cable2" : "2234567890",
-		"Cable3" : "3234567890",
-		"Cable4" : "4234567890"
-    }
-}
+{"get_reader_readingResult":{"Cable1":"1","Cable2":"2","Cable3":"3","Cable4":"4","Nefab":"nefabdePrueba"}}

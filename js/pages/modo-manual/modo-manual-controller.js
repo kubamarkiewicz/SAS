@@ -80,10 +80,10 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             // add product to input
             if (response.data.get_reader_readingResult) {
                 $scope.nefab = response.data.get_reader_readingResult.Nefab;
-                $scope.cable1 = response.data.get_reader_readingResult.Cables.Cable1;
-                $scope.cable2 = response.data.get_reader_readingResult.Cables.Cable2;
-                $scope.cable3 = response.data.get_reader_readingResult.Cables.Cable3;
-                $scope.cable4 = response.data.get_reader_readingResult.Cables.Cable4;
+                $scope.cable1 = response.data.get_reader_readingResult.Cable1;
+                $scope.cable2 = response.data.get_reader_readingResult.Cable2;
+                $scope.cable3 = response.data.get_reader_readingResult.Cable3;
+                $scope.cable4 = response.data.get_reader_readingResult.Cable4;
 
                 // stop interval
                 ArtisterilIntervalService.stop('getReaderReading');
@@ -102,6 +102,10 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
         }
 
         $('button.execute-acton').attr("disabled", true).addClass('loading');
+        
+        if (!$scope.cable2) $scope.cable2 = '0000000000';
+        if (!$scope.cable3) $scope.cable3 = '0000000000';
+        if (!$scope.cable4) $scope.cable4 = '0000000000';
 
         $http({
             method  : 'GET',
@@ -109,13 +113,13 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             params  : {
                 "action" : $scope.action, 
                 "reader" : $scope.readerId, 
-                "product" : JSON.stringify({
-                    "Nefab": $scope.nefab, 
-                    "Cable1": $scope.cable1,
-                    "Cable2": $scope.cable2,
-                    "Cable3": $scope.cable3,
-                    "Cable4": $scope.cable4
-                })
+                "product" : JSON.stringify([
+                    $scope.nefab, 
+                    $scope.cable1,
+                    $scope.cable2,
+                    $scope.cable3,
+                    $scope.cable4
+                ])
             }
          })
         .then(function(response) {
