@@ -1,0 +1,77 @@
+
+<div class="zoom-controls">
+	<md-button class="md-raised md-primary zoom-in" ng-click="zoomIn()">&#43;</md-button>
+	<md-button class="md-raised md-primary zoom-out" ng-click="zoomOut()">&#8722;</md-button>
+</div>
+
+<div id="agv-popup" class="popup" md-theme="dark">
+	<h3>AGV {{ selectedAGV.id }}</h3>
+	<p>Estado: {{ selectedAGV.state }}</p>
+</div>
+
+<div id="semaphore-popup" class="popup" md-theme="dark">
+	<h3>Semaphore {{ selectedSemaphore.id }}</h3>
+	<p class="clickable" ng-click="updateSemaphore(selectedSemaphore.id)">Paro</p>
+	<p class="clickable" ng-click="updateSemaphore(selectedSemaphore.id)">Marcha</p>
+	<p class="clickable" ng-click="updateSemaphore(selectedSemaphore.id)">Rearme</p>
+</div>
+
+<div id="transport-belt-popup" class="popup" md-theme="dark">
+	<h3>Cinta transportadora {{ selectedTransportBelt.id }}</h3>
+	<p class="clickable" ng-click="updateTransportBelt(selectedTransportBelt.id)">Paro</p>
+	<p class="clickable" ng-click="updateTransportBelt(selectedTransportBelt.id)">Marcha</p>
+	<p class="clickable" ng-click="updateTransportBelt(selectedTransportBelt.id)">Rearme</p>
+</div>
+
+<div id="position-popup" class="popup" md-theme="dark">
+	<h3>POSICIÓN {{ selectedPosition.id }}</h3>
+	<p ng-show="!storagePositionNichesData.length" layout="row" layout-align="center">
+		<md-progress-circular md-diameter="20px"></md-progress-circular>
+	</p>
+	<p ng-repeat="niche in storagePositionNichesData">
+		Nicho {{ niche.id }}<br>
+		{{ niche.product ? 'Producto ' + niche.product : '-' }}
+	</p>
+</div>
+
+
+<div id="mapa" ng-click="mapClick()">
+	
+	<div 
+		ng-repeat="agv in AGVData"  
+		id="agv-{{ agv.id }}"
+		class="agv" 
+		style="transform: translate({{ xPercentToPx(agv.x) }}px, {{ yPercentToPx(agv.y) }}px) rotate({{ agv.orientation }}deg)"
+		ng-click="openAGVPopup($event, agv)">
+		{{ agv.id }}
+	</div>
+	
+	<div 
+		ng-repeat="semaphore in semaphoresData"  
+		id="semaphore-{{ semaphore.id }}"
+		class="semaphore" 
+		style="transform: translate({{ xPercentToPx(semaphore.x) }}px, {{ yPercentToPx(semaphore.y) }}px)"
+		ng-click="openSemaphorePopup($event, semaphore)">
+	</div>
+	
+	<div 
+		ng-repeat="transportBelt in transportBeltsData"  
+		id="transport-belt-{{ transportBelt.id }}"
+		class="transport-belt" 
+		style="transform: translate({{ xPercentToPx(transportBelt.x) }}px, {{ yPercentToPx(transportBelt.y) }}px)"
+		ng-click="openTransportBeltPopup($event, transportBelt)">
+		CT{{ transportBelt.id }}
+	</div>
+
+	<div 
+		ng-repeat="position in storagePositionsData"  
+		id="position-{{ position.id }}"
+		class="position" 
+		style="left: {{ position.x }}%; top: {{ position.y }}%"
+		ng-click="openPositionPopup($event, position)">
+	</div>
+
+
+	<!-- <img src="mapa/410.svg" alt="" /> -->
+	<img src="mapa/AGV PSA Vigo_ESTIRADO_v5.svg" alt="">
+</div> 

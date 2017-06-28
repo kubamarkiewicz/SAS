@@ -1,0 +1,57 @@
+
+<div class="container">
+		
+	<h2>Seleccione la acción y el lector</h2>
+
+	<form name="actionForm" ng-submit="executeAction()">
+
+		<p class="action">
+			<label>ACCIÓN</label>
+			<md-input-container md-no-float>
+				<md-select ng-model="action" placeholder="Seleccionar acción" ng-change="selectAction()" required md-no-asterisk>
+					<md-option ng-repeat="action in actionsData" ng-value="action">{{ action }}</md-option>
+				</md-select>
+			</md-input-container>
+		</p>
+
+		<p class="reader">
+			<label>LECTOR</label>
+			<md-input-container md-no-float>
+				<md-select ng-model="readerId" placeholder="Seleccionar lector" ng-change="selectReader()">
+    				<md-option ng-repeat="reader in readersData" ng-value="reader">{{ reader }}</md-option>
+  				</md-select>
+			</md-input-container>
+		</p>
+
+		<p class="product-id">
+			<label>LECTURA (opcionalmente manual)</label>
+			<md-input-container md-no-float>
+		        <input type="text" name="productId" ng-model="productId" placeholder="Código de producto" maxlength="{{ product_code_length }}" minlength="{{ product_code_length }}">
+		        <md-button class="clear" ng-click="clearReading()"></md-button>
+		    </md-input-container>
+			<span class="message"><md-progress-circular md-diameter="20px"></md-progress-circular>{{ productIdMessage }}</span>
+		</p>
+
+		<p>
+		    <md-button type="submit" class="md-raised md-warn execute-action">Confirmar <md-progress-circular></md-progress-circular></md-button>
+		</p>
+
+	</form>
+
+	<hr>
+	<br>
+
+	<form name="fileForm" ng-submit="uploadFile()" class="upload-file">
+		<p>
+			<label>CARGAR ARCHIVO</label>
+			<md-input-container md-no-float>
+		        <span class="file-input">
+		        	<input type="file" id="uploadFileInput" placeholder="Seleccionar archivo" required>
+		        </span>
+		    </md-input-container>
+		    <md-button type="submit" class="md-raised md-primary">Enviar <md-progress-circular></md-progress-circular></md-button>
+		</p>
+   	</form>
+
+
+</div>

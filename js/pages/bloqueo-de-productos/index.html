@@ -1,0 +1,88 @@
+
+<div layout="row">
+
+	<div flex layout="column">
+
+		<section class="action-switch">
+			
+			<h2>Acción a realizar</h2>
+
+			<div class="buttons">
+				<md-button md-colors="{background: 'blue'}" ng-click="setAction('block')" ng-class="{'selected': action == 'block'}">Bloquear</md-button>
+				<md-button md-colors="{background: 'blue'}" ng-click="setAction('unblock')" ng-class="{'selected': action == 'unblock'}">Desbloquear</md-button>
+			</div>
+
+		</section>
+
+		<section class="actions" ng-show="action">
+			
+			<h2>Selecciona los productos a {{action == 'block' ? 'bloquear' : 'desbloquear'}}</h2>
+
+			<form ng-submit="blockProductByInput()">
+				<p>
+					<label>Por teclado</label>
+					<md-input-container md-no-float>
+				        <input type="text" name="productId" ng-model="productId" placeholder="Código de producto" maxlength="{{ product_code_length }}" minlength="{{ product_code_length }}">
+				    </md-input-container>
+				    <md-button type="submit" class="block-product"></md-button>
+				</p>
+		   	</form>
+
+			<form ng-submit="selectReader()" class="reader">
+				<p>
+					<label>Por lector</label>
+					<md-input-container md-no-float>
+        				<md-select ng-model="readerId" placeholder="Seleccionar lector">
+            				<md-option ng-repeat="reader in readersData" ng-value="reader">{{ reader }}</md-option>
+          				</md-select>
+        			</md-input-container>
+				    <md-button type="submit" class="md-raised md-primary">Seleccionar <md-progress-circular></md-progress-circular></md-button>
+				</p>
+		   	</form>
+
+			<form ng-submit="uploadFile()" class="upload-file">
+				<p>
+					<label>Por archivo</label>
+					<md-input-container md-no-float>
+				        <span class="file-input">
+				        	<input type="file" id="uploadFileInput" placeholder="Seleccionar archivo" required>
+				        </span>
+				    </md-input-container>
+				    <md-button type="submit" class="md-raised md-primary">Enviar <md-progress-circular></md-progress-circular></md-button>
+				</p>
+		   	</form>
+
+
+
+		</section>	
+
+		<section flex class="selected-products" layout="column" ng-show="action">
+		
+			<h2>Productos seleccionados</h2>
+
+			<div class="list" flex>
+				<div class="item" ng-repeat="item in selectedProducts track by $index">
+					<div class="remove" ng-click="removeFromSelection(item)"></div>
+					{{ item }}
+				</div>
+			</div>
+
+			<md-button class="md-raised md-warn block-products" ng-click="blockProducts()">{{action == 'block' ? 'bloquear' : 'desbloquear'}} <md-progress-circular></md-progress-circular></md-button>
+			
+		</section>
+
+	</div><!-- !column -->
+
+	<section flex class="blocked-products">
+		
+		<h2 ng-show="action">Productos bloqueados</h2>
+
+		<div class="list" ng-show="action">
+			<div class="item" ng-repeat="item in blockedProductsData track by $index">
+				<div class="unblock" ng-click="selectProduct(item)" ng-show="action == 'unblock'"></div>
+				{{ item }}
+			</div>
+		</div>
+	</section>
+
+</div>

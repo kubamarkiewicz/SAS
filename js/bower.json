@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "authors": [
+    "Kuba Markiewicz <kuba.markiewicz@gmail.com>"
+  ],
+  "main": "css/custom.css",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.6.4",
+    "angular-material": "^1.1.4",
+    "jquery": "^3.2.1",
+    "jquery.panzoom": "^3.2.2"
+  }
+}

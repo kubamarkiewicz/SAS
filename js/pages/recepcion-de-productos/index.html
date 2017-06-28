@@ -1,0 +1,65 @@
+
+<div layout="row">
+
+	<div flex layout="column">
+
+		<section class="actions">
+			
+			<h2>Selecciona el método de inserción</h2>
+
+			<form ng-submit="receiveProductByInput()">
+				<p>
+					<label>Por teclado</label>
+					<md-input-container md-no-float>
+				        <input type="text" name="productId" ng-model="productId" placeholder="Código de producto"maxlength="{{ product_code_length }}" minlength="{{ product_code_length }}">
+				    </md-input-container>
+				    <md-button type="submit" class="receive-product"></md-button>
+				</p>
+		   	</form>
+
+			<form ng-submit="selectReader()" class="reader">
+				<p>
+					<label>Por lector</label>
+					<md-input-container md-no-float>
+        				<md-select ng-model="readerId" placeholder="Seleccionar lector">
+            				<md-option ng-repeat="reader in readersData" ng-value="reader">{{ reader }}</md-option>
+          				</md-select>
+        			</md-input-container>
+				    <md-button type="submit" class="md-raised md-primary">Seleccionar <md-progress-circular></md-progress-circular></md-button>
+				</p>
+		   	</form>
+
+			<form ng-submit="uploadFile()" class="upload-file">
+				<p>
+					<label>Por archivo</label>
+					<md-input-container md-no-float>
+				        <span class="file-input">
+				        	<input type="file" id="uploadFileInput" placeholder="Seleccionar archivo" required>
+				        </span>
+				    </md-input-container>
+				    <md-button type="submit" class="md-raised md-primary">Enviar <md-progress-circular></md-progress-circular></md-button>
+				</p>
+		   	</form>
+
+
+
+		</section>	
+
+	</div><!-- !column -->
+
+	<section flex class="selected-products" layout="column">
+		
+		<h2>Productos a insertar</h2>
+
+		<div class="list" flex>
+			<div class="item" ng-repeat="item in selectedProducts track by $index">
+				<div class="remove" ng-click="removeFromSelection(item)"></div>
+				{{ item }}
+			</div>
+		</div>
+
+		<md-button class="md-raised md-warn receive-products" ng-click="receiveProducts()">Insertar a recibidos <md-progress-circular></md-progress-circular></md-button>
+		
+	</section>
+
+</div>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title ng-bind="pageTitle + ' - PSA'">PSA</title>
+
+    <!-- Le styles -->
+    <!-- <link href="js/libraries/bootstrap/dist/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="js/libraries/angular-material/angular-material.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body class="page-datos-del-sga loading">
+
+    <header layout="row" layout-align="center center">
+
+        <md-menu>
+            <md-button ng-click="$mdMenu.open()">
+                <div class="burger">
+                    <div class="slice"></div>
+                    <div class="slice"></div>
+                    <div class="slice"></div>
+                </div>
+                MENÚ
+            </md-button>
+            <md-menu-content id="menu-dropdown" width="4">
+                <md-menu-item ng-hide="!user_permissions['visualizador-del-proceso']">
+                    <md-button ng-href="#visualizador-del-proceso" md-colors="{background: 'blue'}">Visualizador del Proceso</md-button>
+                </md-menu-item>
+                <md-menu-item ng-hide="!user_permissions['datos-del-sga']">
+                    <md-button ng-href="#datos-del-sga" md-colors="{background: 'blue'}">Datos del SGA</md-button>
+                </md-menu-item>
+<!--                 <md-menu-item ng-hide="!user_permissions['configuracion-de-parametros']">
+                    <md-button ng-href="#configuracion-de-parametros" md-colors="{background: 'blue'}">CONFIGURACIÓN DE PARÁMETROS</md-button>
+                </md-menu-item> -->
+                <md-menu-item ng-hide="!user_permissions['bloqueo-de-productos']">
+                    <md-button ng-href="#bloqueo-de-productos" md-colors="{background: 'blue'}">Bloqueo de productos</md-button>
+                </md-menu-item>
+                <md-menu-item ng-hide="!user_permissions['recepcion-de-productos']">
+                    <md-button ng-href="#recepcion-de-productos" md-colors="{background: 'blue'}">Recepción de productos</md-button>
+                </md-menu-item>
+                <md-menu-item ng-hide="!user_permissions['modo-manual']">
+                    <md-button ng-href="#modo-manual" md-colors="{background: 'blue'}">Modo manual</md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button ng-click="logout()" md-colors="{background: 'blue'}">Salir</md-button>
+                </md-menu-item>
+             </md-menu-content>
+        </md-menu>
+
+        <h1>{{ pageTitle }}</h1>
+
+        <div class="logos" flex layout-fill layout="row" layout-align="end center">
+            <img src="images/artisteril.gif" alt="artisteril:diasa">
+            <img src="images/psa.gif" alt="PSA Groupe">
+        </div>
+
+    </header>
+
+	<main ng-view ng-show="user_permissions[pageSlug] || pageSlug == 'login'"></main>
+
+    <footer layout="row" layout-align="space-between center">
+        <div class="user">{{username}}</div>
+        <div class="clock">{{date}}</div>
+    </footer>
+
+
+	<!-- Le javascript -->
+	<!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- Libraries -->
+    <script src="js/libraries/jquery/dist/jquery.min.js"></script>
+    <script src="js/libraries/angular/angular.min.js"></script>
+    <script src="js/libraries/angular-route/angular-route.min.js"></script>
+    <script src="js/libraries/angular-animate/angular-animate.min.js"></script>
+    <script src="js/libraries/angular-aria/angular-aria.min.js"></script>
+    <script src="js/libraries/angular-messages/angular-messages.min.js"></script>
+    <script src="js/libraries/angular-material/angular-material.min.js"></script>
+    <script src="js/config/config.js"></script>
+    <script src="js/config/webservice.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- Pages -->
+    <script src="js/pages/login/login-controller.js"></script>
+    <script src="js/pages/visualizador-del-proceso/visualizador-del-proceso-controller.js"></script>
+    <script src="js/pages/datos-del-sga/datos-del-sga-controller.js"></script>
+    <script src="js/pages/bloqueo-de-productos/bloqueo-de-productos-controller.js"></script>
+    <script src="js/pages/recepcion-de-productos/recepcion-de-productos-controller.js"></script>
+    <script src="js/pages/modo-manual/modo-manual-controller.js"></script>
+
+    <!-- Components -->
+
+    <!-- Services -->
+    <script src="js/services/artisteril-auth-service.js"></script>
+    <script src="js/services/artisteril-interval-service.js"></script>
+
+    <!-- other libraries -->
+    <script src="js/libraries/jquery.panzoom/dist/jquery.panzoom.min.js"></script>
+
+</body>
+</html>

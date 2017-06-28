@@ -1,0 +1,25 @@
+
+	
+	<form id="login-form" ng-submit="submit()" ng-hide="loading">
+
+		<h2>Login</h2>
+	  	<md-content md-theme="dark" layout-padding>
+
+	    	<p>
+	    		<label>Usuario</label>
+	    		<md-input-container>
+			        <input name="username" type="text" ng-model="username" required>
+			    </md-input-container>
+			</p>
+			<p>
+				<label>Contraseña</label>
+			    <md-input-container>
+			        <input name="password" type="password" ng-model="password" required>
+			    </md-input-container>
+	    	</p>
+		  	<md-button type="submit" class="md-raised md-primary">Enviar <md-progress-circular></md-progress-circular></md-button>
+
+	  	</md-content>
+	</form>
+	
+
