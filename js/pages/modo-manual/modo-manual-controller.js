@@ -111,12 +111,10 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
                 "reader" : $scope.readerId, 
                 "product" : JSON.stringify({
                     "Nefab": $scope.nefab, 
-                    "Cables": {
-                        "Cable1": $scope.cable1,
-                        "Cable2": $scope.cable2,
-                        "Cable3": $scope.cable3,
-                        "Cable4": $scope.cable4
-                    }
+                    "Cable1": $scope.cable1,
+                    "Cable2": $scope.cable2,
+                    "Cable3": $scope.cable3,
+                    "Cable4": $scope.cable4
                 })
             }
          })
