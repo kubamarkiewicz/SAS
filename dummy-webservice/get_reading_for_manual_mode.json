@@ -1,3 +1,11 @@
 {
-    "get_reading_for_manual_modeResult" : "1234567890"
+    "get_reader_readingResult" : {
+    	"Nefab" : "123456789012",
+    	"Cables" : {
+    		"Cable1" : "1234567890",
+    		"Cable2" : "2234567890",
+    		"Cable3" : "3234567890",
+    		"Cable4" : "4234567890"
+    	}
+    }
 }

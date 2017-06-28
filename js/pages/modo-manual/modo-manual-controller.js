@@ -1,7 +1,9 @@
 app.controller('ModoManualProductosController', function($scope, $rootScope, $http, $routeParams, config, ArtisterilIntervalService, $mdToast) {  
 
-    $scope.product_code_length = config.config.product_code_length;
-    
+    $scope.nefab_code_length = config.config.nefab_code_length;
+    $scope.cable_code_length = config.config.cable_code_length;
+
+
     var toast = $mdToast.simple()
             .hideDelay(3000)
             .position('top left')
@@ -73,11 +75,15 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             url     : config.webservice.urls.get_reading_for_manual_mode
          })
         .then(function(response) {
-            console.log(response.data);
+            // console.log(response.data);
 
             // add product to input
             if (response.data.get_reader_readingResult) {
-                $scope.productId = response.data.get_reader_readingResult;
+                $scope.nefab = response.data.get_reader_readingResult.Nefab;
+                $scope.cable1 = response.data.get_reader_readingResult.Cables.Cable1;
+                $scope.cable2 = response.data.get_reader_readingResult.Cables.Cable2;
+                $scope.cable3 = response.data.get_reader_readingResult.Cables.Cable3;
+                $scope.cable4 = response.data.get_reader_readingResult.Cables.Cable4;
 
                 // stop interval
                 ArtisterilIntervalService.stop('getReaderReading');
@@ -100,7 +106,19 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
         $http({
             method  : 'GET',
             url     : config.webservice.urls.select_action,
-            params  : {"action" : $scope.action, "reader" : $scope.readerId, "product" : $scope.productId},
+            params  : {
+                "action" : $scope.action, 
+                "reader" : JSON.stringify({
+                    "Nefab": $scope.nefab, 
+                    "Cables": {
+                        "Cable1": $scope.cable1,
+                        "Cable2": $scope.cable2,
+                        "Cable3": $scope.cable3,
+                        "Cable4": $scope.cable4
+                    }
+                }), 
+                "product" : $scope.productId
+            }
          })
         .then(function(response) {
             // console.log(response.data);
@@ -119,7 +137,11 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             // reset form and disable error messages
             $scope.action = null;
             $scope.readerId = null;
-            $scope.productId = '';
+            $scope.nefab = '';
+            $scope.cable1 = '';
+            $scope.cable2 = '';
+            $scope.cable3 = '';
+            $scope.cable4 = '';
             $scope.actionForm.$setPristine();
             $scope.actionForm.$setUntouched();
         });
@@ -170,6 +192,11 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             $('#uploadFileInput').val('');
         });
     }
+
+
+    $("button.clear").click(function(){
+        $(this).parent().find('input').val('');
+    });
 
 
 });

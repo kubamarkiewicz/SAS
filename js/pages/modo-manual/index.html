@@ -5,32 +5,73 @@
 
 	<form name="actionForm" ng-submit="executeAction()">
 
-		<p class="action">
-			<label>ACCIÓN</label>
-			<md-input-container md-no-float>
-				<md-select ng-model="action" placeholder="Seleccionar acción" ng-change="selectAction()" required md-no-asterisk>
-					<md-option ng-repeat="action in actionsData" ng-value="action">{{ action }}</md-option>
-				</md-select>
-			</md-input-container>
-		</p>
+		<div layout="row">
+			
+			<div flex>
+				
+				<p class="action">
+					<label>ACCIÓN</label>
+					<md-input-container md-no-float>
+						<md-select ng-model="action" placeholder="Seleccionar acción" ng-change="selectAction()" required md-no-asterisk>
+							<md-option ng-repeat="action in actionsData" ng-value="action">{{ action }}</md-option>
+						</md-select>
+					</md-input-container>
+				</p>
 
-		<p class="reader">
-			<label>LECTOR</label>
-			<md-input-container md-no-float>
-				<md-select ng-model="readerId" placeholder="Seleccionar lector" ng-change="selectReader()">
-    				<md-option ng-repeat="reader in readersData" ng-value="reader">{{ reader }}</md-option>
-  				</md-select>
-			</md-input-container>
-		</p>
+				<p class="reader">
+					<label>LECTOR</label>
+					<md-input-container md-no-float>
+						<md-select ng-model="readerId" placeholder="Seleccionar lector" ng-change="selectReader()">
+		    				<md-option ng-repeat="reader in readersData" ng-value="reader">{{ reader }}</md-option>
+		  				</md-select>
+					</md-input-container>
+				</p>
 
-		<p class="product-id">
-			<label>LECTURA (opcionalmente manual)</label>
-			<md-input-container md-no-float>
-		        <input type="text" name="productId" ng-model="productId" placeholder="Código de producto" maxlength="{{ product_code_length }}" minlength="{{ product_code_length }}">
-		        <md-button class="clear" ng-click="clearReading()"></md-button>
-		    </md-input-container>
-			<span class="message"><md-progress-circular md-diameter="20px"></md-progress-circular>{{ productIdMessage }}</span>
-		</p>
+			</div>
+
+			<div flex>
+				
+				<p class="product-id">
+					<label>LECTURA NEFAB (opcionalmente manual)</label>
+					<md-input-container md-no-float>
+				        <input type="text" name="nefab" ng-model="nefab" placeholder="Código de producto" maxlength="{{ nefab_code_length }}" minlength="{{ nefab_code_length }}" required>
+				        <md-button class="clear"></md-button>
+				    </md-input-container>
+				</p>
+				
+				<p class="product-id">
+					<label>LECTURA CABLES (opcionalmente manual)</label>
+					<md-input-container md-no-float>
+				        <input type="text" name="cable1" ng-model="cable1" placeholder="Código de producto" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}" required>
+				        <md-button class="clear"></md-button>
+				    </md-input-container>
+				</p>
+				
+				<p class="product-id">
+					<md-input-container md-no-float>
+				        <input type="text" name="cable2" ng-model="cable2" placeholder="Código de producto" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
+				        <md-button class="clear"></md-button>
+				    </md-input-container>
+				</p>
+				
+				<p class="product-id">
+					<md-input-container md-no-float>
+				        <input type="text" name="cable3" ng-model="cable3" placeholder="Código de producto" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
+				        <md-button class="clear"></md-button>
+				    </md-input-container>
+				</p>
+				
+				<p class="product-id">
+					<md-input-container md-no-float>
+				        <input type="text" name="cable4" ng-model="cable4" placeholder="Código de producto" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
+				        <md-button class="clear"></md-button>
+				    </md-input-container>
+				</p>
+
+			</div>
+
+		</div>
+
 
 		<p>
 		    <md-button type="submit" class="md-raised md-warn execute-action">Confirmar <md-progress-circular></md-progress-circular></md-button>
