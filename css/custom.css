@@ -247,7 +247,7 @@ body > footer {
 
 
 /* mobile */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1450px) {
 
 	body > header {
 		height: 80px;
@@ -341,7 +341,7 @@ body > header h1 {
 	font-weight: 300;
 	line-height: 120px;
 	border-right: 2px solid #ffffff;
-	min-width: calc(50% - 121px);
+	min-width: calc(50% - 188px);
 	white-space: nowrap;;
 }
 body > header .logos {
@@ -393,7 +393,7 @@ section.popup-alerts .alert main {
 
 
 /* mobile */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1450px) {
 
 	body > header md-menu > .md-button {
 		width: 110px;
