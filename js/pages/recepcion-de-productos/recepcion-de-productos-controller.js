@@ -2,13 +2,7 @@ app.controller('RecepcionDeProductosController', function($scope, $rootScope, $h
 
     $scope.nefab_code_length = config.config.nefab_code_length;
     $scope.cable_code_length = config.config.cable_code_length;
-    
-    var toast = $mdToast.simple()
-            .hideDelay(3000)
-            .position('top left')
-            .parent($('body > main'));
-
-
+  
 
     // receive product
 
@@ -56,14 +50,14 @@ app.controller('RecepcionDeProductosController', function($scope, $rootScope, $h
          })
         .then(function(response) {
             // console.log(response.data);
-            toast.content(response.data.receive_productsResult.Message);
+            $rootScope.toast.content(response.data.receive_productsResult.Message);
             if (response.data.receive_productsResult.Result === true) {
-                toast.toastClass('toast-success');
+                $rootScope.toast.toastClass('toast-success');
             }
             else {
-                toast.toastClass('toast-error');
+                $rootScope.toast.toastClass('toast-error');
             }
-            $mdToast.show(toast);
+            $mdToast.show($rootScope.toast);
             $('button.receive-products').attr("disabled", false).removeClass('loading');
             $scope.selectedProducts = [];
         });
@@ -114,9 +108,9 @@ app.controller('RecepcionDeProductosController', function($scope, $rootScope, $h
          })
         .then(function(response) {
             // console.log(response.data);
-            toast.content('Éxito')
+            $rootScope.toast.content('Éxito')
                 .toastClass('toast-success');
-            $mdToast.show(toast);
+            $mdToast.show($rootScope.toast);
             $('form.reader button').attr("disabled", false).removeClass('loading');
 
             // start recieving data from reader
@@ -170,9 +164,9 @@ app.controller('RecepcionDeProductosController', function($scope, $rootScope, $h
         })
         .then(function(response) {
             // console.log(response.data);
-            toast.content('Éxito')
+            $rootScope.toast.content('Éxito')
                 .toastClass('toast-success');
-            $mdToast.show(toast);
+            $mdToast.show($rootScope.toast);
             $('form.upload-file button').attr("disabled", false).removeClass('loading');
             $('#uploadFileInput').val('');
         });

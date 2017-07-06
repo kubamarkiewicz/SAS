@@ -32,13 +32,9 @@ app.controller('LoginController', function($scope, $rootScope, $http, $routePara
             else { // incorrect password
         		$scope.loading = false;
         		
-				var toast = $mdToast.simple()
-				    .content('Usuario o contraseña no correcta')
-				    .hideDelay(3000)
-				    .position('top left')
-				    .parent($('body > main'))
+				$rootScope.toast.content('Usuario o contraseña no correcta')
 				    .toastClass('toast-error');
-				$mdToast.show(toast);
+				$mdToast.show($rootScope.toast);
             }
 
             $('#login-form button').attr("disabled", false).removeClass('loading');
