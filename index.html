@@ -8,9 +8,16 @@
     <title ng-bind="pageTitle + ' - SAS Automtotive Systems'">SAS Automtotive Systems</title>
 
     <!-- Le styles -->
-    <!-- <link href="js/libraries/bootstrap/dist/css/bootstrap.css" rel="stylesheet"> -->
     <link href="js/libraries/angular-material/angular-material.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+    <link href="css/page-login.css" rel="stylesheet">
+    <link href="css/page-visualizador-del-proceso.css" rel="stylesheet">
+    <link href="css/page-datos-del-sga.css" rel="stylesheet">
+    <link href="css/page-bloqueo-de-productos.css" rel="stylesheet">
+    <link href="css/page-modo-manual.css" rel="stylesheet">
+    <link href="css/page-recepcion-de-productos.css" rel="stylesheet">
+    <!-- <link href="css/page-configuracion-de-parametros.css" rel="stylesheet"> -->
+    
     <link rel="shortcut icon" href="images/favicon.ico" />
 </head>
 <body class="page-datos-del-sga loading">
@@ -24,7 +31,7 @@
                     <div class="slice"></div>
                     <div class="slice"></div>
                 </div>
-                MENÚ
+                <span class="title">MENÚ</span>
             </md-button>
             <md-menu-content id="menu-dropdown" width="4">
                 <md-menu-item ng-hide="!user_permissions['visualizador-del-proceso']">

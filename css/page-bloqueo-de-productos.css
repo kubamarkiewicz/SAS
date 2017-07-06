@@ -1,0 +1,157 @@
+
+
+/* Page bloqueo-de-productos *******************************************************************************/
+
+
+body.page-bloqueo-de-productos > main {
+	padding: 50px 25px 25px 25px;
+}
+body.page-bloqueo-de-productos > main > .layout-row {
+	height: 100%;
+}
+body.page-bloqueo-de-productos > main > .layout-row > * {
+	margin: 0px 25px; 
+}
+body.page-bloqueo-de-productos > main section {
+	margin-bottom: 35px;
+}
+body.page-bloqueo-de-productos > main section > h2 {
+	border-bottom: 8px solid #0276af;
+	padding-bottom: 8px;
+}
+
+body.page-bloqueo-de-productos section.action-switch {
+}
+body.page-bloqueo-de-productos section.action-switch .buttons {
+	display: flex;
+	justify-content: space-between;
+}
+body.page-bloqueo-de-productos section.action-switch .buttons .md-button {
+	margin: 0;
+	width: 49%;
+	text-align: left;
+	font-size: 18px;
+	min-height: 40px;
+	line-height: 40px;
+	padding-left: 15px;
+	background-color: #4b4b4b !important;
+}
+body.page-bloqueo-de-productos section.action-switch .buttons .md-button.selected {
+	background-color: #005078 !important;
+}
+body.page-bloqueo-de-productos section.action-switch .buttons .md-button.selected:after {
+	content: "\25C0";
+	float: right;
+	position: absolute;
+	right: 10px;
+}
+
+body.page-bloqueo-de-productos section.actions {
+}
+body.page-bloqueo-de-productos section.actions p {
+}
+body.page-bloqueo-de-productos section.actions p label {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 20px;
+	min-width: 143px;
+	vertical-align: middle;/* line-height: 38px; */;
+}
+body.page-bloqueo-de-productos section.actions p md-input-container {
+}
+body.page-bloqueo-de-productos section.actions p input,
+body.page-bloqueo-de-productos section.actions p .md-select-value {
+	width: 290px;
+}
+body.page-bloqueo-de-productos section.actions p .md-button {
+	width: 165px;
+	margin-left: 3px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+body.page-bloqueo-de-productos section.actions .md-button.block-product {
+	background-image: url(../images/plus.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 21px;
+	min-width: 21px;
+}
+
+body.page-bloqueo-de-productos section.blocked-products .list {
+	display: flex; 
+	flex-wrap: wrap; 
+	margin-right: -34px; 
+	overflow-y: auto;
+}
+body.page-bloqueo-de-productos section.blocked-products .item {
+	background-color: #ffffff;
+	padding: 4px;
+	width: calc(33% - 34px);
+	margin: 0 34px 4px 0;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	position: relative;
+}
+body.page-bloqueo-de-productos section.blocked-products .item .unblock {
+	position: absolute;
+	width: 21px;
+	height: 21px;;
+	cursor: pointer;
+	right: -24px;
+	top: 6px;
+	outline: none;
+	background-image: url(../images/remove.gif);
+	background-repeat: no-repeat;
+}
+
+
+body.page-bloqueo-de-productos section.selected-products {
+	overflow: visible;
+}
+body.page-bloqueo-de-productos section.selected-products .list {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	overflow-y: auto;
+	min-height: 38px;
+}
+body.page-bloqueo-de-productos section.selected-products .list .item {
+	background-color: #ffffff;
+	padding: 4px;
+	width: calc(26%);
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	position: relative;
+	margin: 0 7.3% 4px 0;
+	height: 34px;
+}
+body.page-bloqueo-de-productos section.selected-products .list .item .remove {
+	position: absolute;
+	width: 21px;
+	height: 21px;;
+	cursor: pointer;
+	right: -24px;
+	top: 6px;
+	outline: none;
+	background-image: url(../images/remove.gif);
+	background-repeat: no-repeat;
+}
+body.page-bloqueo-de-productos section.selected-products button.block-products {
+	margin-bottom: 25px;
+}
+
+
+/* mobile */
+@media screen and (max-width: 1150px) {
+	body.page-bloqueo-de-productos section.blocked-products .item {
+		font-size: 18px;
+	}
+}
+@media screen and (max-width: 1430px) {
+
+	body.page-bloqueo-de-productos section.actions p label {
+		display: block;
+	}
+}

@@ -1,0 +1,94 @@
+
+
+/* Page Datos del SGA *******************************************************************************/
+
+body.page-datos-del-sga > main {
+}
+body.page-datos-del-sga main section.alerts {
+	height: calc(50% - 15px);
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 30px;
+}
+body.page-datos-del-sga main section.alerts .list { 
+	display: flex; 
+	flex-wrap: wrap; 
+	margin-right: -34px; 
+	overflow-y: auto;
+}
+body.page-datos-del-sga main section.alerts .alert {
+	color: #ffffff;
+	padding: 18px 24px;
+	width: calc(25% - 34px);
+	margin: 0 34px 34px 0;
+	background-color: #bcb9b9;
+}
+body.page-datos-del-sga main section.alerts .alert-primary {
+	background-color: #0573da;
+}
+body.page-datos-del-sga main section.alerts .alert-success {
+	background-color: #5bb85f;
+}
+body.page-datos-del-sga main section.alerts .alert-info {
+	background-color: #57c3da;
+}
+body.page-datos-del-sga main section.alerts .alert-warning {
+	background-color: #efac51;
+}
+body.page-datos-del-sga main section.alerts .alert-danger {
+	background-color: #d9544f;
+}
+body.page-datos-del-sga main section.alerts .alert-muted {
+	background-color: #2a2b2d;
+}
+body.page-datos-del-sga main section.alerts .alert-white {
+	background-color: #f7f7f7;
+	color: #2a2b2d;
+}
+body.page-datos-del-sga main section.alerts .alert h3 {
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 2px;
+}
+body.page-datos-del-sga main section.alerts .alert main {
+	font-size: 18px;
+}
+
+
+body.page-datos-del-sga main section.blocked-products {
+	display: flex;
+	flex-direction: column;
+	height: calc(50% - 15px);
+}
+body.page-datos-del-sga main section.blocked-products .list {
+	display: flex; 
+	flex-wrap: wrap; 
+	margin-right: -34px; 
+	overflow-y: auto;
+}
+body.page-datos-del-sga main section.blocked-products .item {
+	background-color: #ffffff;
+	padding: 4px;
+	width: calc(14% - 34px);
+	margin: 0 34px 4px 0;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+
+/* mobile */
+@media screen and (max-width: 1200px) {
+
+	body.page-datos-del-sga main section.alerts .alert {
+		width: calc(33% - 34px);
+	}
+	body.page-datos-del-sga main section.blocked-products .item {
+		width: calc(20% - 34px);
+	}
+
+}
+
+
+
