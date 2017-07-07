@@ -392,6 +392,8 @@ section.popup-alerts .alert main {
 
 
 
+
+
 /* mobile */
 @media screen and (max-width: 1450px) {
 
@@ -421,11 +423,12 @@ section.popup-alerts .alert main {
 		height: 80px;
 		line-height: 80px;
 		font-size: 24px;
+	    padding: 0 35px;
 	}
 
 	body > header h1 {
 		line-height: 80px;
-		font-size: 24px;
+		font-size: 27px;
 	}
 
 	body > header .logos {
