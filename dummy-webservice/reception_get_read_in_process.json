@@ -1,0 +1,25 @@
+{
+    "reception_get_read_in_processResult" : 
+    [
+        {
+            "Asn"       : "Wire 1",
+            "Read"      : "Wire 1",
+            "Status"    : "green"
+        },
+        {
+            "Asn"       : "Wire 1",
+            "Read"      : "Wire 1",
+            "Status"    : "green"
+        },
+        {
+            "Asn"       : "Wire 1",
+            "Read"      : "Wire 1",
+            "Status"    : "red"
+        },
+        {
+            "Asn"       : "Wire 1",
+            "Read"      : "Wire 1",
+            "Status"    : "green"
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "data_get_glt_wires_flowResult" : 
+    [
+        [
+            {
+                "GltNumber" : "Wire 1",
+                "AKLNumber" : "Wire 1",
+                "Status"    : "green"
+            },
+            {
+                "GltNumber" : "Wire 2",
+                "AKLNumber" : "Wire 2",
+                "Status"    : "red"
+            },
+            {
+                "GltNumber" : "Wire 3",
+                "AKLNumber" : "Wire 3",
+                "Status"    : "green"
+            },
+            {
+                "GltNumber" : "Wire 4",
+                "AKLNumber" : "Wire 4",
+                "Status"    : "green"
+            },
+        ],
+        [
+            {
+                "GltNumber" : "Wire 1",
+                "AKLNumber" : "Wire 1",
+                "Status"    : "green"
+            },
+            {
+                "GltNumber" : "Wire 2",
+                "AKLNumber" : "Wire 2",
+                "Status"    : "red"
+            },
+            {
+                "GltNumber" : "Wire 3",
+                "AKLNumber" : "Wire 3",
+                "Status"    : "green"
+            },
+            {
+                "GltNumber" : "Wire 4",
+                "AKLNumber" : "Wire 4",
+                "Status"    : "green"
+            },
+        ],
+        [
+            {
+                "GltNumber" : "Wire 1",
+                "AKLNumber" : "Wire 1",
+                "Status"    : "green"
+            },
+            {
+                "GltNumber" : "Wire 2",
+                "AKLNumber" : "Wire 2",
+                "Status"    : "red"
+            },
+            {
+                "GltNumber" : "Wire 3",
+                "AKLNumber" : "Wire 3",
+                "Status"    : "green"
+            },
+            {
+                "GltNumber" : "Wire 4",
+                "AKLNumber" : "Wire 4",
+                "Status"    : "green"
+            },
+        ]
+    ]
+}

@@ -1,0 +1,294 @@
+{
+    "reception_get_glt_incomingResult" : 
+    [
+        [
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            }
+        ],
+        [
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            }
+        ],
+        [
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            }
+        ],
+        [
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            }
+        ],
+        [
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            }
+        ],
+        [
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            }
+        ],
+        [
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            }
+        ],
+        [
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            },
+            {
+                "GltNumber" : "GLTx",
+                "Wire1"     : "Wire 1",
+                "Wire2"     : "Wire 2",
+                "Wire3"     : "Wire 3",
+                "Wire4"     : "Wire 4",
+            }
+        ]
+    ]
+}

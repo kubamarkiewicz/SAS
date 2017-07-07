@@ -93,9 +93,9 @@ get_alerts()
     return: 			//array<Alert>
     [
         {
-            "title": "string",
-            "message": "string",
-            "color": "danger"   // possible values: danger, primary, success, info, warning, muted, white 
+            "Title": "string",
+            "Message": "string",
+            "Color": "danger"   // possible values: danger, primary, success, info, warning, muted, white 
         }
 	]
 
@@ -105,7 +105,9 @@ get_blocked_products()
         "string"
     ]
 
-
+data_get_signals_flow()
+data_get_edi_files_flow()
+data_get_glt_wires_flow()    
 
 
 
@@ -150,6 +152,12 @@ get_reader_reading()
 
 receive_products_from_file(productlist)
     
+reception_get_glt_in_asn()
+reception_get_asn()
+reception_get_read_in_process()
+reception_get_alerts()
+reception_get_glt_incoming()
+
 
 
 
@@ -189,4 +197,5 @@ get_parameters()
 
 save_parameters(parameters)
 
-
+parameters_get_pauses()
+parameters_save_pauses(pauses)

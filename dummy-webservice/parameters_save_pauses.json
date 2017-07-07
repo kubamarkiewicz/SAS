@@ -1,0 +1,39 @@
+// ejemplo de los datos para enviar en el parametro "pauses" del metodo parameters_save_pauses(pauses) 
+
+[
+    {
+        "Start"     : "00:00:00",
+        "End"       : "00:00:00",
+        "Enabled"   : true
+    },
+    {
+        "Start"     : "00:00:00",
+        "End"       : "00:00:00",
+        "Enabled"   : false
+    },
+    {
+        "Start"     : "00:00:00",
+        "End"       : "00:00:00",
+        "Enabled"   : true
+    },
+    {
+        "Start"     : "00:00:00",
+        "End"       : "00:00:00",
+        "Enabled"   : true
+    },
+    {
+        "Start"     : "00:00:00",
+        "End"       : "00:00:00",
+        "Enabled"   : true
+    },
+    {
+        "Start"     : "00:00:00",
+        "End"       : "00:00:00",
+        "Enabled"   : true
+    },
+    {
+        "Start"     : "00:00:00",
+        "End"       : "00:00:00",
+        "Enabled"   : true
+    }
+]

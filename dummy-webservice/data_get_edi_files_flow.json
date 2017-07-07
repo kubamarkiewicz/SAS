@@ -1,0 +1,61 @@
+{
+    "data_get_edi_files_flowResult" : 
+    [
+        [
+            {
+                "Files"     : "ASN",
+                "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+                "Status"    : "green"
+            },
+            {
+                "Files"     : "RECP",
+                "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+                "Status"    : "red"
+            },
+            {
+                "Files"     : "STOR",
+                "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+                "Status"    : "green"
+            },
+            {
+                "Files"     : "ASN",
+                "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+                "Status"    : "green"
+            },
+            {
+                "Files"     : "ASN",
+                "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+                "Status"    : "green"
+            }
+        ],
+        [
+            {
+                "Files"     : "ASN",
+                "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+                "Status"    : "green"
+            },
+            {
+                "Files"     : "RECP",
+                "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+                "Status"    : "green"
+            }
+        ],
+        [
+            {
+                "Files"     : "ASN",
+                "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+                "Status"    : "green"
+            },
+            {
+                "Files"     : "RECP",
+                "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+                "Status"    : "red"
+            },
+            {
+                "Files"     : "STOR",
+                "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+                "Status"    : "green"
+            }
+        ]
+    ]
+}

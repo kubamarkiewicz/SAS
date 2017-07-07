@@ -1,0 +1,45 @@
+{
+    "parameters_get_pausesResult" : 
+    {
+        "CurrentlyPaused" : true,
+        "Pauses" :
+        [
+            {
+                "Start"     : "00:00:00",
+                "End"       : "00:00:00",
+                "Enabled"   : true
+            },
+            {
+                "Start"     : "00:00:00",
+                "End"       : "00:00:00",
+                "Enabled"   : false
+            },
+            {
+                "Start"     : "00:00:00",
+                "End"       : "00:00:00",
+                "Enabled"   : true
+            },
+            {
+                "Start"     : "00:00:00",
+                "End"       : "00:00:00",
+                "Enabled"   : true
+            },
+            {
+                "Start"     : "00:00:00",
+                "End"       : "00:00:00",
+                "Enabled"   : true
+            },
+            {
+                "Start"     : "00:00:00",
+                "End"       : "00:00:00",
+                "Enabled"   : true
+            },
+            {
+                "Start"     : "00:00:00",
+                "End"       : "00:00:00",
+                "Enabled"   : true
+            }
+        ]
+    }
+    
+}
