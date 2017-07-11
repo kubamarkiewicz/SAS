@@ -19,11 +19,11 @@
 				</thead>
 		
 				<tbody>
-					<tr ng-repeat="(key,item) in signalsFlowL9Data">
-						<td>{{ signalsFlowL9Data[key].Time }}</td>
-						<td>{{ signalsFlowL9Data[key].Sec }}</td>
-						<td>{{ signalsFlowM1Data[key].Sec }}</td>
-						<td>{{ signalsFlowM1Data[key].Time }}</td>
+					<tr data-ng-repeat="i in [0,1,2,3,4,5,6,7,8,9]">
+						<td>{{ signalsFlowL9Data[i].Time }}</td>
+						<td>{{ signalsFlowL9Data[i].Sec }}</td>
+						<td>{{ signalsFlowM1Data[i].Sec }}</td>
+						<td>{{ signalsFlowM1Data[i].Time }}</td>
 					</tr>
 				</tbody>
 
