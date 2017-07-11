@@ -44,6 +44,10 @@ app.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
             controller: 'ModoManualProductosController', 
             templateUrl: 'js/pages/modo-manual/index.html' 
         })   
+        .when('/configuracion-de-parametros', { 
+            controller: 'ConfiguracionDeParametrosController', 
+            templateUrl: 'js/pages/configuracion-de-parametros/index.html' 
+        })   
         .otherwise({ 
             redirectTo: '/datos-del-sga' 
         }); 

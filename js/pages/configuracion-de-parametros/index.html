@@ -1,0 +1,34 @@
+
+<section class="parameters" layout="row">
+
+	<div flex>
+
+		<div class="parameter" ng-repeat="key in parametersDataLeftKeys">
+			<h2>{{ key }}</h2>
+			<main>
+
+				<ng-include src="'js/pages/configuracion-de-parametros/partial-' + slugify(parametersData[key].Type) + '.html'"></ng-include>
+
+			</main>
+
+		</div>
+
+	</div>
+
+	<div flex>
+
+		<div class="parameter" ng-repeat="key in parametersDataRightKeys">
+			<h2>{{ key }}</h2>
+			<main>
+
+				<ng-include src="'js/pages/configuracion-de-parametros/partial-' + slugify(parametersData[key].Type) + '.html'"></ng-include>
+
+			</main>
+
+		</div>
+
+	</div>
+
+</section>
+
+<md-button class="md-raised md-warn save" ng-click="saveParametersData()">Guardar <md-progress-circular></md-progress-circular></md-button>

@@ -1,0 +1,39 @@
+{
+    "get_parametersResult" :
+	{
+		"SGA Mode" : {
+			"Options"	: ["Automatic", "Manual"],
+			"Value"		: "Manual",
+			"Type"		: "RadioButton"
+		},
+		"Paths" : {
+			"Options"	: ["Alarms path", "Log files path", "Notifications path"],
+			"Values"	: ["C:/Artisteril/Alarms", "C:/Artisteril/Logs", "C:/Artisteril/Notifications"],
+			"Type"		: "TextBox"
+		},
+		"Barcode Scanners" : {
+			"Options"	: ["MatrixN300-01", "MatrixN300-02", "MatrixN300-03"],
+			"Values"	: [true, false, true],
+			"Type"		: "Checkbox"
+		},
+		"Barcode Readers": {
+			"Options"	: ["MemorX3-01", "MemorX3-02", "MemorX3-03", "MemorX3-04", "MemorX3-05", "MemorX3-06", "MemorX3-07", "MemorX3-08"],
+			"Values"	: [true, true, false, true, false, false, true, false],
+			"Type"		: "Checkbox"
+		},
+		"Breaks for work shift": {
+			"Value"		: 2,
+			"Type"		: "NumericUpDown"
+		},
+		"Load Coordinates": {
+			"Options"	: ["X:", "Y:"],
+			"Values"	: ["25.20", "38.15"],
+			"Type"		: "Textbox"
+		},
+		"AGV": {
+			"Options"	: ["FMX-01", "FMX-02"],
+			"Value"		: "FMX-02",
+			"Type"		: "Combobox"
+		}
+	}
+}

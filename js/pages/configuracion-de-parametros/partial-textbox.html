@@ -1,0 +1,8 @@
+	
+    <div class="textbox" ng-repeat="option in parametersData[key].Options">
+		<label>{{ option }}</label>
+		<md-input-container>
+	        <input ng-model="parametersData[key].Values[$index]">
+	    </md-input-container>
+	</div>
+
