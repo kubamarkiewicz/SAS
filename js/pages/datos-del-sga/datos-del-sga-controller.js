@@ -3,19 +3,35 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
 
     // Signals flow
 
-    $scope.signalsFlowData = [];
+    $scope.signalsFlowL9Data = [];
     
-    $scope.getSignalsFlowData = function()
+    $scope.getSignalsFlowL9Data = function()
     {
         $http({
             method  : 'GET',
-            url     : config.webservice.urls.data_get_signals_flow
+            url     : config.webservice.urls.data_get_signals_L9_flow
          })
         .then(function(response) {
-            $scope.signalsFlowData = response.data.data_get_signals_flowResult;
+            $scope.signalsFlowL9Data = response.data.data_get_signals_L9_flowResult;
         });
     }
-    ArtisterilIntervalService.start($scope.getSignalsFlowData);
+    ArtisterilIntervalService.start($scope.getSignalsFlowL9Data);
+
+
+
+    $scope.signalsFlowM1Data = [];
+    
+    $scope.getSignalsFlowM1Data = function()
+    {
+        $http({
+            method  : 'GET',
+            url     : config.webservice.urls.data_get_signals_M1_flow
+         })
+        .then(function(response) {
+            $scope.signalsFlowM1Data = response.data.data_get_signals_M1_flowResult;
+        });
+    }
+    ArtisterilIntervalService.start($scope.getSignalsFlowM1Data);
 
 
 

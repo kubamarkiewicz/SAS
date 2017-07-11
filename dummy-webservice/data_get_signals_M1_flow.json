@@ -1,0 +1,45 @@
+{
+    "data_get_signals_M1_flowResult" : 
+    [
+        {
+            "Time"  : "23:00",
+            "Sec"    : "XYZ0"
+        },
+        {
+            "Time"  : "23:00",
+            "Sec"    : "XYZ0"
+        },
+        {
+            "Time"  : "23:00",
+            "Sec"    : "XYZ0"
+        },
+        {
+            "Time"  : "23:00",
+            "Sec"    : "XYZ0"
+        },
+        {
+            "Time"  : "23:00",
+            "Sec"    : "XYZ0"
+        },
+        {
+            "Time"  : "23:00",
+            "Sec"    : "XYZ0"
+        },
+        {
+            "Time"  : "23:00",
+            "Sec"    : "XYZ0"
+        },
+        {
+            "Time"  : "23:00",
+            "Sec"    : "XYZ0"
+        },
+        {
+            "Time"  : "23:00",
+            "Sec"    : "XYZ0"
+        },
+        {
+            "Time"  : "23:00",
+            "Sec"    : "XYZ0"
+        }
+    ]
+}
