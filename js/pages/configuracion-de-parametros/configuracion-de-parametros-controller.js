@@ -54,7 +54,7 @@ app.controller('ConfiguracionDeParametrosController', function($scope, $rootScop
         var sendData = {};
         // console.log($scope.parametersData);
         for (key in $scope.parametersData) {
-            sendData[key] = $scope.parametersData[key].Values || $scope.parametersData[key].Value;
+            sendData[$scope.parametersData[key].Name] = $scope.parametersData[key].Values;
         }
         // console.log(sendData);
 
