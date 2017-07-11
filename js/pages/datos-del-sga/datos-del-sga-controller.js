@@ -46,7 +46,10 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
             url     : config.webservice.urls.data_get_edi_files_flow
          })
         .then(function(response) {
-            $scope.ediFilesFlowData = response.data.get_edi_filesResult;
+            $scope.ediFilesFlowData = {};
+            for (i in response.data.get_edi_filesResult) {
+                $scope.ediFilesFlowData[response.data.get_edi_filesResult[i].Files] = response.data.get_edi_filesResult[i].Info;
+            }
         });
     }
     ArtisterilIntervalService.start($scope.getEDIFilesFlowData);

@@ -1,45 +1,46 @@
 {
-    "get_edi_filesResult" : 
-    {
-        "ASN": {
-            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
-            "Status"    : "green"
+    "get_edi_filesResult":[
+        {
+            "Files": "ASN",
+            "Info": {
+                "Status": "green",
+                "Supplier": "11/07/2017 12:03:22 ASN00003068.DAT"
+            }
         },
-        "RECP": {
-            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
-            "Status"    : "red"
+        {
+            "Files": "ASN",
+            "Info": {
+                "Status": "green",
+                "Supplier": "11/07/2017 12:03:22 ASN00003069.DAT"
+            }
         },
-        "STOR": {
-            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
-            "Status"    : "green"
+        {
+            "Files": "ASN",
+            "Info": {
+                "Status": "green",
+                "Supplier": "11/07/2017 12:03:22 ASN00003072.DAT"
+            }
         },
-        "CONV": {
-            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
-            "Status"    : "green"
+        {
+            "Files": "ASN",
+            "Info":{
+                "Status": "green",
+                "Supplier": "11/07/2017 12:03:22 ASN00003089.DAT"
+            }
         },
-        "INVE": {
-            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
-            "Status"    : "green"
+        {
+        "Files": "ASN",
+            "Info":{
+                "Status": "green",
+                "Supplier": "11/07/2017 12:03:23 ASN00003115.DAT"
+            }
         },
-        "FGLT": {
-            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
-            "Status"    : "green"
-        },
-        "FKLT": {
-            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
-            "Status"    : "green"
-        },
-        "STOT": {
-            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
-            "Status"    : "green"
-        },
-        "STOB": {
-            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
-            "Status"    : "green"
-        },
-        "INVT": {
-            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
-            "Status"    : "green"
+        {
+            "Files": "ASN",
+            "Info":{
+                "Status": "green",
+                "Supplier": "11/07/2017 12:03:23 ASN00003134.DAT"
+            }
         }
-    }
+    ]
 }
