@@ -1,27 +1,216 @@
 
-<div class="flow-wrap">
+<div class="col-left">
+	
+	<div class="flow-wrap">
 
-	<section class="signals-flow">
+		<section class="signals-flow">
+			
+			<h2>Signals flow</h2>
+
+			<table class="my-table">
+
+				<thead>
+					<tr>
+						<th>HH:MM</th>
+						<th>SEC:L9</th>
+						<th>SEC:M1</th>
+						<th>HH:MM</th>
+					</tr>
+				</thead>
 		
-		<h2>Signals flow</h2>
+				<tbody>
+					<tr ng-repeat="(key,item) in signalsFlowL9Data">
+						<td>{{ signalsFlowL9Data[key].Time }}</td>
+						<td>{{ signalsFlowL9Data[key].Sec }}</td>
+						<td>{{ signalsFlowM1Data[key].Sec }}</td>
+						<td>{{ signalsFlowM1Data[key].Time }}</td>
+					</tr>
+				</tbody>
 
+			</table>
+
+		</section>
+
+
+
+
+		<section class="edi-files-flow">
+			
+			<h2>EDI files flow</h2>
+			
+			<div class="table-group">
+				
+				<table class="my-table">
+
+					<thead>
+						<tr>
+							<th class="files">FILES</th>
+							<th>SUPPLIER</th>
+							<th class="status">STATUS</th>
+						</tr>
+					</thead>
+			
+					<tbody>
+						<tr>
+							<td class="files">ASN</td>
+							<td>{{ ediFilesFlowData.ASN.Supplier }}</td>
+							<td class="status {{ ediFilesFlowData.ASN.Status }}"></td>
+						</tr>
+						<tr>
+							<td class="files">RECP</td>
+							<td>{{ ediFilesFlowData.RECP.Supplier }}</td>
+							<td class="status {{ ediFilesFlowData.RECP.Status }}"></td>
+						</tr>
+						<tr>
+							<td class="files">STOR</td>
+							<td>{{ ediFilesFlowData.STOR.Supplier }}</td>
+							<td class="status {{ ediFilesFlowData.STOR.Status }}"></td>
+						</tr>
+						<tr>
+							<td class="files">CONV</td>
+							<td>{{ ediFilesFlowData.CONV.Supplier }}</td>
+							<td class="status {{ ediFilesFlowData.CONV.Status }}"></td>
+						</tr>
+						<tr>
+							<td class="files">INVE</td>
+							<td>{{ ediFilesFlowData.INVE.Supplier }}</td>
+							<td class="status {{ ediFilesFlowData.INVE.Status }}"></td>
+						</tr>
+					</tbody>
+
+				</table>
+				
+				<table class="my-table">
+
+					<thead>
+						<tr>
+							<th class="files">FILES</th>
+							<th>WH-GLT vs WH-AKL</th>
+							<th class="status">STATUS</th>
+						</tr>
+					</thead>
+			
+					<tbody>
+						<tr>
+							<td class="files">FGLT</td>
+							<td>{{ ediFilesFlowData.FGLT.Supplier }}</td>
+							<td class="status {{ ediFilesFlowData.FGLT.Status }}"></td>
+						</tr>
+						<tr>
+							<td class="files">FKLT</td>
+							<td>{{ ediFilesFlowData.FKLT.Supplier }}</td>
+							<td class="status {{ ediFilesFlowData.FKLT.Status }}"></td>
+						</tr>
+					</tbody>
+
+				</table>
+				
+				<table class="my-table">
+
+					<thead>
+						<tr>
+							<th class="files">FILES</th>
+							<th>CUSTOMER</th>
+							<th class="status">STATUS</th>
+						</tr>
+					</thead>
+			
+					<tbody>
+						<tr>
+							<td class="files">STOT</td>
+							<td>{{ ediFilesFlowData.STOT.Supplier }}</td>
+							<td class="status {{ ediFilesFlowData.STOT.Status }}"></td>
+						</tr>
+						<tr>
+							<td class="files">STOB</td>
+							<td>{{ ediFilesFlowData.STOB.Supplier }}</td>
+							<td class="status {{ ediFilesFlowData.STOB.Status }}"></td>
+						</tr>
+						<tr>
+							<td class="files">INVT</td>
+							<td>{{ ediFilesFlowData.INVT.Supplier }}</td>
+							<td class="status {{ ediFilesFlowData.INVT.Status }}"></td>
+						</tr>
+					</tbody>
+
+				</table>
+
+			</div>
+
+		</section>
+
+	</div><!-- /.flow-wrap -->
+
+
+	<section class="alerts">
+		
+		<h2>ALERTAS y AVISOS</h2>
+
+		<div class="list"> 
+			
+			<div ng-repeat="item in alertsData" class="alert alert-{{ item.Color }}" >
+				<h3>{{ item.Title }}</h3>
+				<main>{{ item.Message }}</main>
+			</div>
+
+		</div>
+
+	</section>
+
+
+
+	<section class="blocked-products">
+		
+		<h2>Productos bloqueados</h2>
+
+		<div class="list">
+			<div class="item" ng-repeat="item in blockedProductsData track by $index">{{ item }}</div>
+		</div>
+	</section>
+
+</div>
+	
+<div class="col-right">
+
+	<section class="glt-wires-flow">
+		
+		<h2>GLT-wires flow</h2>
+			
 		<table class="my-table">
 
 			<thead>
 				<tr>
-					<th>HH:MM</th>
-					<th>SEC:L9</th>
-					<th>SEC:M1</th>
-					<th>HH:MM</th>
+					<th>GLT</th>
+					<th>AKL</th>
+					<th class="status">STATUS</th>
 				</tr>
 			</thead>
 	
 			<tbody>
-				<tr ng-repeat="(key,item) in signalsFlowL9Data">
-					<td>{{ signalsFlowL9Data[key].Time }}</td>
-					<td>{{ signalsFlowL9Data[key].Sec }}</td>
-					<td>{{ signalsFlowM1Data[key].Sec }}</td>
-					<td>{{ signalsFlowM1Data[key].Time }}</td>
+				<tr ng-repeat-start="item in GTLWiresFlowData" class="numbers">
+					<td>{{ item.GltNumber }}</td>
+					<td>{{ item.GltNumber }}</td>
+					<td class="status {{ item.Status }}"></td>
+				</tr>
+				<tr>
+					<td>{{ item.Wire1 }}</td>
+					<td>{{ item.Wire1 }}</td>
+					<td class="status {{ item.Color1 }}"></td>
+				</tr>
+				<tr>
+					<td>{{ item.Wire2 }}</td>
+					<td>{{ item.Wire2 }}</td>
+					<td class="status {{ item.Color2 }}"></td>
+				</tr>
+				<tr>
+					<td>{{ item.Wire3 }}</td>
+					<td>{{ item.Wire3 }}</td>
+					<td class="status {{ item.Color3 }}"></td>
+				</tr>
+				<tr ng-repeat-end>
+					<td>{{ item.Wire4 }}</td>
+					<td>{{ item.Wire4 }}</td>
+					<td class="status {{ item.Color4 }}"></td>
 				</tr>
 			</tbody>
 
@@ -29,173 +218,8 @@
 
 	</section>
 
-
-
-
-	<section class="edi-files-flow">
-		
-		<h2>EDI files flow</h2>
-		
-		<div class="table-group">
-			
-			<table class="my-table">
-
-				<thead>
-					<tr>
-						<th class="files">FILES</th>
-						<th>SUPPLIER</th>
-						<th class="status">STATUS</th>
-					</tr>
-				</thead>
-		
-				<tbody>
-					<tr>
-						<td class="files">ASN</td>
-						<td>{{ ediFilesFlowData.ASN.Supplier }}</td>
-						<td class="status {{ ediFilesFlowData.ASN.Status }}"></td>
-					</tr>
-					<tr>
-						<td class="files">RECP</td>
-						<td>{{ ediFilesFlowData.RECP.Supplier }}</td>
-						<td class="status {{ ediFilesFlowData.RECP.Status }}"></td>
-					</tr>
-					<tr>
-						<td class="files">STOR</td>
-						<td>{{ ediFilesFlowData.STOR.Supplier }}</td>
-						<td class="status {{ ediFilesFlowData.STOR.Status }}"></td>
-					</tr>
-					<tr>
-						<td class="files">CONV</td>
-						<td>{{ ediFilesFlowData.CONV.Supplier }}</td>
-						<td class="status {{ ediFilesFlowData.CONV.Status }}"></td>
-					</tr>
-					<tr>
-						<td class="files">INVE</td>
-						<td>{{ ediFilesFlowData.INVE.Supplier }}</td>
-						<td class="status {{ ediFilesFlowData.INVE.Status }}"></td>
-					</tr>
-				</tbody>
-
-			</table>
-			
-			<table class="my-table">
-
-				<thead>
-					<tr>
-						<th class="files">FILES</th>
-						<th>WH-GLT vs WH-AKL</th>
-						<th class="status">STATUS</th>
-					</tr>
-				</thead>
-		
-				<tbody>
-					<tr>
-						<td class="files">FGLT</td>
-						<td>{{ ediFilesFlowData.FGLT.Supplier }}</td>
-						<td class="status {{ ediFilesFlowData.FGLT.Status }}"></td>
-					</tr>
-					<tr>
-						<td class="files">FKLT</td>
-						<td>{{ ediFilesFlowData.FKLT.Supplier }}</td>
-						<td class="status {{ ediFilesFlowData.FKLT.Status }}"></td>
-					</tr>
-				</tbody>
-
-			</table>
-			
-			<table class="my-table">
-
-				<thead>
-					<tr>
-						<th class="files">FILES</th>
-						<th>CUSTOMER</th>
-						<th class="status">STATUS</th>
-					</tr>
-				</thead>
-		
-				<tbody>
-					<tr>
-						<td class="files">STOT</td>
-						<td>{{ ediFilesFlowData.STOT.Supplier }}</td>
-						<td class="status {{ ediFilesFlowData.STOT.Status }}"></td>
-					</tr>
-					<tr>
-						<td class="files">STOB</td>
-						<td>{{ ediFilesFlowData.STOB.Supplier }}</td>
-						<td class="status {{ ediFilesFlowData.STOB.Status }}"></td>
-					</tr>
-					<tr>
-						<td class="files">INVT</td>
-						<td>{{ ediFilesFlowData.INVT.Supplier }}</td>
-						<td class="status {{ ediFilesFlowData.INVT.Status }}"></td>
-					</tr>
-				</tbody>
-
-			</table>
-
-		</div>
-
-	</section>
-
-
-
-	<section class="glt-wires-flow">
-		
-		<h2>GLT-wires flow</h2>
-
-		<div class="table-group">
-			
-			<table class="my-table" ng-repeat="items in GTLWiresFlowData">
-
-				<thead>
-					<tr>
-						<th>GLT number</th>
-						<th>AKL number</th>
-						<th class="status">STATUS</th>
-					</tr>
-				</thead>
-		
-				<tbody>
-					<tr ng-repeat="item in items">
-						<td>{{ item.GltNumber }}</td>
-						<td>{{ item.AKLNumber }}</td>
-						<td class="status {{ item.Status }}"></td>
-					</tr>
-				</tbody>
-
-			</table>
-
-	</section>
-
-
-</div><!-- /.flow-wrap -->
+</div>
 
 
 
 
-
-<section class="alerts">
-	
-	<h2>ALERTAS y AVISOS</h2>
-
-	<div class="list"> 
-		
-		<div ng-repeat="item in alertsData" class="alert alert-{{ item.Color }}" >
-			<h3>{{ item.Title }}</h3>
-			<main>{{ item.Message }}</main>
-		</div>
-
-	</div>
-
-</section>
-
-
-
-<section class="blocked-products">
-	
-	<h2>Productos bloqueados</h2>
-
-	<div class="list">
-		<div class="item" ng-repeat="item in blockedProductsData track by $index">{{ item }}</div>
-	</div>
-</section>

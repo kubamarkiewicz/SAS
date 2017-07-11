@@ -3,25 +3,33 @@
 /* Page Datos del SGA *******************************************************************************/
 
 body.page-datos-del-sga > main {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 body.page-datos-del-sga > main h2 {
 	margin-bottom: 2px;
+}
+body.page-datos-del-sga > main .col-left {
+	width: calc(66% - 18px);
+}
+body.page-datos-del-sga > main .col-right {
+	width: calc(33% - 18px);
 }
 body.page-datos-del-sga > main .flow-wrap {
 	height: 50%;
 	display: flex;
 	justify-content: space-between;
-	padding-bottom: 15px;;
+	padding-bottom: 15px;
 }
 body.page-datos-del-sga > main .flow-wrap > * {
-	flex: 0 1 auto;
-	width: calc(33% - 25px);
+	width: calc(50% - 25px);
 }
 
 
 body.page-datos-del-sga th.status, 
-body.page-datos-del-sga td.status, {
-	width: 100px;
+body.page-datos-del-sga td.status {
+	width: 110px;
 }
 body.page-datos-del-sga td.status.green {
 	background-color: #7dbe02;
@@ -57,18 +65,18 @@ body.page-datos-del-sga main section.edi-files-flow table .files {
 }
 
 
-body.page-datos-del-sga main section.glt-wires-flow .table-group {
-	height: calc(100% - 35px);
-	overflow: auto;
+body.page-datos-del-sga main section.glt-wires-flow {
+	height: 100%;
 }
 body.page-datos-del-sga main section.glt-wires-flow table {
-	height: auto;
+	height: calc(100% - 35px);
 }
 body.page-datos-del-sga main section.glt-wires-flow table thead {
-	width: 100%;
 }
 body.page-datos-del-sga main section.glt-wires-flow table tbody {
-	overflow-y: visible;
+}
+body.page-datos-del-sga main section.glt-wires-flow table tr.numbers td {
+	background-color: #bdb9ba;
 }
 
 
@@ -82,15 +90,15 @@ body.page-datos-del-sga main section.alerts {
 }
 body.page-datos-del-sga main section.alerts .list { 
 	display: flex; 
+	overflow-y: auto; 
 	flex-wrap: wrap; 
-	margin-right: -34px; 
-	overflow-y: auto;
+	margin-left: -26px;
 }
 body.page-datos-del-sga main section.alerts .alert {
 	color: #ffffff;
 	padding: 18px 24px;
-	width: calc(25% - 34px);
-	margin: 0 34px 10px 0;
+	width: calc(25% - 26px);
+	margin: 0 0 15px 26px;
 	background-color: #bcb9b9;
 }
 body.page-datos-del-sga main section.alerts .alert-primary {
@@ -133,14 +141,14 @@ body.page-datos-del-sga main section.blocked-products {
 body.page-datos-del-sga main section.blocked-products .list {
 	display: flex; 
 	flex-wrap: wrap; 
-	margin-right: -34px; 
 	overflow-y: auto;
+	margin-left: -26px;
 }
 body.page-datos-del-sga main section.blocked-products .item {
 	background-color: #ffffff;
 	padding: 4px;
-	width: calc(14% - 34px);
-	margin: 0 34px 4px 0;
+	width: calc(14% - 26px);
+	margin: 0 0 4px 26px;
 	text-align: center;
 	font-size: 20px;
 	font-weight: bold;
@@ -154,7 +162,13 @@ body.page-datos-del-sga main section.blocked-products .item {
 /* mobile */
 @media screen and (max-width: 1400px) {
 
-	
+	body.page-datos-del-sga > main .col-left {
+		width: calc(66% - 12px);
+	}
+	body.page-datos-del-sga > main .col-right {
+		width: calc(33% - 12px);
+	}
+
 	body.page-datos-del-sga th.status, 
 	body.page-datos-del-sga td.status {
 		width: 75px;
@@ -171,11 +185,11 @@ body.page-datos-del-sga main section.blocked-products .item {
 		padding: 0 6px;
 	}
 	body.page-datos-del-sga > main .flow-wrap > * {
-	    width: calc(33% - 15px);
+	width: calc(50% - 15px);
 	}
 
 	body.page-datos-del-sga main section.alerts .alert {
-		width: calc(33% - 34px);
+		width: calc(33% - 26px);
 		padding: 7px 13px;
 	}
 	body.page-datos-del-sga main section.alerts .alert h3 {
@@ -186,11 +200,14 @@ body.page-datos-del-sga main section.blocked-products .item {
 		font-size: 16px;
 		line-height: 130%;
 	}
+	body.page-datos-del-sga main section.blocked-products .list {
+		margin-left: -15px;
+	}
 	body.page-datos-del-sga main section.blocked-products .item {
 		font-size: 16px;
 		padding: 2px;
-		width: calc(14% - 15px);
-		margin-right: 15px;
+		width: calc(16% - 15px);
+		margin-left: 15px;
 	}
 
 }

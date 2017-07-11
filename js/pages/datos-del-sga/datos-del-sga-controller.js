@@ -87,8 +87,8 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
             $scope.alertsData = response.data.get_alertsResult;
         });
     }
-    ArtisterilIntervalService.start($scope.getAlertsData);
-    // $scope.getAlertsData();
+    // ArtisterilIntervalService.start($scope.getAlertsData);
+    $scope.getAlertsData();
 
 
 
@@ -108,5 +108,6 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
         });
     }
     ArtisterilIntervalService.start($scope.getBlockedProductsData);
+    $scope.getBlockedProductsData();
 
 });

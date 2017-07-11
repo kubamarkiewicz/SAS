@@ -1,0 +1,45 @@
+{
+    "data_get_edi_files_flowResult" : 
+    {
+        "ASN": {
+            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+            "Status"    : "green"
+        },
+        "RECP": {
+            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+            "Status"    : "red"
+        },
+        "STOR": {
+            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+            "Status"    : "green"
+        },
+        "CONV": {
+            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+            "Status"    : "green"
+        },
+        "INVE": {
+            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+            "Status"    : "green"
+        },
+        "FGLT": {
+            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+            "Status"    : "green"
+        },
+        "FKLT": {
+            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+            "Status"    : "green"
+        },
+        "STOT": {
+            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+            "Status"    : "green"
+        },
+        "STOB": {
+            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+            "Status"    : "green"
+        },
+        "INVT": {
+            "Supplier"  : "DD:MM:AAA HH:MM last transmission",
+            "Status"    : "green"
+        }
+    }
+}
