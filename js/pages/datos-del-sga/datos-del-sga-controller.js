@@ -46,7 +46,7 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
             url     : config.webservice.urls.get_edi_filesResult
          })
         .then(function(response) {
-            $scope.ediFilesFlowData = response.data.data_get_edi_files_flowResult;
+            $scope.ediFilesFlowData = response.data.get_edi_filesResult;
         });
     }
     ArtisterilIntervalService.start($scope.getEDIFilesFlowData);
@@ -62,7 +62,7 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
     {
         $http({
             method  : 'GET',
-            url     : config.webservice.urls.data_get_glt_wires_flow
+            url     : config.webservice.urls.get_glt_wiresResult
          })
         .then(function(response) {
             $scope.GTLWiresFlowData = response.data.get_edi_filesResult;
@@ -87,8 +87,8 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
             $scope.alertsData = response.data.get_alertsResult;
         });
     }
-    // ArtisterilIntervalService.start($scope.getAlertsData);
-    $scope.getAlertsData();
+    ArtisterilIntervalService.start($scope.getAlertsData);
+    // $scope.getAlertsData();
 
 
 
@@ -108,6 +108,6 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
         });
     }
     ArtisterilIntervalService.start($scope.getBlockedProductsData);
-    $scope.getBlockedProductsData();
+    // $scope.getBlockedProductsData();
 
 });
