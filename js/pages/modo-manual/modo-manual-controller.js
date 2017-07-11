@@ -168,7 +168,9 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
         $http({
             method  : 'GET',
             url     : config.webservice.urls.upload_actions_file,
-            params  : {'actionlist' : fileContent}
+            params  : {
+                "action" : $scope.action,
+                'actionlist' : fileContent}
         })
         .then(function(response) {
             // console.log(response.data);
