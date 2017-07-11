@@ -1,5 +1,5 @@
 {
-    "data_get_edi_files_flowResult" : 
+    "get_edi_filesResult" : 
     {
         "ASN": {
             "Supplier"  : "DD:MM:AAA HH:MM last transmission",

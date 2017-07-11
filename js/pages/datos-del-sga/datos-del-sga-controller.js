@@ -43,7 +43,7 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
     {
         $http({
             method  : 'GET',
-            url     : config.webservice.urls.data_get_edi_files_flow
+            url     : config.webservice.urls.get_edi_filesResult
          })
         .then(function(response) {
             $scope.ediFilesFlowData = response.data.data_get_edi_files_flowResult;
@@ -65,7 +65,7 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
             url     : config.webservice.urls.data_get_glt_wires_flow
          })
         .then(function(response) {
-            $scope.GTLWiresFlowData = response.data.data_get_glt_wires_flowResult;
+            $scope.GTLWiresFlowData = response.data.get_edi_filesResult;
         });
     }
     ArtisterilIntervalService.start($scope.getGTLWiresFlowData);
