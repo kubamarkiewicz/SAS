@@ -22,7 +22,7 @@
 		{
 			"Name"		: "Barcode Readers",
 			"Options"	: ["MemorX3-01", "MemorX3-02", "MemorX3-03", "MemorX3-04", "MemorX3-05", "MemorX3-06", "MemorX3-07", "MemorX3-08"],
-			"Values"	: [true, true, false, true, false, false, true, false],
+			"Values"	: [true, false, false, false, false, false, true, false],
 			"Type"		: "Checkbox"
 		},
 		{

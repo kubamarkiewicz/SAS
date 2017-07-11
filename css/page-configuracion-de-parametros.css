@@ -1,0 +1,61 @@
+
+
+/* Page configuracion-de-parametros *******************************************************************************/
+
+body.page-configuracion-de-parametros section.parameters {
+}
+body.page-configuracion-de-parametros section.parameters > .flex:nth-child(1) {
+	margin-right: 25px;
+}
+body.page-configuracion-de-parametros section.parameters > .flex:nth-child(2) {
+	margin-left: 25px;
+}
+body.page-configuracion-de-parametros section.parameters .parameter {
+	margin-bottom: 45px;
+	font-size: 22px;
+}
+body.page-configuracion-de-parametros section.parameters .parameter h2 {
+	text-transform: uppercase;
+	border-bottom: 8px solid #0276af;
+	font-weight: 500;
+	padding-bottom: 4px;
+	margin-bottom: 35px;
+}
+body.page-configuracion-de-parametros section.parameters .parameter main {
+	padding-left: 25px;
+}
+
+body.page-configuracion-de-parametros section.parameters .parameter main md-radio-button {
+	display: inline-block;
+	width: calc(50% - 16px);
+	margin-right: 16px;
+}
+
+body.page-configuracion-de-parametros section.parameters .parameter main .textbox {
+	margin-bottom: 5px;
+}
+body.page-configuracion-de-parametros section.parameters .parameter main .textbox label {
+	display: inline-block;
+	width: 38%;
+}
+body.page-configuracion-de-parametros section.parameters .parameter main .textbox md-input-container {
+	display: inline-block;
+	width: 61%;
+}
+
+body.page-configuracion-de-parametros section.parameters .parameter main md-checkbox {
+	width: calc(50% - 16px);
+	display: inline-block;
+}
+
+body.page-configuracion-de-parametros .md-button.save {
+    margin: 0;
+}
+
+
+/* mobile */
+@media screen and (max-width: 1150px) {
+}
+@media screen and (max-width: 1430px) {
+}
+
