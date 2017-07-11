@@ -38,7 +38,7 @@
 		
 		<div class="table-group">
 			
-			<table class="my-table" ng-repeat="items in ediFilesFlowData">
+			<table class="my-table">
 
 				<thead>
 					<tr>
@@ -49,10 +49,85 @@
 				</thead>
 		
 				<tbody>
-					<tr ng-repeat="item in items">
-						<td class="files">{{ item.Files }}</td>
-						<td>{{ item.Supplier }}</td>
-						<td class="status {{ item.Status }}"></td>
+					<tr>
+						<td class="files">ASN</td>
+						<td>{{ ediFilesFlowData.ASN.Supplier }}</td>
+						<td class="status {{ ediFilesFlowData.ASN.Status }}"></td>
+					</tr>
+					<tr>
+						<td class="files">RECP</td>
+						<td>{{ ediFilesFlowData.RECP.Supplier }}</td>
+						<td class="status {{ ediFilesFlowData.RECP.Status }}"></td>
+					</tr>
+					<tr>
+						<td class="files">STOR</td>
+						<td>{{ ediFilesFlowData.STOR.Supplier }}</td>
+						<td class="status {{ ediFilesFlowData.STOR.Status }}"></td>
+					</tr>
+					<tr>
+						<td class="files">CONV</td>
+						<td>{{ ediFilesFlowData.CONV.Supplier }}</td>
+						<td class="status {{ ediFilesFlowData.CONV.Status }}"></td>
+					</tr>
+					<tr>
+						<td class="files">INVE</td>
+						<td>{{ ediFilesFlowData.INVE.Supplier }}</td>
+						<td class="status {{ ediFilesFlowData.INVE.Status }}"></td>
+					</tr>
+				</tbody>
+
+			</table>
+			
+			<table class="my-table">
+
+				<thead>
+					<tr>
+						<th class="files">FILES</th>
+						<th>WH-GLT vs WH-AKL</th>
+						<th class="status">STATUS</th>
+					</tr>
+				</thead>
+		
+				<tbody>
+					<tr>
+						<td class="files">FGLT</td>
+						<td>{{ ediFilesFlowData.FGLT.Supplier }}</td>
+						<td class="status {{ ediFilesFlowData.FGLT.Status }}"></td>
+					</tr>
+					<tr>
+						<td class="files">FKLT</td>
+						<td>{{ ediFilesFlowData.FKLT.Supplier }}</td>
+						<td class="status {{ ediFilesFlowData.FKLT.Status }}"></td>
+					</tr>
+				</tbody>
+
+			</table>
+			
+			<table class="my-table">
+
+				<thead>
+					<tr>
+						<th class="files">FILES</th>
+						<th>CUSTOMER</th>
+						<th class="status">STATUS</th>
+					</tr>
+				</thead>
+		
+				<tbody>
+					<tr>
+						<td class="files">STOT</td>
+						<td>{{ ediFilesFlowData.STOT.Supplier }}</td>
+						<td class="status {{ ediFilesFlowData.STOT.Status }}"></td>
+					</tr>
+					<tr>
+						<td class="files">STOB</td>
+						<td>{{ ediFilesFlowData.STOB.Supplier }}</td>
+						<td class="status {{ ediFilesFlowData.STOB.Status }}"></td>
+					</tr>
+					<tr>
+						<td class="files">INVT</td>
+						<td>{{ ediFilesFlowData.INVT.Supplier }}</td>
+						<td class="status {{ ediFilesFlowData.INVT.Status }}"></td>
 					</tr>
 				</tbody>
 
