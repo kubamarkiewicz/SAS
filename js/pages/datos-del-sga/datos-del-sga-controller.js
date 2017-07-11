@@ -12,7 +12,7 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
             url     : config.webservice.urls.data_get_signals_L9_flow
          })
         .then(function(response) {
-            $scope.signalsFlowL9Data = response.data.data_get_signals_L9_flowResult;
+            $scope.signalsFlowL9Data = response.data.get_signals_L9Result;
         });
     }
     ArtisterilIntervalService.start($scope.getSignalsFlowL9Data);
@@ -28,7 +28,7 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
             url     : config.webservice.urls.data_get_signals_M1_flow
          })
         .then(function(response) {
-            $scope.signalsFlowM1Data = response.data.data_get_signals_M1_flowResult;
+            $scope.signalsFlowM1Data = response.data.get_signals_M1Result;
         });
     }
     ArtisterilIntervalService.start($scope.getSignalsFlowM1Data);
