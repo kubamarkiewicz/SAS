@@ -4,11 +4,81 @@
 
 body.page-datos-del-sga > main {
 }
+body.page-datos-del-sga > main h2 {
+	margin-bottom: 2px;
+}
+body.page-datos-del-sga > main .flow-wrap {
+	height: 50%;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 15px;;
+}
+body.page-datos-del-sga > main .flow-wrap > * {
+	flex: 0 1 auto;
+	width: calc(33% - 25px);
+}
+
+
+body.page-datos-del-sga th.status, 
+body.page-datos-del-sga td.status, {
+	width: 100px;
+}
+body.page-datos-del-sga td.status.green {
+	background-color: #7dbe02;
+}
+body.page-datos-del-sga td.status.red {
+	background-color: #c40112;
+}
+
+
+
+body.page-datos-del-sga main section.signals-flow {
+}
+body.page-datos-del-sga main section.signals-flow table {
+	height: calc(100% - 35px);
+}
+
+
+body.page-datos-del-sga main section.edi-files-flow .table-group {
+	height: calc(100% - 35px);
+	overflow: auto;
+}
+body.page-datos-del-sga main section.edi-files-flow table {
+	height: auto;
+}
+body.page-datos-del-sga main section.edi-files-flow table thead {
+	width: 100%;
+}
+body.page-datos-del-sga main section.edi-files-flow table tbody {
+	overflow-y: visible;
+}
+body.page-datos-del-sga main section.edi-files-flow table .files {
+	width: 100px;
+}
+
+
+body.page-datos-del-sga main section.glt-wires-flow .table-group {
+	height: calc(100% - 35px);
+	overflow: auto;
+}
+body.page-datos-del-sga main section.glt-wires-flow table {
+	height: auto;
+}
+body.page-datos-del-sga main section.glt-wires-flow table thead {
+	width: 100%;
+}
+body.page-datos-del-sga main section.glt-wires-flow table tbody {
+	overflow-y: visible;
+}
+
+
+
+
 body.page-datos-del-sga main section.alerts {
-	height: calc(50% - 15px);
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 30px;
+	height: calc(25% - 15px);
 }
 body.page-datos-del-sga main section.alerts .list { 
 	display: flex; 
@@ -20,29 +90,29 @@ body.page-datos-del-sga main section.alerts .alert {
 	color: #ffffff;
 	padding: 18px 24px;
 	width: calc(25% - 34px);
-	margin: 0 34px 34px 0;
+	margin: 0 34px 10px 0;
 	background-color: #bcb9b9;
 }
 body.page-datos-del-sga main section.alerts .alert-primary {
-	background-color: #0573da;
+	background-color: #00557f;
 }
 body.page-datos-del-sga main section.alerts .alert-success {
-	background-color: #5bb85f;
+	background-color: #7dbe02;
 }
 body.page-datos-del-sga main section.alerts .alert-info {
-	background-color: #57c3da;
+	background-color: rgb(68, 163, 210);
 }
 body.page-datos-del-sga main section.alerts .alert-warning {
 	background-color: #efac51;
 }
 body.page-datos-del-sga main section.alerts .alert-danger {
-	background-color: #d9544f;
+	background-color: #c40112;
 }
 body.page-datos-del-sga main section.alerts .alert-muted {
-	background-color: #2a2b2d;
+	background-color: #4b4b4b;
 }
 body.page-datos-del-sga main section.alerts .alert-white {
-	background-color: #f7f7f7;
+	background-color: #ffffff;
 	color: #2a2b2d;
 }
 body.page-datos-del-sga main section.alerts .alert h3 {
@@ -58,7 +128,7 @@ body.page-datos-del-sga main section.alerts .alert main {
 body.page-datos-del-sga main section.blocked-products {
 	display: flex;
 	flex-direction: column;
-	height: calc(50% - 15px);
+	height: calc(25% - 15px);
 }
 body.page-datos-del-sga main section.blocked-products .list {
 	display: flex; 
@@ -78,14 +148,49 @@ body.page-datos-del-sga main section.blocked-products .item {
 
 
 
+
+
+
 /* mobile */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
+
+	
+	body.page-datos-del-sga th.status, 
+	body.page-datos-del-sga td.status {
+		width: 75px;
+	}
+
+	body.page-datos-del-sga > main h2 {
+		font-size: 18px;
+	}
+	table.my-table thead th {
+		font-size: 16px;
+		padding: 0 6px;
+	}
+	table.my-table tbody td {
+		padding: 0 6px;
+	}
+	body.page-datos-del-sga > main .flow-wrap > * {
+	    width: calc(33% - 15px);
+	}
 
 	body.page-datos-del-sga main section.alerts .alert {
 		width: calc(33% - 34px);
+		padding: 7px 13px;
+	}
+	body.page-datos-del-sga main section.alerts .alert h3 {
+		font-size: 16px;
+		margin-bottom: 4px;
+	}
+	body.page-datos-del-sga main section.alerts .alert main {
+		font-size: 16px;
+		line-height: 130%;
 	}
 	body.page-datos-del-sga main section.blocked-products .item {
-		width: calc(20% - 34px);
+		font-size: 16px;
+		padding: 2px;
+		width: calc(14% - 15px);
+		margin-right: 15px;
 	}
 
 }

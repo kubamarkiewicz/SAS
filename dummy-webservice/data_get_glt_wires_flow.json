@@ -21,7 +21,7 @@
                 "GltNumber" : "Wire 4",
                 "AKLNumber" : "Wire 4",
                 "Status"    : "green"
-            },
+            }
         ],
         [
             {
@@ -43,7 +43,7 @@
                 "GltNumber" : "Wire 4",
                 "AKLNumber" : "Wire 4",
                 "Status"    : "green"
-            },
+            }
         ],
         [
             {
@@ -65,7 +65,7 @@
                 "GltNumber" : "Wire 4",
                 "AKLNumber" : "Wire 4",
                 "Status"    : "green"
-            },
+            }
         ]
     ]
 }
