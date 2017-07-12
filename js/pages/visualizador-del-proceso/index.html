@@ -46,8 +46,8 @@
 		<md-progress-circular md-diameter="20px"></md-progress-circular>
 	</p>
 	<p ng-repeat="niche in storagePositionNichesData">
-		Nicho {{ niche.Id }}<br>
-		{{ niche.product ? 'Producto ' + niche.product : '-' }}
+		Nicho {{ niche.Id }}
+		<span ng-repeat="product in niche.Product"><br>{{ product }}</span>
 	</p>
 </div>
 
