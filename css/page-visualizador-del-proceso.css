@@ -14,11 +14,12 @@ body.page-visualizador-del-proceso #mapa {;
 	transform-origin: 50% 50%;
 	display: block;
 }
-body.page-visualizador-del-proceso #mapa img {
+body.page-visualizador-del-proceso #map-image {
 	position: relative;
 	z-index: 1;
 	max-width: 100%;
 	max-height: calc(100vh - 136px);
+	display: inli;
 }
 
 
@@ -119,18 +120,19 @@ body.page-visualizador-del-proceso #avg-popup {
 
 body.page-visualizador-del-proceso .position {
     position: absolute;
-    width: 1.2%;
-    height: 2.15%;
     z-index: 10;
     cursor: pointer;
     background-color: rgba(0,85,127,1);
-    opacity: 0;
+    opacity: 0.35;
 	transition: all .05s ease-out;
+    outline: none;
+    height: 2.4%;
+    width: 4.35%;
     /*mix-blend-mode: overlay;*/
 }
 body.page-visualizador-del-proceso .position:hover,
 body.page-visualizador-del-proceso .position.selected {
-	opacity: 0.35;
+	opacity: 0.5;
 }
 
 body.page-visualizador-del-proceso .semaphore {

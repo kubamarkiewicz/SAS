@@ -322,8 +322,6 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
         popup.addClass('open')
     		.css('left', target.offset().left + event.target.getBoundingClientRect().width + 'px')
     		.css('top', (target.offset().top - mainPos.top) + 'px');
-
-        $scope.loadStoragePositionNichesData(position.id);
     }
 
 });

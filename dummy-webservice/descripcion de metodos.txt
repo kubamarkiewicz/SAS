@@ -169,8 +169,8 @@ select_action(action, reader, product)
     
 upload_actions_file(actionlist)
     
-
-
+manual_get_pdf_actions()
+manual_generate_pdf(action)
 
 
 

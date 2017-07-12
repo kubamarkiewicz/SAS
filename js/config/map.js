@@ -3,15 +3,13 @@ window.config = window.config || {};
 
 window.config.map = {
 
-    "width"     : 591.36,   // map width [meters]
-    "height"    : 145.19,   // map height [meters]
-    "offset_x"  : 1.47,     // x axis offset [meters]
-    "offset_y"  : 1.79,     // y axis offset [meters]
+    "width"     : 75.44,   // map width [meters]
+    "height"    : 31.75,   // map height [meters]
+    "offset_x"  : 0.71,     // x axis offset [meters]
+    "offset_y"  : 7.88,     // y axis offset [meters]
 
     "coordinates_urls" : {
-        "storage_positions" : "data/storage_positions_coordinates.json",
-        "semaphores"        : "data/semaphores_coordinates.json",
-        "transport_belts"   : "data/transport_belts_coordinates.json"
+        "storage_positions" : "data/storage_positions_coordinates.json"
     }
 
 }

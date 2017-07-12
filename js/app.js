@@ -16,10 +16,6 @@ app.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
     
     $routeProvider 
 
-/*        .when('/', { 
-            controller: 'DatosDelSGAController', 
-            templateUrl: 'js/pages/datos-del-sga/index.html'
-        })    */ 
         .when('/login', { 
             controller: 'LoginController', 
             templateUrl: 'js/pages/login/index.html' 
@@ -49,7 +45,7 @@ app.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
             templateUrl: 'js/pages/configuracion-de-parametros/index.html' 
         })   
         .otherwise({ 
-            redirectTo: '/datos-del-sga' 
+            redirectTo: '/visualizador-del-proceso' 
         }); 
 
 
