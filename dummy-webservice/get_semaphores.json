@@ -3,11 +3,15 @@
 	[
 		{
 			"Id"			: "1",
-			"State" 		: "stopped"
+			"State" 		: "stopped",
+			"X"				: "165.73",
+			"Y"				: "75.63"
 		},
 		{
 			"Id"			: "2",
-			"State" 		: "working"
+			"State" 		: "working",
+			"X"				: "369.75",
+			"Y"				: "88.62"
 		}
 	]
 }

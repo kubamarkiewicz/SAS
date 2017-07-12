@@ -191,22 +191,12 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             // add keys to array
             $scope.semaphoresData = {};
             for (i in response.data.get_semaphoresResult) {
-                $scope.semaphoresData[response.data.get_semaphoresResult[i].id] = response.data.get_semaphoresResult[i];
+                $scope.semaphoresData[response.data.get_semaphoresResult[i].Id] = response.data.get_semaphoresResult[i];
             }
         });
     }
     ArtisterilIntervalService.start($scope.loadSemaphoresData);
     // $scope.loadSemaphoresData();
-
-
-    // load semaphores coordinates
-    $http({
-        method  : 'GET',
-        url     : config.map.coordinates_urls.semaphores
-     })
-    .then(function(response) {
-        $scope.semaphoresCoordinates = response.data;
-    });
 
 
     $scope.openSemaphorePopup = function(event, semaphore) 
@@ -249,22 +239,12 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             // add keys to array
             $scope.transportBeltsData = {};
             for (i in response.data.get_transport_beltsResult) {
-                $scope.transportBeltsData[response.data.get_transport_beltsResult[i].id] = response.data.get_transport_beltsResult[i];
+                $scope.transportBeltsData[response.data.get_transport_beltsResult[i].Id] = response.data.get_transport_beltsResult[i];
             }
         });
     }
     ArtisterilIntervalService.start($scope.loadTransportBeltsData);
     // $scope.loadTransportBeltsData();
-
-
-    // load transport belts coordinates
-    $http({
-        method  : 'GET',
-        url     : config.map.coordinates_urls.transport_belts
-     })
-    .then(function(response) {
-        $scope.transportBeltsCoordinates = response.data;
-    });
 
 
 
