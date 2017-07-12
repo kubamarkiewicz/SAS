@@ -294,6 +294,29 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
 
 	/* Storage Positions *********************************************************************************/
 
+    $scope.loadStoragePositionData = function()
+    {
+        $scope.storagePositionData = {};
+        $http({
+            method  : 'GET',
+            url     : config.webservice.urls.get_storage_position_niches
+         })
+        .then(function(response) {
+            $scope.storagePositionData = {};
+            for (i in response.data.get_storage_position_nichesResult) {
+                var position = response.data.get_storage_position_nichesResult[i];
+                if (!$scope.storagePositionData[position.Id]) {
+                    $scope.storagePositionData[position.Id] = {
+                        "Id": position.Id,
+                        "Niches": []
+                    };
+                }
+                $scope.storagePositionData[position.Id].Niches.push(position);
+            }
+        });
+    }
+    ArtisterilIntervalService.start($scope.loadStoragePositionData);
+
     // load storage positions coordinates
     $http({
         method  : 'GET',
@@ -302,6 +325,7 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
     .then(function(response) {
         $scope.storagePositionsCoordinates = response.data;
     });
+
 
 
     
@@ -320,20 +344,6 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
     		.css('top', (target.offset().top - mainPos.top) + 'px');
 
         $scope.loadStoragePositionNichesData(position.id);
-    }
-
-
-    $scope.loadStoragePositionNichesData = function(storage_position_id)
-    {
-        $scope.storagePositionNichesData = [];
-        $http({
-            method  : 'GET',
-            url     : config.webservice.urls.get_storage_position_niches,
-            params  : {'storage_position_id' : storage_position_id}
-         })
-        .then(function(response) {
-            $scope.storagePositionNichesData = response.data.get_storage_position_nichesResult;
-        });
     }
 
 });

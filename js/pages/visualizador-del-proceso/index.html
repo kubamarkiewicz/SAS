@@ -42,12 +42,9 @@
 <!-- storage position popup -->
 <div id="position-popup" class="popup" md-theme="dark">
 	<h3>POSICIÓN {{ selectedPosition.Id }}</h3>
-	<p ng-show="!storagePositionNichesData.length" layout="row" layout-align="center">
-		<md-progress-circular md-diameter="20px"></md-progress-circular>
-	</p>
-	<p ng-repeat="niche in storagePositionNichesData">
-		Nicho {{ niche.Id }}
-		<span ng-repeat="product in niche.Product"><br>{{ product }}</span>
+	<p ng-repeat="niche in selectedPosition.Niches">
+		Height {{ niche.Height }}
+		<span ng-repeat="product in niche.Product"><br>Producto {{ product }}</span>
 	</p>
 </div>
 
@@ -86,10 +83,10 @@
 
 	<!-- storage positions -->
 	<div 
-		ng-repeat="(id, position) in storagePositionsCoordinates"  
-		id="position-{{ id }}"
+		ng-repeat="position in storagePositionData"  
+		id="position-{{ position.Id }}"
 		class="position" 
-		style="transform: translate({{ metersToPxX(position.x) }}px, {{ metersToPxY(position.y) }}px)"
+		style="transform: translate({{ metersToPxX(storagePositionsCoordinates[position.Id].x) }}px, {{ metersToPxY(storagePositionsCoordinates[position.Id].y) }}px)"
 		ng-click="openPositionPopup($event, position)">
 	</div>
 

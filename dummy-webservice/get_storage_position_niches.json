@@ -1,9 +1,14 @@
 {
     "get_storage_position_nichesResult": [
 	    {
-	        "Height": 2,
+	        "Height": 1,
 	        "Id": 1213,
 	        "Product": ["1111111111"]
+	    },
+	    {
+	        "Height": 2,
+	        "Id": 1213,
+	        "Product": ["1111111111", "333333333"]
 	    },
 	    {
 	        "Height": 2,

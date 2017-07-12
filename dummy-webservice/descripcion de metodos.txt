@@ -66,20 +66,14 @@ get_transport_belts()
 
 update_transport_belt(id, state) 
 
-get_storage_positions()
-    return:             //List<StoragePosition>
-    [
-        {
-            id: string
-        }
-    ]
 
-get_storage_position_niches(storage_position_id)
+get_storage_position_niches()
     return:             //List<StoragePositionNiche>
     [
         {
-            niche_id: string,
-            product: string
+            Id: string,
+            Height: string,
+            Product: array
         }
     ]
 
