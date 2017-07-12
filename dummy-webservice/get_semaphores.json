@@ -2,16 +2,12 @@
     "get_semaphoresResult" :
 	[
 		{
-			"id"			: "1",
-			"x"				: 15,
-			"y"				: 15,
-			"state" 		: "stopped"
+			"Id"			: "1",
+			"State" 		: "stopped"
 		},
 		{
-			"id"			: "2",
-			"x"				: 40,
-			"y"				: 40,
-			"state" 		: "working"
+			"Id"			: "2",
+			"State" 		: "working"
 		}
 	]
 }

@@ -2,16 +2,12 @@
     "get_transport_beltsResult" :
 	[
 		{
-			"id"			: "1",
-			"x"				: 65,
-			"y"				: 7,
-			"state" 		: "stopped"
+			"Id"			: "1",
+			"State" 		: "stopped"
 		},
 		{
-			"id"			: "2",
-			"x"				: 70,
-			"y"				: 7,
-			"state" 		: "working"
+			"Id"			: "2",
+			"State" 		: "working"
 		}
 	]
 }

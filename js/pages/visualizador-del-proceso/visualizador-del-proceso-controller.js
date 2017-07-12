@@ -294,19 +294,6 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
 
 	/* Storage Positions *********************************************************************************/
 
-    $scope.loadStoragePositionsData = function()
-    {
-        $http({
-            method  : 'GET',
-            url     : config.webservice.urls.get_storage_positions
-         })
-        .then(function(response) {
-            $scope.storagePositionsData = response.data.get_storage_positionsResult;
-        });
-    }
-    $scope.loadStoragePositionsData();
-
-
     // load storage positions coordinates
     $http({
         method  : 'GET',
