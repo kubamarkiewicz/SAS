@@ -17,8 +17,8 @@
 
 <!-- AGV popup -->
 <div id="agv-popup" class="popup" md-theme="dark">
-	<h3>AGV {{ selectedAGV.id }}</h3>
-	<p>Estado: {{ selectedAGV.state }}</p>
+	<h3>AGV {{ selectedAGV.Id }}</h3>
+	<p>Estado: {{ selectedAGV.Status }}</p>
 </div>
 
 <!-- semaphore popup -->
@@ -58,11 +58,11 @@
 	<!-- AGVs -->
 	<div 
 		ng-repeat="agv in AGVData"  
-		id="agv-{{ agv.id }}"
+		id="agv-{{ agv.Id }}"
 		class="agv" 
-		style="transform: translate({{ metersToPxX(agv.x) }}px, {{ metersToPxY(agv.y) }}px) rotate({{ agv.orientation }}deg)"
+		style="transform: translate({{ metersToPxX(agv.X) }}px, {{ metersToPxY(agv.Y) }}px) rotate({{ agv.Orientation }}deg)"
 		ng-click="openAGVPopup($event, agv)">
-		{{ agv.id }}
+		{{ agv.Id }}
 	</div>
 	
 	<!-- semaphores -->

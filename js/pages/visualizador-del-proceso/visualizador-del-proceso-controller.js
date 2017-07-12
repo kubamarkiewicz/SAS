@@ -154,7 +154,7 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             // add keys to array, otherwise animation does not work ...
             $scope.AGVData = {};
             for (i in response.data.get_agvsResult) {
-                $scope.AGVData[response.data.get_agvsResult[i].id] = response.data.get_agvsResult[i];
+                $scope.AGVData[response.data.get_agvsResult[i].Id] = response.data.get_agvsResult[i];
             }
         });
     }
