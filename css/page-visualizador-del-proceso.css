@@ -17,6 +17,8 @@ body.page-visualizador-del-proceso #mapa {;
 body.page-visualizador-del-proceso #mapa img {
 	position: relative;
 	z-index: 1;
+	max-width: 100%;
+	max-height: calc(100vh - 136px);
 }
 
 
