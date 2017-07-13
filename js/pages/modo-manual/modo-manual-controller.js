@@ -144,6 +144,23 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
 
 
 
+
+    // get file actions
+
+    $scope.fileActionsData = [];
+
+    $scope.getFileActionsData = function()
+    {
+        $http({
+            method  : 'GET',
+            url     : config.webservice.urls.manual_get_file_actions
+         })
+        .then(function(response) {
+            $scope.fileActionsData = response.data.get_file_actionsResult;
+        });
+    }
+    $scope.getFileActionsData();
+
     // upload file
 
     $scope.uploadFile = function()
@@ -164,8 +181,9 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             method  : 'GET',
             url     : config.webservice.urls.upload_actions_file,
             params  : {
-                "action" : $scope.action,
-                'actionlist' : fileContent}
+                "action" : $scope.fileAction,
+                'actionlist' : fileContent
+            }
         })
         .then(function(response) {
             $rootScope.toast.content(response.data.upload_warehouseOrders_fileResult.Message);

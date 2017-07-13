@@ -169,7 +169,8 @@ select_reader_for_manual_mode(id)
 
 select_action(action, reader, product) 
 
-    
+
+manual_get_file_actions()
 upload_actions_file(actionlist)
     
 manual_get_pdf_actions()
