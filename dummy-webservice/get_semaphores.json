@@ -4,8 +4,8 @@
 		{
 			"Id"			: "1",
 			"State" 		: "stopped",
-			"X"				: "0",
-			"Y"				: "0",
+			"X"				: "1",
+			"Y"				: "1",
 			"Actions"		: [
 				"Accion 1",
 				"Accion 2",

@@ -373,6 +373,9 @@ section.popup-alerts {
 	top: 10px;
 	height: calc(100% - 20px);
 }
+section.popup-alerts.closed {
+    width: 0;
+}
 section.popup-alerts .alerts {
 	column-width: 300px;
 	height: 100%;
