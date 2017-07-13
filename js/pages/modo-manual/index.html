@@ -5,9 +5,9 @@
 
 	<form name="actionForm" ng-submit="executeAction()">
 
-		<div layout="row">
+		<div class="row">
 			
-			<div flex>
+			<div class="col-left">
 				
 				<p class="action">
 					<label>ACCIÓN</label>
@@ -27,9 +27,9 @@
 					</md-input-container>
 				</p>
 
-			</div>
+			</div><!-- /.col-left -->
 
-			<div flex>
+			<div class="col-right"
 				
 				<p class="product-id">
 					<label>LECTURA NEFAB (opcionalmente manual)</label>
@@ -68,23 +68,21 @@
 				    </md-input-container>
 				</p>
 
-			</div>
+			</div><!-- /.col-right -->
 
-		</div>
-
+		</div><!-- /.row -->	
 
 		<p>
 		    <md-button type="submit" class="md-raised md-warn execute-action">Confirmar <md-progress-circular></md-progress-circular></md-button>
 		</p>
-
 	</form>
 
 	<hr>
 	<br>
 
-	<div layout="row" >
+	<div class="row">
 			
-		<div flex>
+		<div class="col-left">		
 
 			<form name="fileForm" ng-submit="uploadFile()" class="upload-file">
 				<p>
@@ -98,9 +96,9 @@
 				</p>
 		   	</form>
 
-		</div>
+		</div><!-- /.col-left -->
 
-		<div flex>
+		<div class="col-right">	
 			
 			<form class="pdfForm" ng-submit="generatePDF()">
 				
@@ -114,12 +112,15 @@
 				</p>
 
 				<p>
-				    <md-button type="submit" class="md-raised md-warn execute-action">Generate PDF</md-button>
+				    <md-button type="submit" class="md-raised md-warn execute-action">Generar PDF</md-button>
 				</p>
 
 		   	</form>
 
-		</div>
+
+		</div><!-- /.col-right -->
+
+	</div><!-- /.row -->	
 
 
 </div>

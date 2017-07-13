@@ -425,7 +425,17 @@ table.my-table tbody td {
     vertical-align: top;
 }
 
-
+.row {
+	display: flex;
+}
+.col-left {
+	flex: 1;
+	margin-right: 15px;
+}
+.col-right {
+	flex: 1;
+	margin-left: 15px;
+}
 
 
 
