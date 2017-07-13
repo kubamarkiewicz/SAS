@@ -373,6 +373,9 @@ section.popup-alerts {
 	top: 10px;
 	height: calc(100% - 20px);
 }
+section.popup-alerts.hide {
+	visibility: hidden;
+}
 section.popup-alerts.closed {
     width: 0;
 }

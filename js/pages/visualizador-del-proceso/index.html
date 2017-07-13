@@ -1,6 +1,6 @@
 
 <!-- popup alerts -->
-<section class="popup-alerts">
+<section class="popup-alerts closed" ng-class="{hide: !popupAlertsCount}">
 	<div class="alerts">
 		<div class="alert" ng-repeat="item in popupAlertsData">
 			<h3>{{ item.Title }}</h3>
@@ -9,7 +9,7 @@
 		<a class="close">✕</a>
 	</div>
 	<a class="open">
-		(<span class="count">8</span>)
+		(<span class="count">{{ popupAlertsCount }}</span>)
 	</a> 
 </section>
 

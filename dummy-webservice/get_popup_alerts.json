@@ -1,7 +1,7 @@
 {
 	"get_popup_alertsResult" : 
 	[
-		{
+	/*	{
 			"Title": "Lorem ipsum",
 			"Message": "dolor sit amet, consectetur adipiscing elit"
 		},
@@ -48,6 +48,6 @@
 		{
 			"Title": "Sed do eiusmod tempor 6",
 			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-		}
+		}*/
 	]
 }

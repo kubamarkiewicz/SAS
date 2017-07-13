@@ -3,7 +3,8 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
 
     // Popup Alerts
 
-    $scope.popupAlertsData = [];
+    $scope.popupAlertsData = {};
+    $scope.popupAlertsCount = 0;
 
     $scope.getPopupAlertsData = function()
     {
@@ -13,8 +14,10 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
          })
         .then(function(response) {
             $scope.popupAlertsData = {};
+            $scope.popupAlertsCount = 0;
             for (i in response.data.get_popup_alertsResult) {
                 $scope.popupAlertsData[response.data.get_popup_alertsResult[i].Title + response.data.get_popup_alertsResult[i].Message] = response.data.get_popup_alertsResult[i];
+                $scope.popupAlertsCount += 1;
             }
         });
     }
@@ -25,6 +28,7 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
     });
     $("section.popup-alerts .open").click(function(){
         $("section.popup-alerts").removeClass('closed');
+        console.log('open');
     });
 
 
