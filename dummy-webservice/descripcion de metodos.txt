@@ -44,6 +44,9 @@ get_agvs()
         }
     ]
 
+
+update_agv(id, action)
+
 get_semaphores()
     return:             //List<Semaphore>
     [
@@ -53,7 +56,7 @@ get_semaphores()
         }
     ]
 
-update_semaphore(id, state)
+update_semaphore(id, action)
 
 get_transport_belts()
     return:             //List<TransportBelt>
@@ -64,7 +67,7 @@ get_transport_belts()
         }
     ]
 
-update_transport_belt(id, state) 
+update_transport_belt(id, action) 
 
 
 get_storage_position_niches()

@@ -183,7 +183,7 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             method  : 'GET',
             url     : config.webservice.urls.update_agv,
             params  : {
-                "ref"   : id, 
+                "id"   : id, 
                 "action": action
             }
          })
@@ -242,7 +242,7 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             method  : 'GET',
             url     : config.webservice.urls.update_semaphore,
             params  : {
-                "ref"   : id, 
+                "id"   : id, 
                 "action": action
             }
          })
@@ -304,7 +304,7 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             method  : 'GET',
             url     : config.webservice.urls.update_transport_belt,
             params  : {
-                "ref"   : id, 
+                "id"   : id, 
                 "action": action
             }
          })
