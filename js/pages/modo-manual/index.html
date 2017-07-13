@@ -82,17 +82,44 @@
 	<hr>
 	<br>
 
-	<form name="fileForm" ng-submit="uploadFile()" class="upload-file">
-		<p>
-			<label>CARGAR ARCHIVO</label>
-			<md-input-container md-no-float>
-		        <span class="file-input">
-		        	<input type="file" id="uploadFileInput" placeholder="Seleccionar archivo" required>
-		        </span>
-		    </md-input-container>
-		    <md-button type="submit" class="md-raised md-primary">Enviar <md-progress-circular></md-progress-circular></md-button>
-		</p>
-   	</form>
+	<div layout="row" >
+			
+		<div flex>
+
+			<form name="fileForm" ng-submit="uploadFile()" class="upload-file">
+				<p>
+					<label>CARGAR ARCHIVO</label>
+					<md-input-container md-no-float>
+				        <span class="file-input">
+				        	<input type="file" id="uploadFileInput" placeholder="Seleccionar archivo" required>
+				        </span>
+				    </md-input-container>
+				    <md-button type="submit" class="md-raised md-primary">Enviar <md-progress-circular></md-progress-circular></md-button>
+				</p>
+		   	</form>
+
+		</div>
+
+		<div flex>
+			
+			<form class="pdfForm" ng-submit="generatePDF()">
+				
+				<p class="action">
+					<label>PDF</label>
+					<md-input-container md-no-float>
+						<md-select ng-model="pdfAction" placeholder="Seleccionar PDF" required md-no-asterisk>
+							<md-option ng-repeat="action in pdfActionsData" ng-value="action">{{ action }}</md-option>
+						</md-select>
+					</md-input-container>
+				</p>
+
+				<p>
+				    <md-button type="submit" class="md-raised md-warn execute-action">Generate PDF</md-button>
+				</p>
+
+		   	</form>
+
+		</div>
 
 
 </div>

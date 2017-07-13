@@ -194,4 +194,24 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
     });
 
 
+
+
+    // get PDF actions
+
+    $scope.pdfActionsData = [];
+
+    $scope.getPdfActionsData = function()
+    {
+        $http({
+            method  : 'GET',
+            url     : config.webservice.urls.manual_get_pdf_actions
+         })
+        .then(function(response) {
+            // console.log(response.data);
+            $scope.pdfActionsData = response.data.get_pdf_actionsResult;
+        });
+    }
+    $scope.getPdfActionsData();
+
+
 });
