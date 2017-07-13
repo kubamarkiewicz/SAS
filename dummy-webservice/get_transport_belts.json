@@ -5,13 +5,22 @@
 			"Id"			: "1",
 			"State" 		: "stopped",
 			"X" 			: "15.73",	
-			"Y" 			: "15.63"
+			"Y" 			: "15.63",
+			"Actions"		: [
+				"Accion 1",
+				"Accion 2",
+				"Accion 3"
+			]
 		},
 		{
 			"Id"			: "2",
 			"State" 		: "working",
 			"X" 			: "19.75",	
-			"Y" 			: "13.62"
+			"Y" 			: "13.62",
+			"Actions"		: [
+				"Accion 1",
+				"Accion 2"
+			]
 		}
 	]
 }

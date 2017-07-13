@@ -19,32 +19,29 @@
 <div id="agv-popup" class="popup" md-theme="dark">
 	<h3>AGV {{ selectedAGV.Id }}</h3>
 	<p>Estado: {{ selectedAGV.Status }}</p>
+	<p class="clickable" ng-repeat="action in selectedAGV.Actions" ng-click="updateAGV(selectedAGV.Id, action)">{{ action }}</p>
 </div>
 
 <!-- semaphore popup -->
 <div id="semaphore-popup" class="popup" md-theme="dark">
 	<h3>Semaphore {{ selectedSemaphore.Id }}</h3>
 	<p>Estado: {{ selectedSemaphore.State }}</p>
-	<p class="clickable" ng-click="updateSemaphore(selectedSemaphore.Id)">Paro</p>
-	<p class="clickable" ng-click="updateSemaphore(selectedSemaphore.Id)">Marcha</p>
-	<p class="clickable" ng-click="updateSemaphore(selectedSemaphore.Id)">Rearme</p>
+	<p class="clickable" ng-repeat="action in selectedSemaphore.Actions" ng-click="updateSemaphore(selectedSemaphore.Id, action)">{{ action }}</p>
 </div>
 
 <!-- transport belt popup -->
 <div id="transport-belt-popup" class="popup" md-theme="dark">
 	<h3>Cinta transportadora {{ selectedTransportBelt.Id }}</h3>
 	<p>Estado: {{ selectedTransportBelt.State }}</p>
-	<p class="clickable" ng-click="updateTransportBelt(selectedTransportBelt.Id)">Paro</p>
-	<p class="clickable" ng-click="updateTransportBelt(selectedTransportBelt.Id)">Marcha</p>
-	<p class="clickable" ng-click="updateTransportBelt(selectedTransportBelt.Id)">Rearme</p>
+	<p class="clickable" ng-repeat="action in selectedTransportBelt.Actions" ng-click="updateTransportBelt(selectedTransportBelt.Id, action)">{{ action }}</p>
 </div>
 
 <!-- storage position popup -->
 <div id="position-popup" class="popup" md-theme="dark">
 	<h3>POSICIÓN {{ selectedPosition.Id }}</h3>
 	<p ng-repeat="niche in selectedPosition.Niches">
-		Height {{ niche.Height }}
-		<span ng-repeat="product in niche.Product"><br>Producto {{ product }}</span>
+		Height: {{ niche.Height }}
+		<span ng-repeat="product in niche.Product"><br>Producto: {{ product }}</span>
 	</p>
 </div>
 

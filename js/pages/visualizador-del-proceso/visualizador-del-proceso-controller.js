@@ -175,6 +175,24 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             .css('top', (event.clientY - mainPos.top) + 'px');
     }
 
+    $scope.updateAGV = function(id, action) 
+    {
+        $http({
+            method  : 'GET',
+            url     : config.webservice.urls.update_agv,
+            params  : {
+                "ref"   : id, 
+                "action": action
+            }
+         })
+        .then(function(response) {
+            $rootScope.toast.content('Éxito')
+                .toastClass('toast-success');
+            $mdToast.show($rootScope.toast);
+        });
+        $scope.deselectAllObjects();
+    }
+
 
 
     /* Semaphores *********************************************************************************/
@@ -213,12 +231,22 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             .css('top', (target.offset().top - mainPos.top) + 'px');
     }
 
-    $scope.updateSemaphore = function(id) 
+    $scope.updateSemaphore = function(id, action) 
     {
-        $rootScope.toast.content('Éxito')
-            .toastClass('toast-success');
-        $mdToast.show($rootScope.toast);
-        $('body.page-visualizador-del-proceso .popup').removeClass('open');
+        $http({
+            method  : 'GET',
+            url     : config.webservice.urls.update_semaphore,
+            params  : {
+                "ref"   : id, 
+                "action": action
+            }
+         })
+        .then(function(response) {
+            $rootScope.toast.content('Éxito')
+                .toastClass('toast-success');
+            $mdToast.show($rootScope.toast);
+        });
+        $scope.deselectAllObjects();
     }
 
 
@@ -262,12 +290,22 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             .css('top', (target.offset().top - mainPos.top) + 'px');
     }
 
-    $scope.updateTransportBelt = function(id) 
+    $scope.updateTransportBelt = function(id, action) 
     {
-        $rootScope.toast.content('Éxito')
-            .toastClass('toast-success');
-        $mdToast.show($rootScope.toast);
-        $('body.page-visualizador-del-proceso .popup').removeClass('open');
+        $http({
+            method  : 'GET',
+            url     : config.webservice.urls.update_transport_belt,
+            params  : {
+                "ref"   : id, 
+                "action": action
+            }
+         })
+        .then(function(response) {
+            $rootScope.toast.content('Éxito')
+                .toastClass('toast-success');
+            $mdToast.show($rootScope.toast);
+        });
+        $scope.deselectAllObjects();
     }
 
 
@@ -296,6 +334,7 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
         });
     }
     ArtisterilIntervalService.start($scope.loadStoragePositionData);
+    // $scope.loadStoragePositionData();
 
     // load storage positions coordinates
     $http({
