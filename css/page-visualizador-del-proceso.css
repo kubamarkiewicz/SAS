@@ -126,8 +126,8 @@ body.page-visualizador-del-proceso .position {
     opacity: 0.35;
 	transition: all .05s ease-out;
     outline: none;
-    height: 2.4%;
-    width: 4.35%;
+    height: 1vw;
+    width: 3.4vw;
     /*mix-blend-mode: overlay;*/
 }
 body.page-visualizador-del-proceso .position:hover,
