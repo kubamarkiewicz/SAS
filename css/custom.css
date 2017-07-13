@@ -127,10 +127,12 @@ md-toast.toast-error .md-toast-content {
 .md-button.md-warn.md-raised:not([disabled]):hover {
 	background-color: #b21010;
 }
-.md-button md-progress-circular {
+.md-button md-progress-circular,
+.loadable md-progress-circular {
 	display: none;
 }
-.md-button.loading md-progress-circular {
+.md-button.loading md-progress-circular,
+.loadable.loading md-progress-circular {
 	display: block;
 	width: 20px !important;
 	height: 20px !important;
@@ -138,13 +140,16 @@ md-toast.toast-error .md-toast-content {
 	vertical-align: middle;
 	margin-left: 5px;
 }
-.md-button md-progress-circular svg {
+.md-button md-progress-circular svg,
+.loadable md-progress-circular svg {
 	width: 20px !important;
     height: 20px !important;
     transform-origin: 10px 10px 10px !important;
 }
-.md-button md-progress-circular path {
-	stroke: #0276af;
+.md-button md-progress-circular path,
+.loadable md-progress-circular path {
+	/*stroke: #0276af;*/
+	stroke: #ffffff;
 }
 md-input-container {
 	margin: 0;

@@ -175,8 +175,10 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             .css('top', (event.clientY - mainPos.top) + 'px');
     }
 
-    $scope.updateAGV = function(id, action) 
+    $scope.updateAGV = function(id, action, $event) 
     {
+        $($event.currentTarget).attr("disabled", true).addClass('loading');
+
         $http({
             method  : 'GET',
             url     : config.webservice.urls.update_agv,
@@ -189,8 +191,9 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             $rootScope.toast.content('Éxito')
                 .toastClass('toast-success');
             $mdToast.show($rootScope.toast);
+            $scope.deselectAllObjects();
+            $($event.currentTarget).attr("disabled", false).removeClass('loading');
         });
-        $scope.deselectAllObjects();
     }
 
 
@@ -231,8 +234,10 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             .css('top', (target.offset().top - mainPos.top) + 'px');
     }
 
-    $scope.updateSemaphore = function(id, action) 
+    $scope.updateSemaphore = function(id, action, $event) 
     {
+        $($event.currentTarget).attr("disabled", true).addClass('loading');
+
         $http({
             method  : 'GET',
             url     : config.webservice.urls.update_semaphore,
@@ -245,8 +250,9 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             $rootScope.toast.content('Éxito')
                 .toastClass('toast-success');
             $mdToast.show($rootScope.toast);
+            $scope.deselectAllObjects();
+            $($event.currentTarget).attr("disabled", false).removeClass('loading');
         });
-        $scope.deselectAllObjects();
     }
 
 
@@ -290,8 +296,10 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             .css('top', (target.offset().top - mainPos.top) + 'px');
     }
 
-    $scope.updateTransportBelt = function(id, action) 
+    $scope.updateTransportBelt = function(id, action, $event) 
     {
+        $($event.currentTarget).attr("disabled", true).addClass('loading');
+
         $http({
             method  : 'GET',
             url     : config.webservice.urls.update_transport_belt,
@@ -304,8 +312,9 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             $rootScope.toast.content('Éxito')
                 .toastClass('toast-success');
             $mdToast.show($rootScope.toast);
+            $scope.deselectAllObjects();
+            $($event.currentTarget).attr("disabled", false).removeClass('loading');
         });
-        $scope.deselectAllObjects();
     }
 
 
