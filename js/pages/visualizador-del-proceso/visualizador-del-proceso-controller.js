@@ -20,7 +20,12 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
     }
     ArtisterilIntervalService.start($scope.getPopupAlertsData);
 
-
+    $("section.popup-alerts .close").click(function(){
+        $("section.popup-alerts").addClass('closed');
+    });
+    $("section.popup-alerts .open").click(function(){
+        $("section.popup-alerts").removeClass('closed');
+    });
 
 
 

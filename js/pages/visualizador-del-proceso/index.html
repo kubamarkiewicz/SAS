@@ -1,10 +1,16 @@
 
 <!-- popup alerts -->
 <section class="popup-alerts">
-	<div class="alert" ng-repeat="item in popupAlertsData">
-		<h3>{{ item.Title }}</h3>
-		<main>{{ item.Message }}</main>
+	<div class="alerts">
+		<div class="alert" ng-repeat="item in popupAlertsData">
+			<h3>{{ item.Title }}</h3>
+			<main>{{ item.Message }}</main>
+		</div>
+		<a class="close">✕</a>
 	</div>
+	<a class="open">
+		(<span class="count">8</span>)
+	</a> 
 </section>
 
 
@@ -64,7 +70,7 @@
 		ng-repeat="semaphore in semaphoresData"  
 		id="semaphore-{{ semaphore.Id }}"
 		class="semaphore" 
-		style="transform: translate({{ metersToPxX(semaphore.X) }}px, {{ metersToPxX(semaphore.Y) }}px)"
+		style="transform: translate({{ metersToPxX(semaphore.X) }}px, {{ metersToPxY(semaphore.Y) }}px)"
 		ng-click="openSemaphorePopup($event, semaphore)">
 	</div>
 	
