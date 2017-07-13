@@ -18,7 +18,7 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             }
         });
     }
-    // ArtisterilIntervalService.start($scope.getPopupAlertsData);
+    ArtisterilIntervalService.start($scope.getPopupAlertsData);
 
 
 
