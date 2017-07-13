@@ -12,9 +12,13 @@ body.page-datos-del-sga > main h2 {
 }
 body.page-datos-del-sga > main .col-left {
 	width: calc(66% - 18px);
+	margin-right: 0;
+	flex: none;
 }
 body.page-datos-del-sga > main .col-right {
 	width: calc(33% - 18px);
+	margin-left: 0;
+	flex: none;
 }
 body.page-datos-del-sga > main .flow-wrap {
 	height: 50%;
@@ -147,7 +151,7 @@ body.page-datos-del-sga main section.blocked-products .list {
 body.page-datos-del-sga main section.blocked-products .item {
 	background-color: #ffffff;
 	padding: 4px;
-	width: calc(14% - 26px);
+	width: calc(16% - 26px);
 	margin: 0 0 4px 26px;
 	text-align: center;
 	font-size: 20px;
@@ -206,7 +210,7 @@ body.page-datos-del-sga main section.blocked-products .item {
 	body.page-datos-del-sga main section.blocked-products .item {
 		font-size: 16px;
 		padding: 2px;
-		width: calc(16% - 15px);
+		width: calc(20% - 15px);
 		margin-left: 15px;
 	}
 

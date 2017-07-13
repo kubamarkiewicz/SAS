@@ -1,3 +1,17 @@
+<!-- popup alerts -->
+<section class="popup-alerts closed" ng-class="{hide: !popupAlertsCount}">
+	<div class="alerts">
+		<div class="alert" ng-repeat="item in popupAlertsData">
+			<h3>{{ item.Title }}</h3>
+			<main>{{ item.Message }}</main>
+		</div>
+		<a class="close">✕</a>
+	</div>
+	<a class="open">
+		(<span class="count">{{ popupAlertsCount }}</span>)
+	</a> 
+</section>
+
 
 <div class="col-left">
 	
