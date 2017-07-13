@@ -5,13 +5,16 @@ var ArtisterilIntervalService = angular.module('ArtisterilIntervalService', [])
 
 	this.intervals = {};
 
-    this.start = function(callback, miliseconds, name) 
+    this.start = function(callback, miliseconds, name, doNotCallNow) 
     {
         if (miliseconds === undefined || !miliseconds) miliseconds = this.defaultMilliseconds;
         if (name === undefined || !name) name = 'interval_' + (Object.keys(this.intervals).length + 1);
+        if (doNotCallNow === undefined || !doNotCallNow) doNotCallNow = false;
 
         // call it now
-        callback();
+        if (!doNotCallNow) {
+            callback();
+        }
 
         // stop interval
         if (this.intervals[name]) {

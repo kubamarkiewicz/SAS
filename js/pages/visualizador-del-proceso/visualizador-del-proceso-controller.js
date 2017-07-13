@@ -23,13 +23,19 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
     }
     ArtisterilIntervalService.start($scope.getPopupAlertsData);
 
-    $("section.popup-alerts .close").click(function(){
-        $("section.popup-alerts").addClass('closed');
-    });
+
     $("section.popup-alerts .open").click(function(){
         $("section.popup-alerts").removeClass('closed');
-        console.log('open');
+        ArtisterilIntervalService.start($scope.closePopupAlerts, 300000, 'closePopupAlerts', true);
     });
+    $("section.popup-alerts .close").click(function(){
+        $scope.closePopupAlerts();
+    });
+
+    $scope.closePopupAlerts = function() {
+        $("section.popup-alerts").addClass('closed');
+        ArtisterilIntervalService.stop('closePopupAlerts');
+    }
 
 
 
