@@ -1,4 +1,4 @@
-app.controller('ModoManualProductosController', function($scope, $rootScope, $http, $routeParams, config, ArtisterilIntervalService, $mdToast) {  
+app.controller('ModoManualProductosController', function($scope, $rootScope, $http, $routeParams, config, ArtisterilIntervalService, $mdToast, $window) {  
 
     $scope.nefab_code_length = config.config.nefab_code_length;
     $scope.cable_code_length = config.config.cable_code_length;
@@ -15,7 +15,6 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             url     : config.webservice.urls.get_actions
          })
         .then(function(response) {
-            // console.log(response.data);
             $scope.actionsData = response.data.get_actionsResult;
         });
     }
@@ -34,7 +33,6 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             url     : config.webservice.urls.get_readers_for_manual_mode
          })
         .then(function(response) {
-            // console.log(response.data);
             $scope.readersData = response.data.get_readersResult;
         });
     }
@@ -54,7 +52,6 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             params  : {"id" : $scope.readerId}
          })
         .then(function(response) {
-            // console.log(response.data);
         });
 
         // start recieving data from reader
@@ -68,7 +65,6 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             url     : config.webservice.urls.get_reading_for_manual_mode
          })
         .then(function(response) {
-            // console.log(response.data);
 
             // add product to input
             if (response.data.get_reader_readingResult) {
@@ -116,7 +112,6 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             }
          })
         .then(function(response) {
-            // console.log(response.data);
             $rootScope.toast.content(response.data.add_warehouseOrderResult.Message);
             if (response.data.add_warehouseOrderResult.Result === true) {
                 $rootScope.toast.toastClass('toast-success');
@@ -173,7 +168,6 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
                 'actionlist' : fileContent}
         })
         .then(function(response) {
-            // console.log(response.data);
             $rootScope.toast.content(response.data.upload_warehouseOrders_fileResult.Message);
             if (response.data.upload_warehouseOrders_fileResult.Result === true) {
                 $rootScope.toast.toastClass('toast-success');
@@ -207,11 +201,23 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             url     : config.webservice.urls.manual_get_pdf_actions
          })
         .then(function(response) {
-            // console.log(response.data);
             $scope.pdfActionsData = response.data.get_pdf_actionsResult;
         });
     }
     $scope.getPdfActionsData();
+
+
+    // generate PDF 
+
+    $scope.generatePDF = function()
+    {
+        if (!$scope.pdfAction) {
+            return;
+        }
+
+        $window.open(config.webservice.urls.manual_generate_pdf + '?action=' +  $scope.pdfAction);
+    }
+
 
 
 });
