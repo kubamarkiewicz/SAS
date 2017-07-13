@@ -29,7 +29,7 @@
 
 			</div><!-- /.col-left -->
 
-			<div class="col-right"
+			<div class="col-right">
 				
 				<p class="product-id">
 					<label>LECTURA NEFAB (opcionalmente manual)</label>
@@ -85,6 +85,16 @@
 		<div class="col-left">		
 
 			<form name="fileForm" ng-submit="uploadFile()" class="upload-file">
+				
+				<p class="action">
+					<label>ACCIÓN</label>
+					<md-input-container md-no-float>
+						<md-select ng-model="fileAction" placeholder="Seleccionar acción" required md-no-asterisk>
+							<md-option ng-repeat="action in actionsData" ng-value="action">{{ action }}</md-option>
+						</md-select>
+					</md-input-container>
+				</p>
+
 				<p>
 					<label>CARGAR ARCHIVO</label>
 					<md-input-container md-no-float>
@@ -92,8 +102,13 @@
 				        	<input type="file" id="uploadFileInput" placeholder="Seleccionar archivo" required>
 				        </span>
 				    </md-input-container>
-				    <md-button type="submit" class="md-raised md-primary">Enviar <md-progress-circular></md-progress-circular></md-button>
+
+				    <br>
+
+					<md-button type="submit" class="md-raised md-warn generate-pdf">Enviar <md-progress-circular></md-progress-circular></md-button>
 				</p>
+
+
 		   	</form>
 
 		</div><!-- /.col-left -->
