@@ -149,11 +149,11 @@ get_reader_reading()
 
 receive_products_from_file(productlist)
     
-reception_get_glt_in_asn()
-reception_get_asn()
-reception_get_read_in_process()
-reception_get_alerts()
-reception_get_glt_incoming()
+get_glt_in_asn()
+get_asn()
+get_read_in_process()
+get_alerts()
+get_glt_incoming()
 
 
 
