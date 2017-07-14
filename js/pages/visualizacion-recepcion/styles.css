@@ -1,0 +1,93 @@
+
+
+/* Page Visualizacion recepcion *******************************************************************************/
+
+body.page-visualizacion-recepcion > main {
+	overflow: hidden;
+}
+body.page-visualizacion-recepcion > main .row {
+	height: 100%;
+}
+body.page-visualizacion-recepcion > main .row .col-4:nth-child(2) {
+	flex-direction: column;
+	display: flex;
+}
+body.page-visualizacion-recepcion main table tr.separator {
+	border-bottom: 3px solid #4b4b4b;
+}
+
+body.page-visualizacion-recepcion main section.glt-in-asn {
+	height: 100%;
+}
+body.page-visualizacion-recepcion main section.glt-in-asn table {
+	height: calc(100% - 35px);
+}
+
+body.page-visualizacion-recepcion main section.asn {
+	margin-bottom: 24px;
+}
+body.page-visualizacion-recepcion main section.asn td {
+	background-color: #00557e;
+	color: #ffffff;
+}
+
+
+body.page-visualizacion-recepcion main section.read-in-process {
+	margin-bottom: 24px;
+}
+
+body.page-visualizacion-recepcion main section.read-in-progress {
+	margin-bottom: 24px;
+}
+
+body.page-visualizacion-recepcion main section.alerts {
+	height: calc(100% - 322px);
+}
+body.page-visualizacion-recepcion main section.alerts .list {
+	overflow-y: auto;
+	height: calc(100% - 35px);
+}
+body.page-visualizacion-recepcion main section.alerts .alert {
+	color: #ffffff;
+	padding: 18px 24px;
+	margin: 0 0 15px 0;
+}
+body.page-visualizacion-recepcion main section.alerts .alert h3 {
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 2px;
+}
+body.page-visualizacion-recepcion main section.alerts .alert main {
+	font-size: 18px;
+}
+
+
+
+body.page-visualizacion-recepcion main section.glt-incoming {
+	margin-bottom: 24px;
+}
+body.page-visualizacion-recepcion main section.glt-incoming {
+	height: 100%;
+}
+body.page-visualizacion-recepcion main section.glt-incoming table {
+	height: calc(100% - 35px);
+}
+
+
+
+
+/* mobile */
+@media screen and (max-width: 1400px) {
+
+	body.page-visualizacion-recepcion main section.alerts .alert {
+		padding: 7px 13px;
+	}
+	body.page-visualizacion-recepcion main section.alerts .alert h3 {
+		font-size: 16px;
+		margin-bottom: 4px;
+	}
+	body.page-visualizacion-recepcion main section.alerts .alert main {
+		font-size: 16px;
+		line-height: 130%;
+	}
+}

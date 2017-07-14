@@ -47,7 +47,7 @@ body.page-modo-manual > main p.loading .message md-progress-circular {
 }
 
 body.page-modo-manual > main p.product-id button.clear {
-	background-image: url(../images/remove.gif);
+	background-image: url(../../../images/remove.gif);
     background-repeat: no-repeat;
     background-position: center center;
     width: 21px;

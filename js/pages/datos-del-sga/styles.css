@@ -31,17 +31,6 @@ body.page-datos-del-sga > main .flow-wrap > * {
 }
 
 
-body.page-datos-del-sga th.status, 
-body.page-datos-del-sga td.status {
-	width: 110px;
-}
-body.page-datos-del-sga td.status.green {
-	background-color: #7dbe02;
-}
-body.page-datos-del-sga td.status.red {
-	background-color: #c40112;
-}
-
 
 
 body.page-datos-del-sga main section.signals-flow {
@@ -103,29 +92,6 @@ body.page-datos-del-sga main section.alerts .alert {
 	padding: 18px 24px;
 	width: calc(25% - 26px);
 	margin: 0 0 15px 26px;
-	background-color: #bcb9b9;
-}
-body.page-datos-del-sga main section.alerts .alert-primary {
-	background-color: #00557f;
-}
-body.page-datos-del-sga main section.alerts .alert-success {
-	background-color: #7dbe02;
-}
-body.page-datos-del-sga main section.alerts .alert-info {
-	background-color: rgb(68, 163, 210);
-}
-body.page-datos-del-sga main section.alerts .alert-warning {
-	background-color: #efac51;
-}
-body.page-datos-del-sga main section.alerts .alert-danger {
-	background-color: #c40112;
-}
-body.page-datos-del-sga main section.alerts .alert-muted {
-	background-color: #4b4b4b;
-}
-body.page-datos-del-sga main section.alerts .alert-white {
-	background-color: #ffffff;
-	color: #2a2b2d;
 }
 body.page-datos-del-sga main section.alerts .alert h3 {
 	font-weight: bold;
@@ -181,15 +147,8 @@ body.page-datos-del-sga main section.blocked-products .item {
 	body.page-datos-del-sga > main h2 {
 		font-size: 18px;
 	}
-	table.my-table thead th {
-		font-size: 16px;
-		padding: 0 6px;
-	}
-	table.my-table tbody td {
-		padding: 0 6px;
-	}
 	body.page-datos-del-sga > main .flow-wrap > * {
-	width: calc(50% - 15px);
+		width: calc(50% - 15px);
 	}
 
 	body.page-datos-del-sga main section.alerts .alert {
@@ -215,6 +174,9 @@ body.page-datos-del-sga main section.blocked-products .item {
 	}
 
 }
+
+
+
 
 
 

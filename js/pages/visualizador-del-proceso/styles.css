@@ -107,7 +107,7 @@ body.page-visualizador-del-proceso .agv {
 	/*background-color: #7dbd01;*/
 	z-index: 15;
 	color: #ffffff;
-	background-image: url(../images/agv.svg);
+	background-image: url(../../../images/agv.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: 0px 0 3px 1px rgba(0,0,0,0.20);
@@ -178,7 +178,7 @@ body.page-visualizador-del-proceso .transport-belt {
 	z-index: 12;
     font-size: 0.35vw;
     text-align: center;
-	background-image: url(../images/cinta_transportadora.svg);
+	background-image: url(../../../images/cinta_transportadora.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: 0 0 1px 0 rgba(0,0,0,0.35);

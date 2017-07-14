@@ -18,54 +18,12 @@
 				</thead>
 		
 				<tbody>
-					<tr>
-						<td>GLTx</td>
-						<td>Wire 1</td>
-						<td>Wire 2</td>
-						<td>Wire 3</td>
-						<td>Wire 4</td>
-					</tr>
-					<tr>
-						<td>GLTx</td>
-						<td>Wire 1</td>
-						<td>Wire 2</td>
-						<td>Wire 3</td>
-						<td>Wire 4</td>
-					</tr>
-					<tr>
-						<td>GLTx</td>
-						<td>Wire 1</td>
-						<td>Wire 2</td>
-						<td>Wire 3</td>
-						<td>Wire 4</td>
-					</tr>
-					<tr>
-						<td>GLTx</td>
-						<td>Wire 1</td>
-						<td>Wire 2</td>
-						<td>Wire 3</td>
-						<td>Wire 4</td>
-					</tr>
-					<tr class="separator">
-						<td>GLTx</td>
-						<td>Wire 1</td>
-						<td>Wire 2</td>
-						<td>Wire 3</td>
-						<td>Wire 4</td>
-					</tr>
-					<tr>
-						<td>GLTx</td>
-						<td>Wire 1</td>
-						<td>Wire 2</td>
-						<td>Wire 3</td>
-						<td>Wire 4</td>
-					</tr>
-					<tr>
-						<td>GLTx</td>
-						<td>Wire 1</td>
-						<td>Wire 2</td>
-						<td>Wire 3</td>
-						<td>Wire 4</td>
+					<tr ng-repeat="item in gltInAsnData">
+						<td>{{ item.GltNumber }}</td>
+						<td>{{ item.Wire1 }}</td>
+						<td>{{ item.Wire2 }}</td>
+						<td>{{ item.Wire3 }}</td>
+						<td>{{ item.Wire4 }}</td>
 					</tr>
 				</tbody>
 
@@ -82,7 +40,6 @@
 			
 			<h2>ASN</h2>
 
-
 			<table class="my-table">
 
 				<thead>
@@ -95,14 +52,79 @@
 		
 				<tbody>
 					<tr>
-						<td>XXXXXXXXXX</td>
-						<td>XXXXXXXXXX</td>
-						<td>XXXXXXXXXX</td>
+						<td>{{ asnData.Number }}</td>
+						<td>{{ asnData.ID }}</td>
+						<td>{{ asnData.Albaran }}</td>
 					</tr>
 				</tbody>
 
 			</table>
 
+		</section>
+
+
+		
+		<section class="read-in-process">
+			
+			<h2>READ IN PROCESS</h2>
+
+			<table class="my-table">
+
+				<thead>
+					<tr>
+						<th>ASN</th>
+						<th>READ</th>
+						<th>STATUS</th>
+					</tr>
+				</thead>
+		
+				<tbody>
+					<tr class="grey">
+						<td>{{ readInProcessData.AsnGlt }}</td>
+						<td>{{ readInProcessData.ReadGlt }}</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>{{ readInProcessData.AsnWire1 }}</td>
+						<td>{{ readInProcessData.ReadWire1 }}</td>
+						<td class="status {{ readInProcessData.StatusWire1 }}"></td>
+					</tr>
+					<tr>
+						<td>{{ readInProcessData.AsnWire2 }}</td>
+						<td>{{ readInProcessData.ReadWire2 }}</td>
+						<td class="status {{ readInProcessData.StatusWire2 }}"></td>
+					</tr>
+					<tr>
+						<td>{{ readInProcessData.AsnWire3 }}</td>
+						<td>{{ readInProcessData.ReadWire3 }}</td>
+						<td class="status {{ readInProcessData.StatusWire3 }}"></td>
+					</tr>
+					<tr>
+						<td>{{ readInProcessData.AsnWire4 }}</td>
+						<td>{{ readInProcessData.ReadWire4 }}</td>
+						<td class="status {{ readInProcessData.StatusWire4 }}"></td>
+					</tr>
+				</tbody>
+
+			</table>
+
+		</section>
+
+
+
+
+		<section class="alerts">
+			
+			<h2>ALERTAS y AVISOS</h2>
+
+			<div class="list"> 
+				
+				<div ng-repeat="item in alertsData" class="alert alert-danger" >
+					<h3>{{ item.Title }}</h3>
+					<main>{{ item.Message }}</main>
+				</div>
+
+			</div>
 
 		</section>
 
@@ -128,54 +150,12 @@
 				</thead>
 		
 				<tbody>
-					<tr>
-						<td>GLTx</td>
-						<td>Wire 1</td>
-						<td>Wire 2</td>
-						<td>Wire 3</td>
-						<td>Wire 4</td>
-					</tr>
-					<tr>
-						<td>GLTx</td>
-						<td>Wire 1</td>
-						<td>Wire 2</td>
-						<td>Wire 3</td>
-						<td>Wire 4</td>
-					</tr>
-					<tr>
-						<td>GLTx</td>
-						<td>Wire 1</td>
-						<td>Wire 2</td>
-						<td>Wire 3</td>
-						<td>Wire 4</td>
-					</tr>
-					<tr>
-						<td>GLTx</td>
-						<td>Wire 1</td>
-						<td>Wire 2</td>
-						<td>Wire 3</td>
-						<td>Wire 4</td>
-					</tr>
-					<tr class="separator">
-						<td>GLTx</td>
-						<td>Wire 1</td>
-						<td>Wire 2</td>
-						<td>Wire 3</td>
-						<td>Wire 4</td>
-					</tr>
-					<tr>
-						<td>GLTx</td>
-						<td>Wire 1</td>
-						<td>Wire 2</td>
-						<td>Wire 3</td>
-						<td>Wire 4</td>
-					</tr>
-					<tr>
-						<td>GLTx</td>
-						<td>Wire 1</td>
-						<td>Wire 2</td>
-						<td>Wire 3</td>
-						<td>Wire 4</td>
+					<tr ng-repeat="item in gltIncomingData">
+						<td>{{ item.GltNumber }}</td>
+						<td>{{ item.Wire1 }}</td>
+						<td>{{ item.Wire2 }}</td>
+						<td>{{ item.Wire3 }}</td>
+						<td>{{ item.Wire4 }}</td>
 					</tr>
 				</tbody>
 

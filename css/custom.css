@@ -69,7 +69,7 @@ h1, h2, h3, h4 {
 h2 { 
 	margin-top: 0; 
 	font-size: 24px; 
-	margin-bottom: 24px;
+	margin-bottom: 4px;
 
 }
 h3 {
@@ -465,6 +465,24 @@ table.scroll-table tbody td {
     padding: 0 20px;
     vertical-align: top;
 }
+table.my-table tbody tr.grey td,
+table.scroll-table tbody tr.grey td {
+	background-color: #bdb9ba;
+}
+table.my-table td.status,
+table.my-table th.status,
+table.scroll-table td.status,
+table.scroll-table th.status {
+	width: 110px;
+}
+table.my-table td.status.green,
+table.scroll-table td.status.green {
+	background-color: #7dbe02;
+}
+table.my-table td.status.red,
+table.scroll-table td.status.red {
+	background-color: #c40112;
+}
 
 
 
@@ -521,6 +539,30 @@ table.scroll-table tbody tr {
 
 
 
+.alert-primary {
+	background-color: #00557f;
+}
+.alert-success {
+	background-color: #7dbe02;
+}
+.alert-info {
+	background-color: rgb(68, 163, 210);
+}
+.alert-warning {
+	background-color: #efac51;
+}
+.alert-danger {
+	background-color: #c40112;
+}
+.alert-muted {
+	background-color: #4b4b4b;
+}
+.alert-white {
+	background-color: #ffffff;
+	color: #2a2b2d;
+}
+
+
 /* mobile */
 @media screen and (max-width: 1450px) {
 
@@ -572,6 +614,16 @@ table.scroll-table tbody tr {
 		line-height: 14px;
 		background-size: contain;
 		padding-left: 26px;;
+	}
+
+	table.my-table thead th,
+	table.scroll-table thead th {
+		font-size: 16px;
+		padding: 0 6px;
+	}
+	table.my-table tbody td,
+	table.scroll-table tbody td {
+		padding: 0 6px;
 	}
 
 }

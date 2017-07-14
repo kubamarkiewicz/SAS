@@ -1,25 +1,23 @@
 {
     "get_read_in_processResult" : 
-    [
-        {
-            "Asn"       : "Wire 1",
-            "Read"      : "Wire 1",
-            "Status"    : "green"
-        },
-        {
-            "Asn"       : "Wire 1",
-            "Read"      : "Wire 1",
-            "Status"    : "green"
-        },
-        {
-            "Asn"       : "Wire 1",
-            "Read"      : "Wire 1",
-            "Status"    : "red"
-        },
-        {
-            "Asn"       : "Wire 1",
-            "Read"      : "Wire 1",
-            "Status"    : "green"
-        }
-    ]
+    {
+        "AsnGlt"        : "GLT Number",
+        "ReadGlt"       : "GLT Number",
+        
+        "AsnWire1"      : "Wire 1",
+        "ReadWire1"     : "Wire 1",
+        "StatusWire1"   : "green",
+        
+        "AsnWire2"      : "Wire 2",
+        "ReadWire2"     : "Wire 2",
+        "StatusWire2"   : "red",
+        
+        "AsnWire3"      : "Wire 3",
+        "ReadWire3"     : "Wire 3",
+        "StatusWire3"   : "green",
+
+        "AsnWire4"      : "Wire 4",
+        "ReadWire4"     : "Wire 4",
+        "StatusWire4"   : "red"
+    }
 }
