@@ -17,6 +17,7 @@
     <link href="css/page-modo-manual.css" rel="stylesheet">
     <link href="css/page-recepcion-de-productos.css" rel="stylesheet">
     <link href="css/page-configuracion-de-parametros.css" rel="stylesheet">
+    <link href="css/page-visualizacion-recepcion.css" rel="stylesheet">
     
     <link rel="shortcut icon" href="images/favicon.ico" />
 </head>
@@ -51,6 +52,9 @@
                 </md-menu-item>
                 <md-menu-item ng-hide="!user_permissions['modo-manual']">
                     <md-button ng-href="#modo-manual" md-colors="{background: 'blue'}">Modo manual</md-button>
+                </md-menu-item>
+                <md-menu-item ng-hide="!user_permissions['visualizacion-recepcion']">
+                    <md-button ng-href="#visualizacion-recepcion" md-colors="{background: 'blue'}">Visualización recepción</md-button>
                 </md-menu-item>
                 <md-menu-item>
                     <md-button ng-click="logout()" md-colors="{background: 'blue'}">Salir</md-button>
@@ -91,7 +95,7 @@
     <script src="js/config/map.js"></script>
     <script src="js/app.js"></script>
 
-    <!-- Pages -->
+    <!-- Pages Controllers -->
     <script src="js/pages/login/login-controller.js"></script>
     <script src="js/pages/visualizador-del-proceso/visualizador-del-proceso-controller.js"></script>
     <script src="js/pages/datos-del-sga/datos-del-sga-controller.js"></script>
@@ -99,6 +103,7 @@
     <script src="js/pages/recepcion-de-productos/recepcion-de-productos-controller.js"></script>
     <script src="js/pages/modo-manual/modo-manual-controller.js"></script>
     <script src="js/pages/configuracion-de-parametros/configuracion-de-parametros-controller.js"></script>
+    <script src="js/pages/visualizacion-recepcion/visualizacion-recepcion-controller.js"></script>
 
     <!-- Components -->
 

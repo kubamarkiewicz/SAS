@@ -1,0 +1,34 @@
+
+
+/* Page Visualizacion recepcion *******************************************************************************/
+
+body.page-visualizacion-recepcion > main {
+	overflow: hidden;
+}
+body.page-visualizacion-recepcion > main .row {
+	height: 100%;
+}
+body.page-visualizacion-recepcion main table tr.separator {
+	border-bottom: 3px solid #4b4b4b;
+}
+
+body.page-visualizacion-recepcion main section.glt-in-asn {
+	height: 100%;
+}
+body.page-visualizacion-recepcion main section.glt-in-asn table {
+	height: calc(100% - 35px);
+}
+
+body.page-visualizacion-recepcion main section.asn td {
+	background-color: #00557e;
+	color: #ffffff;
+}
+
+
+
+body.page-visualizacion-recepcion main section.glt-incoming {
+	height: 100%;
+}
+body.page-visualizacion-recepcion main section.glt-incoming table {
+	height: calc(100% - 35px);
+}

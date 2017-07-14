@@ -44,6 +44,10 @@ app.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
             controller: 'ConfiguracionDeParametrosController', 
             templateUrl: 'js/pages/configuracion-de-parametros/index.html' 
         })   
+        .when('/visualizacion-recepcion', { 
+            controller: 'VisualizacionRecepcionController', 
+            templateUrl: 'js/pages/visualizacion-recepcion/index.html' 
+        })   
         .otherwise({ 
             redirectTo: '/visualizador-del-proceso' 
         }); 

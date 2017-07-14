@@ -447,24 +447,11 @@ section.popup-alerts.closed .open {
 	display: block;
 }
 
-
-
 table.my-table {    
-	display: flex;
-    flex-flow: column;
-    height: 100%;
     width: 100%;
 }
-table.my-table thead, 
-table.my-table tbody tr {
-    display: table;
-    table-layout: fixed;
-}
-table.my-table thead {
-    flex: 0 0 auto;
-    width: calc(100% - 0.9em);
-}
-table.my-table thead th {
+table.my-table thead th,
+table.scroll-table thead th {
 	text-align: left;
 	background-color: #4b4b4b;
 	color: #ffffff;
@@ -472,29 +459,63 @@ table.my-table thead th {
 	font-weight: 500;
 	padding: 0 20px;
 }
-table.my-table tbody {
-    flex: 1 1 auto;
-    display: block;
-    overflow-y: scroll;
-}
-table.my-table tbody tr {
-    width: 100%;
-}
-table.my-table tbody td {
+table.my-table tbody td,
+table.scroll-table tbody td {
     background-color: #ffffff;
     padding: 0 20px;
     vertical-align: top;
 }
 
+
+
+
+table.scroll-table {    
+	display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+}
+table.scroll-table thead, 
+table.scroll-table tbody tr {
+    display: table;
+    table-layout: fixed;
+}
+table.scroll-table thead {
+    flex: 0 0 auto;
+    width: calc(100% - 0.9em);
+}
+table.scroll-table tbody {
+    flex: 1 1 auto;
+    display: block;
+    overflow-y: scroll;
+}
+table.scroll-table tbody tr {
+    width: 100%;
+}
+
 .row {
 	display: flex;
 }
-.col-left {
+.col-6 {
 	flex: 1;
+}
+.col-6:nth-child(1) {
 	margin-right: 15px;
 }
-.col-right {
+.col-6:nth-child(2) {
+	margin-left: 15px;
+}
+.col-4 {
 	flex: 1;
+}
+.col-4:nth-child(1) {
+	margin-right: 15px;
+}
+.col-4:nth-child(2) {
+	margin-right: 15px;
+	margin-left: 15px;
+}
+.col-4:nth-child(3) {
 	margin-left: 15px;
 }
 

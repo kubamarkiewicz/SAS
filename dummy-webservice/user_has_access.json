@@ -1,11 +1,12 @@
 {
 	"user_has_accessResult" : 
 	{
-	    "Visualizador_del_proceso" : true,
-	    "Datos_del_sga" : true,
-	    "Configuracion_de_parametros" : true,
-	    "Bloqueos" : true,
-	    "Recepcion_de_productos" : true,
-	    "Modo_manual" : true
+	    "Visualizador_del_proceso" 		: true,
+	    "Datos_del_sga" 				: true,
+	    "Configuracion_de_parametros" 	: true,
+	    "Bloqueos" 						: true,
+	    "Recepcion_de_productos" 		: true,
+	    "Modo_manual" 					: true,
+	    "Visualizacion_recepcion" 		: true
 	}
 }
