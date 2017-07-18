@@ -1,6 +1,8 @@
 app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, $http, $routeParams, config, ArtisterilIntervalService, $animate, $mdToast) {  
 
 
+
+
     // Popup Alerts
 
     $scope.popupAlertsData = {};
@@ -129,7 +131,7 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
 
     /* calculate positions on map (convert meters to px) *******************************************/
 
-    var mapImg = $('#mapa img');
+    var mapImg = $('#map-image');
 
     $scope.metersToPxX = function(x)
     {

@@ -12,14 +12,14 @@ body.page-visualizador-del-proceso #mapa {;
 	transition: transform 0.15s ease-out;
 	z-index: 1;
 	transform-origin: 50% 50%;
-	display: block;
+	display: inline-block;
 }
 body.page-visualizador-del-proceso #map-image {
 	position: relative;
 	z-index: 1;
+	display: inline-block;
 	max-width: 100%;
 	max-height: calc(100vh - 136px);
-	display: inli;
 }
 
 
@@ -126,8 +126,8 @@ body.page-visualizador-del-proceso .position {
     opacity: 0.35;
 	transition: opacity .05s ease-out;
     outline: none;
-    height: 1vw;
-    width: 3.4vw;
+    height: 2.5%;
+    width: 4.8%;
     /*mix-blend-mode: overlay;*/
 }
 body.page-visualizador-del-proceso .position:hover,
@@ -192,4 +192,11 @@ body.page-visualizador-del-proceso .transport-belt.selected {
 }
 body.page-visualizador-del-proceso #transport-belt-popup {
 	background-color: #760304;
+}
+
+use.ic-1 {
+    fill: skyblue;
+}
+svg path {
+    fill: inherit;
 }
