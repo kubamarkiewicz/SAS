@@ -122,17 +122,17 @@ body.page-visualizador-del-proceso .position {
     position: absolute;
     z-index: 10;
     cursor: pointer;
-    background-color: rgba(0,85,127,1);
+    background-color: rgb(2, 118, 175);
     opacity: 0.35;
-	transition: opacity .05s ease-out;
+	transition: opacity .15s ease-out;
     outline: none;
-    height: 2.5%;
-    width: 4.8%;
+    height: 2.3%;
+    width: 4.7%;
     /*mix-blend-mode: overlay;*/
 }
 body.page-visualizador-del-proceso .position:hover,
 body.page-visualizador-del-proceso .position.selected {
-	opacity: 0.5;
+	opacity: 1;
 }
 
 body.page-visualizador-del-proceso .semaphore {
