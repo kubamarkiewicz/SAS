@@ -195,5 +195,4 @@ get_parameters()
 
 save_parameters(parameters)
 
-parameters_get_pauses()
-parameters_save_pauses(pauses)
+parameters_get_pause_status()

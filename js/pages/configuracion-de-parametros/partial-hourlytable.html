@@ -1,0 +1,29 @@
+	
+	<p>Edita los horarios de las pausas. Sin marcar indica que no se hace.</p>
+
+	<div class="state">
+		Estado actual
+		<div class="color green" ng-show="!pauseStatus">
+			En actividad
+		</div>
+		<div class="color red" ng-show="pauseStatus">
+			En pausa
+		</div>
+	</div>
+
+	<div class="hoursLabels">
+		<span class="label">Inicio</span>
+		<span class="label">Final</span>
+	</div>
+    <div class="hours" ng-repeat="option in parametersData[key].Values track by $index">
+		<md-input-container>
+	        <input ng-model="parametersData[key].Values[$index].Start">
+	    </md-input-container>
+		<md-input-container>
+	        <input ng-model="parametersData[key].Values[$index].End">
+	    </md-input-container>
+	    <md-checkbox ng-model="parametersData[key].Values[$index].Activated"></md-checkbox>
+	    <span class="add" ng-click="addHourBelow($index, parametersData[key])"></span>
+	    <span class="remove" ng-click="removeHour($index, parametersData[key])"></span>
+	</div>
+

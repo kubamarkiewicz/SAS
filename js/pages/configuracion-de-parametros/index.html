@@ -3,7 +3,7 @@
 
 	<div flex>
 
-		<div class="parameter" ng-repeat="key in parametersDataLeftKeys">
+		<div ng-repeat="key in parametersDataLeftKeys" class="parameter {{ slugify(parametersData[key].Type) }}">
 			<h2>{{ parametersData[key].Name }}</h2>
 			<main>
 
@@ -17,7 +17,7 @@
 
 	<div flex>
 
-		<div class="parameter" ng-repeat="key in parametersDataRightKeys">
+		<div ng-repeat="key in parametersDataRightKeys" class="parameter {{ slugify(parametersData[key].Type) }}">
 			<h2>{{ parametersData[key].Name }}</h2>
 			<main>
 

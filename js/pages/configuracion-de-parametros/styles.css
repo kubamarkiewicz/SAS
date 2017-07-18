@@ -4,16 +4,20 @@
 
 body.page-configuracion-de-parametros section.parameters {
 }
+
 body.page-configuracion-de-parametros section.parameters > .flex:nth-child(1) {
 	margin-right: 25px;
 }
+
 body.page-configuracion-de-parametros section.parameters > .flex:nth-child(2) {
 	margin-left: 25px;
 }
+
 body.page-configuracion-de-parametros section.parameters .parameter {
 	margin-bottom: 45px;
 	font-size: 22px;
 }
+
 body.page-configuracion-de-parametros section.parameters .parameter h2 {
 	text-transform: uppercase;
 	border-bottom: 8px solid #0276af;
@@ -21,41 +25,94 @@ body.page-configuracion-de-parametros section.parameters .parameter h2 {
 	padding-bottom: 4px;
 	margin-bottom: 35px;
 }
+
 body.page-configuracion-de-parametros section.parameters .parameter main {
 	padding-left: 25px;
 }
 
-body.page-configuracion-de-parametros section.parameters .parameter main md-radio-button {
+body.page-configuracion-de-parametros section.parameters .parameter.radiobutton main md-radio-button {
 	display: inline-block;
 	width: calc(50% - 16px);
 	margin-right: 16px;
 }
 
-body.page-configuracion-de-parametros section.parameters .parameter main .textbox {
+body.page-configuracion-de-parametros section.parameters .parameter.textbox main > div {
 	margin-bottom: 5px;
 }
-body.page-configuracion-de-parametros section.parameters .parameter main .textbox label {
+
+body.page-configuracion-de-parametros section.parameters .parameter.textbox main label {
 	display: inline-block;
 	width: 38%;
 }
-body.page-configuracion-de-parametros section.parameters .parameter main .textbox md-input-container {
+
+body.page-configuracion-de-parametros section.parameters .parameter.textbox main  md-input-container {
 	display: inline-block;
 	width: 61%;
 }
 
-body.page-configuracion-de-parametros section.parameters .parameter main md-checkbox {
+body.page-configuracion-de-parametros section.parameters .parameter.checkbox main md-checkbox {
 	width: calc(50% - 16px);
 	display: inline-block;
 }
 
-body.page-configuracion-de-parametros .md-button.save {
-    margin: 0;
+body.page-configuracion-de-parametros section.parameters .parameter.hourlytable .state {
+	float: right;
+	margin-bottom: 22px;
+}
+body.page-configuracion-de-parametros section.parameters .parameter.hourlytable .state .color {
+	color: #ffffff;
+	text-transform: uppercase;
+	text-align: center;
+	width: 260px;
+	margin-top: 8px;
+	line-height: 60px;
+}
+body.page-configuracion-de-parametros section.parameters .parameter.hourlytable .state .color.green {
+	background-color: #7dbe02;
+}
+body.page-configuracion-de-parametros section.parameters .parameter.hourlytable .state .color.red {
+	background-color: #c40112;
+}
+body.page-configuracion-de-parametros section.parameters .parameter.hourlytable .hoursLabels .label {
+	width: 104px;
+	display: inline-block;
+	margin-left: 4px;
+	margin-bottom: 8px;
+}
+body.page-configuracion-de-parametros section.parameters .parameter.hourlytable .hours {
+	margin-bottom: 2px;
+}
+body.page-configuracion-de-parametros section.parameters .parameter.hourlytable .hours .md-input {
+	width: 104px;
+}
+body.page-configuracion-de-parametros section.parameters .parameter.hourlytable .hours .add,
+body.page-configuracion-de-parametros section.parameters .parameter.hourlytable .hours .remove {
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	margin: 0px 6px 0px 0;
+	vertical-align: middle;
+	outline: none;
+}
+body.page-configuracion-de-parametros section.parameters .parameter.hourlytable .hours .add {
+	background-image: url(../../../images/plus.png);
+}
+body.page-configuracion-de-parametros section.parameters .parameter.hourlytable .hours .remove {
+	background-image: url(../../../images/remove.gif);
 }
 
+body.page-configuracion-de-parametros .md-button.save {
+	margin: 0;
+}
 
-/* mobile */
 @media screen and (max-width: 1150px) {
 }
-@media screen and (max-width: 1430px) {
-}
 
+@media screen and (max-width: 1430px) {
+
+	body.page-configuracion-de-parametros section.parameters .parameter.hourlytable .state {
+		float: none;
+	}
+}

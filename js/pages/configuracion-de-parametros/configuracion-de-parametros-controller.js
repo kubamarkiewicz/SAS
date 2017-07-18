@@ -75,4 +75,29 @@ app.controller('ConfiguracionDeParametrosController', function($scope, $rootScop
     }
 
 
+    $scope.addHourBelow = function(index, parameterData) 
+    {
+        // console.log(parameterData);
+        parameterData.Values.splice(index + 1, 0, {"Activated":true});
+    }
+
+    $scope.removeHour = function(index, parameterData) 
+    {
+        parameterData.Values.splice(index, 1);
+    }
+    
+
+    $scope.loadPasueStatusData = function()
+    {
+        $http({
+            method  : 'GET',
+            url     : config.webservice.urls.parameters_get_pause_status
+        })
+        .then(function(response) {
+            $scope.pauseStatus = response.data.get_pause_statusResult;
+        });
+    }
+    ArtisterilIntervalService.start($scope.loadPasueStatusData);
+
+
 });

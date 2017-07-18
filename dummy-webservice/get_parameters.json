@@ -41,6 +41,16 @@
 			"Options"	: ["FMX-01", "FMX-02"],
 			"Values"	: ["FMX-02"],
 			"Type"		: "Combobox"
+		},
+		{
+			"Name"		: "Tabla horaria de descansos",
+			"Values"	: [
+							{"Start":"12:00:00", "End":"12:05:00", "Activated":true},
+							{"Start":"13:00:00", "End":"13:05:00", "Activated":false},
+							{"Start":"14:00:00", "End":"14:05:00", "Activated":true},
+							{"Start":"15:00:00", "End":"15:05:00", "Activated":true}
+						],
+			"Type"		: "HourlyTable"
 		}
 	]
 }
