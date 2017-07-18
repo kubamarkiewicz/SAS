@@ -71,7 +71,7 @@ body.page-configuracion-de-parametros section.parameters .parameter.hourlytable 
 	background-color: #7dbe02;
 }
 body.page-configuracion-de-parametros section.parameters .parameter.hourlytable .state .color.red {
-	background-color: #c40112;
+	background-color: #efac51;
 }
 body.page-configuracion-de-parametros section.parameters .parameter.hourlytable .hoursLabels .label {
 	width: 104px;
