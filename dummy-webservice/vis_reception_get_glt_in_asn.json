@@ -2,7 +2,7 @@
     "get_glt_in_asnResult" : 
     [
         {
-            "GltNumber" : "GLT Number",
+            "GltNumber" : "GLTx",
             "Wire1"     : "wire 1",
             "Color1"    : "green",
             "Wire2"     : "wire 2",
@@ -13,7 +13,7 @@
             "Color4"    : "green"
         },
         {
-            "GltNumber" : "GLT Number",
+            "GltNumber" : "GLTx",
             "Wire1"     : "wire 1",
             "Color1"    : "green",
             "Wire2"     : "wire 2",
@@ -24,7 +24,7 @@
             "Color4"    : "green"
         },
         {
-            "GltNumber" : "GLT Number",
+            "GltNumber" : "GLTx",
             "Wire1"     : "wire 1",
             "Color1"    : "green",
             "Wire2"     : "wire 2",
@@ -35,7 +35,7 @@
             "Color4"    : "green"
         },
         {
-            "GltNumber" : "GLT Number",
+            "GltNumber" : "GLTx",
             "Wire1"     : "wire 1",
             "Color1"    : "green",
             "Wire2"     : "wire 2",
@@ -46,7 +46,7 @@
             "Color4"    : "green"
         },
         {
-            "GltNumber" : "GLT Number",
+            "GltNumber" : "GLTx",
             "Wire1"     : "wire 1",
             "Color1"    : "green",
             "Wire2"     : "wire 2",
@@ -57,7 +57,7 @@
             "Color4"    : "green"
         },
         {
-            "GltNumber" : "GLT Number",
+            "GltNumber" : "GLTx",
             "Wire1"     : "wire 1",
             "Color1"    : "green",
             "Wire2"     : "wire 2",
@@ -68,7 +68,7 @@
             "Color4"    : "green"
         },
         {
-            "GltNumber" : "GLT Number",
+            "GltNumber" : "GLTx",
             "Wire1"     : "wire 1",
             "Color1"    : "green",
             "Wire2"     : "wire 2",
@@ -79,7 +79,7 @@
             "Color4"    : "green"
         },
         {
-            "GltNumber" : "GLT Number",
+            "GltNumber" : "GLTx",
             "Wire1"     : "wire 1",
             "Color1"    : "green",
             "Wire2"     : "wire 2",
@@ -90,7 +90,7 @@
             "Color4"    : "green"
         },
         {
-            "GltNumber" : "GLT Number",
+            "GltNumber" : "GLTx",
             "Wire1"     : "wire 1",
             "Color1"    : "green",
             "Wire2"     : "wire 2",
@@ -101,7 +101,7 @@
             "Color4"    : "green"
         },
         {
-            "GltNumber" : "GLT Number",
+            "GltNumber" : "GLTx",
             "Wire1"     : "wire 1",
             "Color1"    : "green",
             "Wire2"     : "wire 2",

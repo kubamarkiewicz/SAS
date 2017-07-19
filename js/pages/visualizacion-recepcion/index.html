@@ -13,36 +13,17 @@
 				<thead>
 					<tr>
 						<th>GLT</th>
-						<th>AKL</th>
-						<th class="status">STATUS</th>
+						<th colspan="4">Wires</th>
 					</tr>
 				</thead>
 			
 				<tbody>
-					<tr ng-repeat-start="item in gltInAsnData" class="numbers">
+					<tr ng-repeat="item in gltInAsnData">
 						<td>{{ item.GltNumber }}</td>
-						<td>{{ item.GltNumber }}</td>
-						<td class="status {{ item.Status }}"></td>
-					</tr>
-					<tr>
 						<td>{{ item.Wire1 }}</td>
-						<td>{{ item.Wire1 }}</td>
-						<td class="status {{ item.Color1 }}"></td>
-					</tr>
-					<tr>
 						<td>{{ item.Wire2 }}</td>
-						<td>{{ item.Wire2 }}</td>
-						<td class="status {{ item.Color2 }}"></td>
-					</tr>
-					<tr>
 						<td>{{ item.Wire3 }}</td>
-						<td>{{ item.Wire3 }}</td>
-						<td class="status {{ item.Color3 }}"></td>
-					</tr>
-					<tr ng-repeat-end>
 						<td>{{ item.Wire4 }}</td>
-						<td>{{ item.Wire4 }}</td>
-						<td class="status {{ item.Color4 }}"></td>
 					</tr>
 				</tbody>
 
