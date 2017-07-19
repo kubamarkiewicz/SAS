@@ -6,7 +6,7 @@
         
         "AsnWire1"      : "Wire 1",
         "ReadWire1"     : "Wire 1",
-        "StatusWire1"   : "green",
+        "StatusWire1"   : "grey",
         
         "AsnWire2"      : "Wire 2",
         "ReadWire2"     : "Wire 2",
@@ -18,6 +18,10 @@
 
         "AsnWire4"      : "Wire 4",
         "ReadWire4"     : "Wire 4",
-        "StatusWire4"   : "red"
+        "StatusWire4"   : "red",
+
+        "AsnWire5"      : "Wire 5",
+        "ReadWire5"     : "Wire 5",
+        "StatusWire5"   : "red"
     }
 }

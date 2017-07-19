@@ -1,115 +1,75 @@
 {
     "get_glt_in_asnResult" : 
     [
-        {
-            "GltNumber" : "GLTx",
-            "Wire1"     : "wire 1",
-            "Color1"    : "green",
-            "Wire2"     : "wire 2",
-            "Color2"    : "green",
-            "Wire3"     : "wire 3",
-            "Color3"    : "green",
-            "Wire4"     : "wire 4",
-            "Color4"    : "green"
+         {
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
         },
         {
-            "GltNumber" : "GLTx",
-            "Wire1"     : "wire 1",
-            "Color1"    : "green",
-            "Wire2"     : "wire 2",
-            "Color2"    : "green",
-            "Wire3"     : "wire 3",
-            "Color3"    : "green",
-            "Wire4"     : "wire 4",
-            "Color4"    : "green"
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
         },
         {
-            "GltNumber" : "GLTx",
-            "Wire1"     : "wire 1",
-            "Color1"    : "green",
-            "Wire2"     : "wire 2",
-            "Color2"    : "green",
-            "Wire3"     : "wire 3",
-            "Color3"    : "green",
-            "Wire4"     : "wire 4",
-            "Color4"    : "green"
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
         },
         {
-            "GltNumber" : "GLTx",
-            "Wire1"     : "wire 1",
-            "Color1"    : "green",
-            "Wire2"     : "wire 2",
-            "Color2"    : "green",
-            "Wire3"     : "wire 3",
-            "Color3"    : "green",
-            "Wire4"     : "wire 4",
-            "Color4"    : "green"
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
         },
         {
-            "GltNumber" : "GLTx",
-            "Wire1"     : "wire 1",
-            "Color1"    : "green",
-            "Wire2"     : "wire 2",
-            "Color2"    : "green",
-            "Wire3"     : "wire 3",
-            "Color3"    : "green",
-            "Wire4"     : "wire 4",
-            "Color4"    : "green"
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
         },
         {
-            "GltNumber" : "GLTx",
-            "Wire1"     : "wire 1",
-            "Color1"    : "green",
-            "Wire2"     : "wire 2",
-            "Color2"    : "green",
-            "Wire3"     : "wire 3",
-            "Color3"    : "green",
-            "Wire4"     : "wire 4",
-            "Color4"    : "green"
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
         },
         {
-            "GltNumber" : "GLTx",
-            "Wire1"     : "wire 1",
-            "Color1"    : "green",
-            "Wire2"     : "wire 2",
-            "Color2"    : "green",
-            "Wire3"     : "wire 3",
-            "Color3"    : "green",
-            "Wire4"     : "wire 4",
-            "Color4"    : "green"
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
         },
         {
-            "GltNumber" : "GLTx",
-            "Wire1"     : "wire 1",
-            "Color1"    : "green",
-            "Wire2"     : "wire 2",
-            "Color2"    : "green",
-            "Wire3"     : "wire 3",
-            "Color3"    : "green",
-            "Wire4"     : "wire 4",
-            "Color4"    : "green"
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
         },
         {
-            "GltNumber" : "GLTx",
-            "Wire1"     : "wire 1",
-            "Color1"    : "green",
-            "Wire2"     : "wire 2",
-            "Color2"    : "green",
-            "Wire3"     : "wire 3",
-            "Color3"    : "green",
-            "Wire4"     : "wire 4",
-            "Color4"    : "green"
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
         },
         {
-            "GltNumber" : "GLTx",
-            "Wire1"     : "wire 1",
-            "Color1"    : "green",
-            "Wire2"     : "wire 2",
-            "Color2"    : "green",
-            "Wire3"     : "wire 3",
-            "Color3"    : "green",
-            "Wire4"     : "wire 4",
-            "Color4"    : "green"
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
         }
     ]
 }

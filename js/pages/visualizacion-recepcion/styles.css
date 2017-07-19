@@ -18,6 +18,9 @@ body.page-visualizacion-recepcion main table tr.separator {
 body.page-visualizacion-recepcion main table tr.numbers td {
 	background-color: #bdb9ba;
 }
+table.my-table tbody td.status {
+    background-color: #e2e2e2;
+}
 
 body.page-visualizacion-recepcion main section.glt-in-asn {
 	height: 100%;
@@ -44,7 +47,7 @@ body.page-visualizacion-recepcion main section.read-in-progress {
 }
 
 body.page-visualizacion-recepcion main section.alerts {
-	height: calc(100% - 322px);
+	height: calc(100% - 337px);
 }
 body.page-visualizacion-recepcion main section.alerts .list {
 	overflow-y: auto;
