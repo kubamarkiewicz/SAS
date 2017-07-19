@@ -250,7 +250,7 @@ body > footer {
 	background-color: rgba(0, 85, 127, 1);
 	color: #ffffff;
 	height: 54px;
-	padding: 0 30px 0 50px;
+	padding: 15px 30px 0 50px;
 }
 
 
@@ -267,6 +267,8 @@ body > footer {
 	body > footer {
 		height: 40px;
 		font-size: 14px;
+		padding-top: 10px;
+		padding-left: 30px;
 	}
 
 }
@@ -361,15 +363,31 @@ body > header .logos img {
 }
 
 
+body > footer .fullscreen {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	background-image: url(../images/fullscreen.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	outline: none;
+	float: left;
+	margin: 2px 0;
+}
 body > footer .user {
+	display: inline-block;
 	font-weight: bold;
 	background-image: url(../images/user.gif);
 	background-repeat: no-repeat;
 	padding-left: 35px;
 	line-height: 23px;
+	float: left;
+	margin: 0px 30px;
 }
 body > footer .clock {
 	font-weight: bold;
+	float: right;
 }
 
 
@@ -617,10 +635,14 @@ table.scroll-table tbody tr {
 	    height: 100%;
 	}
 
+	body > footer .fullscreen {
+		margin: 2px;
+	}
 	body > footer .user {
 		line-height: 14px;
 		background-size: contain;
-		padding-left: 26px;;
+		padding-left: 26px;
+		margin-top: 3px;;
 	}
 
 	table.my-table thead th,

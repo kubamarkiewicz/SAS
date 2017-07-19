@@ -73,7 +73,8 @@
 
 	<main ng-view ng-show="user_permissions[pageSlug] || pageSlug == 'login'"></main>
 
-    <footer layout="row" layout-align="space-between center">
+    <footer>
+        <div class="fullscreen" ng-click="toggleFullScreen()"></div>
         <div class="user">{{username}}</div>
         <div class="clock">{{date}}</div>
     </footer>
