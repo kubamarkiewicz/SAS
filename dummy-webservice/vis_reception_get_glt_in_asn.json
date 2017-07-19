@@ -2,11 +2,114 @@
     "get_glt_in_asnResult" : 
     [
         {
-            "GltNumber" : "GLTx",
-            "Wire1"     : "Wire 1",
-            "Wire2"     : "Wire 2",
-            "Wire3"     : "Wire 3",
-            "Wire4"     : "Wire 4"
+            "GltNumber" : "GLT Number",
+            "Wire1"     : "wire 1",
+            "Color1"    : "green",
+            "Wire2"     : "wire 2",
+            "Color2"    : "green",
+            "Wire3"     : "wire 3",
+            "Color3"    : "green",
+            "Wire4"     : "wire 4",
+            "Color4"    : "green"
+        },
+        {
+            "GltNumber" : "GLT Number",
+            "Wire1"     : "wire 1",
+            "Color1"    : "green",
+            "Wire2"     : "wire 2",
+            "Color2"    : "green",
+            "Wire3"     : "wire 3",
+            "Color3"    : "green",
+            "Wire4"     : "wire 4",
+            "Color4"    : "green"
+        },
+        {
+            "GltNumber" : "GLT Number",
+            "Wire1"     : "wire 1",
+            "Color1"    : "green",
+            "Wire2"     : "wire 2",
+            "Color2"    : "green",
+            "Wire3"     : "wire 3",
+            "Color3"    : "green",
+            "Wire4"     : "wire 4",
+            "Color4"    : "green"
+        },
+        {
+            "GltNumber" : "GLT Number",
+            "Wire1"     : "wire 1",
+            "Color1"    : "green",
+            "Wire2"     : "wire 2",
+            "Color2"    : "green",
+            "Wire3"     : "wire 3",
+            "Color3"    : "green",
+            "Wire4"     : "wire 4",
+            "Color4"    : "green"
+        },
+        {
+            "GltNumber" : "GLT Number",
+            "Wire1"     : "wire 1",
+            "Color1"    : "green",
+            "Wire2"     : "wire 2",
+            "Color2"    : "green",
+            "Wire3"     : "wire 3",
+            "Color3"    : "green",
+            "Wire4"     : "wire 4",
+            "Color4"    : "green"
+        },
+        {
+            "GltNumber" : "GLT Number",
+            "Wire1"     : "wire 1",
+            "Color1"    : "green",
+            "Wire2"     : "wire 2",
+            "Color2"    : "green",
+            "Wire3"     : "wire 3",
+            "Color3"    : "green",
+            "Wire4"     : "wire 4",
+            "Color4"    : "green"
+        },
+        {
+            "GltNumber" : "GLT Number",
+            "Wire1"     : "wire 1",
+            "Color1"    : "green",
+            "Wire2"     : "wire 2",
+            "Color2"    : "green",
+            "Wire3"     : "wire 3",
+            "Color3"    : "green",
+            "Wire4"     : "wire 4",
+            "Color4"    : "green"
+        },
+        {
+            "GltNumber" : "GLT Number",
+            "Wire1"     : "wire 1",
+            "Color1"    : "green",
+            "Wire2"     : "wire 2",
+            "Color2"    : "green",
+            "Wire3"     : "wire 3",
+            "Color3"    : "green",
+            "Wire4"     : "wire 4",
+            "Color4"    : "green"
+        },
+        {
+            "GltNumber" : "GLT Number",
+            "Wire1"     : "wire 1",
+            "Color1"    : "green",
+            "Wire2"     : "wire 2",
+            "Color2"    : "green",
+            "Wire3"     : "wire 3",
+            "Color3"    : "green",
+            "Wire4"     : "wire 4",
+            "Color4"    : "green"
+        },
+        {
+            "GltNumber" : "GLT Number",
+            "Wire1"     : "wire 1",
+            "Color1"    : "green",
+            "Wire2"     : "wire 2",
+            "Color2"    : "green",
+            "Wire3"     : "wire 3",
+            "Color3"    : "green",
+            "Wire4"     : "wire 4",
+            "Color4"    : "green"
         }
     ]
 }

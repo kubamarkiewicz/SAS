@@ -15,6 +15,9 @@ body.page-visualizacion-recepcion > main .row .col-4:nth-child(2) {
 body.page-visualizacion-recepcion main table tr.separator {
 	border-bottom: 3px solid #4b4b4b;
 }
+body.page-visualizacion-recepcion main table tr.numbers td {
+	background-color: #bdb9ba;
+}
 
 body.page-visualizacion-recepcion main section.glt-in-asn {
 	height: 100%;

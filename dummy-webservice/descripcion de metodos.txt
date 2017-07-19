@@ -148,8 +148,13 @@ get_reader_reading()
     ]
 
 receive_products_from_file(productlist)
+
+
+
+
+PANTALLA VISUALIZACION DE RECEPCIÓN
     
-get_glt_in_asn()
+get_glt_in_asn(asn)
 get_asn()
 get_read_in_process()
 get_alerts()

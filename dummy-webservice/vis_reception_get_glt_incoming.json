@@ -2,11 +2,74 @@
     "get_glt_incomingResult" : 
     [
         {
-            "GltNumber" : "GLTx",
-            "Wire1"     : "Wire 1",
-            "Wire2"     : "Wire 2",
-            "Wire3"     : "Wire 3",
-            "Wire4"     : "Wire 4"
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
+        },
+        {
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
+        },
+        {
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
+        },
+        {
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
+        },
+        {
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
+        },
+        {
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
+        },
+        {
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
+        },
+        {
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
+        },
+        {
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
+        },
+        {
+            "Nefab"     : "Nefab",
+            "Cable1"     : "Cable 1",
+            "Cable2"     : "Cable 2",
+            "Cable3"     : "Cable 3",
+            "Cable4"     : "Cable 4"
         }
     ]
 }

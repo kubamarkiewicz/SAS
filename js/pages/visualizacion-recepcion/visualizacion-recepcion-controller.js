@@ -9,33 +9,15 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
     {
         $http({
             method  : 'GET',
-            url     : config.webservice.urls.vis_reception_get_glt_in_asn
+            url     : config.webservice.urls.vis_reception_get_glt_in_asn,
+            params  : {
+                "asn" : $scope.asnNumber
+            }
          })
         .then(function(response) {
             $scope.gltInAsnData = response.data.get_glt_in_asnResult;
         });
     }
-    ArtisterilIntervalService.start($scope.getGltInAsnData);
-    // $scope.getAlertsData();
-
-
-
-    // ASN
-
-    $scope.asnData = [];
-    
-    $scope.getASNData = function()
-    {
-        $http({
-            method  : 'GET',
-            url     : config.webservice.urls.vis_reception_get_asn
-         })
-        .then(function(response) {
-            $scope.asnData = response.data.get_asnResult;
-        });
-    }
-    ArtisterilIntervalService.start($scope.getASNData);
-    // $scope.getAlertsData();
 
 
     // Read in process

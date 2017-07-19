@@ -13,17 +13,36 @@
 				<thead>
 					<tr>
 						<th>GLT</th>
-						<th colspan="4">WIRES</th>
+						<th>AKL</th>
+						<th class="status">STATUS</th>
 					</tr>
 				</thead>
-		
+			
 				<tbody>
-					<tr ng-repeat="item in gltInAsnData">
+					<tr ng-repeat-start="item in gltInAsnData" class="numbers">
 						<td>{{ item.GltNumber }}</td>
+						<td>{{ item.GltNumber }}</td>
+						<td class="status {{ item.Status }}"></td>
+					</tr>
+					<tr>
 						<td>{{ item.Wire1 }}</td>
+						<td>{{ item.Wire1 }}</td>
+						<td class="status {{ item.Color1 }}"></td>
+					</tr>
+					<tr>
 						<td>{{ item.Wire2 }}</td>
+						<td>{{ item.Wire2 }}</td>
+						<td class="status {{ item.Color2 }}"></td>
+					</tr>
+					<tr>
 						<td>{{ item.Wire3 }}</td>
+						<td>{{ item.Wire3 }}</td>
+						<td class="status {{ item.Color3 }}"></td>
+					</tr>
+					<tr ng-repeat-end>
 						<td>{{ item.Wire4 }}</td>
+						<td>{{ item.Wire4 }}</td>
+						<td class="status {{ item.Color4 }}"></td>
 					</tr>
 				</tbody>
 
@@ -40,25 +59,12 @@
 			
 			<h2>ASN</h2>
 
-			<table class="my-table">
-
-				<thead>
-					<tr>
-						<th>NÚM</th>
-						<th>ID</th>
-						<th>ALBARÁN</th>
-					</tr>
-				</thead>
-		
-				<tbody>
-					<tr>
-						<td>{{ asnData.Number }}</td>
-						<td>{{ asnData.ID }}</td>
-						<td>{{ asnData.Albaran }}</td>
-					</tr>
-				</tbody>
-
-			</table>
+			<form ng-submit="getGltInAsnData()">
+				<md-input-container md-no-float>
+			        <input type="text" ng-model="asnNumber" placeholder="Número ASN" required>
+			    </md-input-container>
+			    <md-button type="submit" class="md-raised md-primary">Enviar <md-progress-circular></md-progress-circular></md-button>
+		   	</form>
 
 		</section>
 
@@ -151,11 +157,11 @@
 		
 				<tbody>
 					<tr ng-repeat="item in gltIncomingData">
-						<td>{{ item.GltNumber }}</td>
-						<td>{{ item.Wire1 }}</td>
-						<td>{{ item.Wire2 }}</td>
-						<td>{{ item.Wire3 }}</td>
-						<td>{{ item.Wire4 }}</td>
+						<td>{{ item.Nefab }}</td>
+						<td>{{ item.Cable1 }}</td>
+						<td>{{ item.Cable2 }}</td>
+						<td>{{ item.Cable3 }}</td>
+						<td>{{ item.Cable4 }}</td>
 					</tr>
 				</tbody>
 
