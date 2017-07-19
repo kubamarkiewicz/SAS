@@ -213,6 +213,13 @@ md-select.ng-invalid.ng-touched .md-select-value,
 md-input-container.md-input-invalid md-select .md-select-value {
     border-color: rgb(213,0,0)!important;
 }
+md-checkbox.md-checked .md-icon,
+md-radio-button.md-default-theme .md-on, md-radio-button .md-on {
+    background-color: #c40013;
+}
+md-radio-button.md-default-theme.md-checked .md-off, md-radio-button.md-checked .md-off {
+    border-color: #c40013;
+}
 
 /***************************************************************************************************/
 /* Layout Divs                                                                                     */
@@ -540,16 +547,16 @@ table.scroll-table tbody tr {
 
 
 .alert-primary {
-	background-color: #00557f;
+	background-color: #00557e;
 }
 .alert-success {
 	background-color: #7dbe02;
 }
 .alert-info {
-	background-color: rgb(68, 163, 210);
+	background-color: #0276af;
 }
 .alert-warning {
-	background-color: #efac51;
+	background-color: #ff7e00;
 }
 .alert-danger {
 	background-color: #c40112;
@@ -559,7 +566,7 @@ table.scroll-table tbody tr {
 }
 .alert-white {
 	background-color: #ffffff;
-	color: #2a2b2d;
+	color: #2a2b2d !important;
 }
 
 

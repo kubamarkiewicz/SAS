@@ -76,11 +76,12 @@ app.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
          '200', '300', '400', 'A100'],
         'contrastLightColors': undefined    // could also specify this if default was 'dark'
     });   
+   
 
 
     $mdThemingProvider.theme('default')
         .primaryPalette('blue')
-        .accentPalette('pink')
+        .accentPalette('red')
         .warnPalette('red');
 
     $mdThemingProvider.theme('dark', 'default')
