@@ -14,11 +14,13 @@ body.page-datos-del-sga > main .col-left {
 	width: calc(66% - 18px);
 	margin-right: 0;
 	flex: none;
+	height: 100%;
 }
 body.page-datos-del-sga > main .col-right {
 	width: calc(33% - 18px);
 	margin-left: 0;
 	flex: none;
+	height: 100%;
 }
 body.page-datos-del-sga > main .flow-wrap {
 	height: 50%;
@@ -28,12 +30,14 @@ body.page-datos-del-sga > main .flow-wrap {
 }
 body.page-datos-del-sga > main .flow-wrap > * {
 	width: calc(50% - 25px);
+	height: 100%;
 }
 
 
 
 
 body.page-datos-del-sga main section.signals-flow {
+	height: 100%;
 }
 body.page-datos-del-sga main section.signals-flow table {
 	height: calc(100% - 35px);

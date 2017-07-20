@@ -1,7 +1,6 @@
 var ArtisterilAuthService = angular.module('ArtisterilAuthService', [])
 .service('ArtisterilAuthService', function ($rootScope, $location, $http) 
 {
-
     // load user from localStorage
     $rootScope.username = localStorage.username;
     $rootScope.user_permissions = [];
