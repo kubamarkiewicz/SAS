@@ -53,42 +53,47 @@
 
 
 
-<div id="mapa" ng-click="mapClick($event)">
+<div id="mapa">
 	
 	<!-- AGVs -->
 	<div 
 		ng-repeat="agv in AGVData"  
-		id="agv-{{ agv.Id }}"
+		ng-init="$last && onAGVsRendered()"
 		class="agv" 
-		style="transform: translate({{ metersToPxX(agv.X) }}px, {{ metersToPxY(agv.Y) }}px) rotate({{ agv.Orientation }}deg)"
-		ng-click="openAGVPopup($event, agv)">
+		id="agv-{{ agv.Id }}"
+		data-agv-id="{{ agv.Id }}"
+		style="transform: translate({{ metersToPxX(agv.X) }}px, {{ metersToPxY(agv.Y) }}px) rotate({{ agv.Orientation }}deg)">
 		{{ agv.Id }}
 	</div>
 	
 	<!-- semaphores -->
 	<div 
 		ng-repeat="semaphore in semaphoresData"  
-		id="semaphore-{{ semaphore.Id }}"
+		ng-init="$last && onSemaphoresRendered()"
 		class="semaphore" 
-		style="transform: translate({{ metersToPxX(semaphore.X) }}px, {{ metersToPxY(semaphore.Y) }}px)"
-		ng-click="openSemaphorePopup($event, semaphore)">
+		id="semaphore-{{ semaphore.Id }}"
+		data-semaphore-id="{{ semaphore.Id }}"
+		style="transform: translate({{ metersToPxX(semaphore.X) }}px, {{ metersToPxY(semaphore.Y) }}px)">
 	</div>
 	
 	<!-- transport belts -->
 	<div 
 		ng-repeat="transportBelt in transportBeltsData"  
-		id="transport-belt-{{ transportBelt.Id }}"
+		ng-init="$last && onTransportBeltsRendered()"
 		class="transport-belt" 
-		style="transform: translate({{ metersToPxX(transportBelt.X) }}px, {{ metersToPxY(transportBelt.Y) }}px)"
-		ng-click="openTransportBeltPopup($event, transportBelt)">
+		id="transport-belt-{{ transportBelt.Id }}"
+		data-transport-belt-id="{{ transportBelt.Id }}"
+		style="transform: translate({{ metersToPxX(transportBelt.X) }}px, {{ metersToPxY(transportBelt.Y) }}px)">
 		CT{{ transportBelt.Id }}
 	</div>
 
 	<!-- storage positions -->
 	<div 
 		ng-repeat="position in storagePositionData"  
-		id="position-{{ position.Id }}"
+		ng-init="$last && onStoragePositionsRendered()"
 		class="position" 
+		id="position-{{ position.Id }}"
+		data-storage-position-id="{{ position.Id }}"
 		style="transform: translate({{ metersToPxX(storagePositionsCoordinates[position.Id].x) }}px, {{ metersToPxY(storagePositionsCoordinates[position.Id].y) }}px)"
 		ng-click="openPositionPopup($event, position)">
 	</div>

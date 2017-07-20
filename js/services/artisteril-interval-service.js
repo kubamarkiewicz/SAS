@@ -22,7 +22,7 @@ var ArtisterilIntervalService = angular.module('ArtisterilIntervalService', [])
         }
 
         // start interval
-        // this.intervals[name] = setInterval(callback, miliseconds);
+        this.intervals[name] = setInterval(callback, miliseconds);
     };
 
 
