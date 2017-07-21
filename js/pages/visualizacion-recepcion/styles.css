@@ -36,6 +36,9 @@ body.page-visualizacion-recepcion main section.asn td {
 	background-color: #00557e;
 	color: #ffffff;
 }
+body.page-visualizacion-recepcion main section.asn .generate-notification {
+	margin-top: 13px;
+}
 
 
 body.page-visualizacion-recepcion main section.read-in-process {
@@ -47,7 +50,7 @@ body.page-visualizacion-recepcion main section.read-in-progress {
 }
 
 body.page-visualizacion-recepcion main section.alerts {
-	height: calc(100% - 337px);
+	height: calc(100% - 390px);
 }
 body.page-visualizacion-recepcion main section.alerts .list {
 	overflow-y: auto;

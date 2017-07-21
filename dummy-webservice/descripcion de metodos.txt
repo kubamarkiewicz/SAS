@@ -159,6 +159,7 @@ get_asn()
 get_read_in_process()
 get_alerts()
 get_glt_incoming()
+generate_notofication()
 
 
 
