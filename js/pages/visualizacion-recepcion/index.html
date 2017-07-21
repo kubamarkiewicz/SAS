@@ -111,7 +111,7 @@
 
 			<div class="list"> 
 				
-				<div ng-repeat="item in alertsData" class="alert alert-danger" >
+				<div ng-repeat="item in alertsData" class="alert alert-{{ item.Color }}" >
 					<h3>{{ item.Title }}</h3>
 					<main>{{ item.Message }}</main>
 				</div>

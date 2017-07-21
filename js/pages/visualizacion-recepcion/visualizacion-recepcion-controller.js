@@ -15,7 +15,9 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
             }
          })
         .then(function(response) {
-            $scope.gltInAsnData = response.data.get_glt_in_asnResult;
+            
+            $scope.gltInAsnData = response.data.reception_get_glt_in_asnResult;
+            console.log(response.data);
         });
     }
 
@@ -31,7 +33,7 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
             url     : config.webservice.urls.vis_reception_get_read_in_process
          })
         .then(function(response) {
-            $scope.readInProcessData = response.data.get_read_in_processResult;
+            $scope.readInProcessData = response.data.reception_get_read_in_processResult;
         });
     }
     ArtisterilIntervalService.start($scope.getReadInProcessData);
@@ -50,7 +52,7 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
             url     : config.webservice.urls.vis_reception_get_alerts
          })
         .then(function(response) {
-            $scope.alertsData = response.data.get_alertsResult;
+            $scope.alertsData = response.data.reception_get_alertsResult;
         });
     }
     ArtisterilIntervalService.start($scope.getAlertsData);
@@ -69,7 +71,7 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
             url     : config.webservice.urls.vis_reception_get_glt_incoming
          })
         .then(function(response) {
-            $scope.gltIncomingData = response.data.get_glt_incomingResult;
+            $scope.gltIncomingData = response.data.reception_get_glt_incomingResult;
         });
     }
     ArtisterilIntervalService.start($scope.getGltIncomingData);
