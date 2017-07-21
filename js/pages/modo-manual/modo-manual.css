@@ -34,7 +34,6 @@ body.page-modo-manual > main p .md-select-value {
 	margin-right: 15px;
 }
 body.page-modo-manual > main button.execute-action {
-	font-size: 18px;
 	display: block;
 }
 
@@ -66,3 +65,14 @@ body.page-modo-manual > main form.pdfForm p .md-button.md-warn.md-raised {
 	margin-top: 0;
 }
 
+
+
+/* mobile */
+@media screen and (max-width: 1450px) {
+
+	
+	body.page-modo-manual > main p label {
+	font-size: 16px;
+	}
+
+}

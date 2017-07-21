@@ -115,4 +115,8 @@ body.page-configuracion-de-parametros .md-button.save {
 	body.page-configuracion-de-parametros section.parameters .parameter.hourlytable .state {
 		float: none;
 	}
+
+	body.page-configuracion-de-parametros section.parameters .parameter {
+		font-size: 14px;
+	}
 }

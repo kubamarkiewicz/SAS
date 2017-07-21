@@ -18,10 +18,6 @@
 
         "AsnWire4"      : "1234567894",
         "ReadWire4"     : "1234567894",
-        "StatusWire4"   : "red",
-
-        "AsnWire5"      : "1234567895",
-        "ReadWire5"     : "1234567895",
-        "StatusWire5"   : "red"
+        "StatusWire4"   : "red"
     }
 }
