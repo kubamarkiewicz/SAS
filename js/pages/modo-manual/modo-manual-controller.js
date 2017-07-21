@@ -233,7 +233,24 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             return;
         }
 
-        $window.open(config.webservice.urls.manual_generate_pdf + '?action=' +  $scope.pdfAction);
+        $http({
+            method  : 'GET',
+            url     : config.webservice.urls.manual_generate_pdf,
+            params  : {"action" : $scope.pdfAction}
+         })
+        .then(function(response) {
+            $rootScope.toast.content(response.data.generate_pdfResult.Message);
+            if (response.data.generate_pdfResult.Result === true) {
+                $rootScope.toast.toastClass('toast-success');
+            }
+            else {
+                $rootScope.toast.toastClass('toast-error');
+            }
+            $mdToast.show($rootScope.toast);
+            
+            $('form.upload-file button').attr("disabled", false).removeClass('loading');
+            $('#uploadFileInput').val('');
+        });
     }
 
 
