@@ -1,27 +1,27 @@
 {
     "reception_get_read_in_processResult" : 
     {
-        "AsnGlt"        : "GLT Number",
-        "ReadGlt"       : "GLT Number",
+        "AsnGlt"        : "123456789012",
+        "ReadGlt"       : "123456789012",
         
-        "AsnWire1"      : "Wire 1",
-        "ReadWire1"     : "Wire 1",
+        "AsnWire1"      : "1234567891",
+        "ReadWire1"     : "1234567891",
         "StatusWire1"   : "grey",
         
-        "AsnWire2"      : "Wire 2",
-        "ReadWire2"     : "Wire 2",
+        "AsnWire2"      : "1234567892",
+        "ReadWire2"     : "1234567892",
         "StatusWire2"   : "red",
         
-        "AsnWire3"      : "Wire 3",
-        "ReadWire3"     : "Wire 3",
+        "AsnWire3"      : "1234567893",
+        "ReadWire3"     : "1234567893",
         "StatusWire3"   : "green",
 
-        "AsnWire4"      : "Wire 4",
-        "ReadWire4"     : "Wire 4",
+        "AsnWire4"      : "1234567894",
+        "ReadWire4"     : "1234567894",
         "StatusWire4"   : "red",
 
-        "AsnWire5"      : "Wire 5",
-        "ReadWire5"     : "Wire 5",
+        "AsnWire5"      : "1234567895",
+        "ReadWire5"     : "1234567895",
         "StatusWire5"   : "red"
     }
 }
