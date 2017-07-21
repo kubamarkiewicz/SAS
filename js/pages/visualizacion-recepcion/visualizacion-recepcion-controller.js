@@ -28,7 +28,10 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
     {
         $http({
             method  : 'GET',
-            url     : config.webservice.urls.vis_reception_get_read_in_process
+            url     : config.webservice.urls.vis_reception_get_read_in_process,
+            params  : {
+                "asn" : $scope.asnNumber
+            }
          })
         .then(function(response) {
             $scope.readInProcessData = response.data.reception_get_read_in_processResult;
@@ -92,7 +95,10 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
     {
         $http({
             method  : 'GET',
-            url     : config.webservice.urls.vis_reception_get_glt_incoming
+            url     : config.webservice.urls.vis_reception_get_glt_incoming,
+            params  : {
+                "asn" : $scope.asnNumber
+            }
          })
         .then(function(response) {
             $scope.gltIncomingData = response.data.reception_get_glt_incomingResult;

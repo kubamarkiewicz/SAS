@@ -51,7 +51,7 @@ window.config.webservice = {
         "manual_get_file_actions"       : "dummy-webservice/manual_get_file_actions.json",
         "upload_actions_file"           : "dummy-webservice/upload_actions_file.json",
         "manual_get_pdf_actions"        : "dummy-webservice/manual_get_pdf_actions.json",
-        "manual_generate_pdf"           : "dummy-webservice/manual_generate_pdf.pdf",
+        "manual_generate_pdf"           : "dummy-webservice/manual_generate_pdf.json",
 
         "get_parameters"                : "dummy-webservice/get_parameters.json",
         "save_parameters"               : "dummy-webservice/empty.json",
@@ -62,21 +62,24 @@ window.config.webservice = {
         "vis_reception_get_read_in_process" : "dummy-webservice/vis_reception_get_read_in_process.json",
         "vis_reception_get_alerts"          : "dummy-webservice/vis_reception_get_alerts.json",
         "vis_reception_get_glt_incoming"    : "dummy-webservice/vis_reception_get_glt_incoming.json",
+        "vis_reception_generate_notification" : "dummy-webservice/vis_reception_generate_notofication.json",
 
-        "enter_Data"                    : "dummy-webservice/empty.json",
-        "enter_Reception"               : "dummy-webservice/empty.json",
-        "enter_Lockings"                : "dummy-webservice/empty.json",
-        "enter_Manual"                  : "dummy-webservice/empty.json",
-        "enter_Process"                 : "dummy-webservice/empty.json",
-        "enter_Parameters"              : "dummy-webservice/empty.json",
-        "enter_Login"                   : "dummy-webservice/empty.json",
+        "enter_Login"                   : "dummy-webservice/enter.json",
+        "enter_Data"                    : "dummy-webservice/enter.json",
+        "enter_Reception"               : "dummy-webservice/enter.json",
+        "enter_Lockings"                : "dummy-webservice/enter.json",
+        "enter_Manual"                  : "dummy-webservice/enter.json",
+        "enter_Process"                 : "dummy-webservice/enter.json",
+        "enter_Parameters"              : "dummy-webservice/enter.json",
+        "enter_VisuReception"            : "dummy-webservice/enter.json",
 
-        "exit_Data"                     : "dummy-webservice/empty.json",
-        "exit_Reception"                : "dummy-webservice/empty.json",
-        "exit_Lockings"                 : "dummy-webservice/empty.json",
-        "exit_Manual"                   : "dummy-webservice/empty.json",
-        "exit_Process"                  : "dummy-webservice/empty.json",
-        "exit_Parameters"               : "dummy-webservice/empty.json",
+        "exit_Data"                     : "dummy-webservice/exit.json",
+        "exit_Reception"                : "dummy-webservice/exit.json",
+        "exit_Lockings"                 : "dummy-webservice/exit.json",
+        "exit_Manual"                   : "dummy-webservice/exit.json",
+        "exit_Process"                  : "dummy-webservice/exit.json",
+        "exit_Parameters"               : "dummy-webservice/exit.json",
+        "exit_VisuReception"             : "dummy-webservice/exit.json"
 
 
 /*
@@ -134,14 +137,16 @@ window.config.webservice = {
         "vis_reception_get_read_in_process" : "dummy-webservice/reception_get_read_in_process.json",
         "vis_reception_get_alerts"          : "dummy-webservice/reception_get_alerts.json",
         "vis_reception_get_glt_incoming"    : "dummy-webservice/reception_get_glt_incoming.json",
+        "vis_reception_generate_notification" : "dummy-webservice/vis_reception_generate_notofication.json",
 
+        "enter_Login"                   : "http://192.168.0.89:8888/SAS/Login/api/enter_Login",
         "enter_Data"                    : "http://192.168.0.89:8888/SAS/Data/api/enter_Data",
         "enter_Reception"               : "http://192.168.0.89:8888/SAS/Reception/api/enter_Reception",
         "enter_Lockings"                : "http://192.168.0.89:8888/SAS/Lockings/api/enter_Lockings",
         "enter_Manual"                  : "http://192.168.0.89:8888/SAS/Manual/api/enter_Manual",
         "enter_Process"                 : "http://192.168.0.89:8888/SAS/Process/api/enter_Process",
         "enter_Parameters"              : "http://192.168.0.89:8888/SAS/Parameters/api/enter_Parameters",
-        "enter_Login"                   : "http://192.168.0.89:8888/SAS/Login/api/enter_Login",
+        "enter_VisuReception"            : "dummy-webservice/enter.json",
 
         "exit_Data"                     : "http://192.168.0.89:8888/SAS/Data/api/exit_Data",
         "exit_Reception"                : "http://192.168.0.89:8888/SAS/Reception/api/exit_Reception",
@@ -149,6 +154,7 @@ window.config.webservice = {
         "exit_Manual"                   : "http://192.168.0.89:8888/SAS/Manual/api/exit_Manual",
         "exit_Process"                  : "http://192.168.0.89:8888/SAS/Process/api/exit_Process",
         "exit_Parameters"               : "http://192.168.0.89:8888/SAS/Parameters/api/exit_Parameters",
+        "exit_VisuReception"             : "dummy-webservice/exit.json"
 */
 
     }

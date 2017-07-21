@@ -139,6 +139,7 @@ app.run(function($rootScope, $sce, $http, $location, $interval, ArtisterilAuthSe
                 case "recepcion-de-productos"       : $http.get(config.webservice.urls.exit_Reception); break;
                 case "modo-manual"                  : $http.get(config.webservice.urls.exit_Manual); break;
                 case "configuracion-de-parametros"  : $http.get(config.webservice.urls.exit_Parameters); break;
+                case "visualizacion-recepcion"      : $http.get(config.webservice.urls.exit_VisuReception); break;
             }
         }
         switch($rootScope.pageSlug) {
@@ -150,6 +151,7 @@ app.run(function($rootScope, $sce, $http, $location, $interval, ArtisterilAuthSe
             case "modo-manual"                  : $http.get(config.webservice.urls.enter_Manual); break;
             case "configuracion-de-parametros"  : $http.get(config.webservice.urls.enter_Parameters); break;
             case "login"                        : $http.get(config.webservice.urls.enter_Login); break;
+            case "visualizacion-recepcion"      : $http.get(config.webservice.urls.enter_VisuReception); break;
         }
         
     });
