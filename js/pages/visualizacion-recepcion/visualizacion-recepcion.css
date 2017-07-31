@@ -91,6 +91,9 @@ body.page-visualizacion-recepcion main section.glt-incoming {
 body.page-visualizacion-recepcion main section.glt-incoming table {
 	height: calc(100% - 35px);
 }
+body.page-visualizacion-recepcion main section.glt-incoming table td.red {
+	color: #a40f0f;
+}
 
 
 body.page-visualizacion-recepcion main section.glt-in-asn td,

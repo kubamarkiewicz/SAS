@@ -141,10 +141,10 @@
 				<tbody>
 					<tr ng-repeat="item in gltIncomingData">
 						<td class="glt">{{ item.Nefab }}</td>
-						<td>{{ item.Cable1 }}</td>
-						<td>{{ item.Cable2 }}</td>
-						<td>{{ item.Cable3 }}</td>
-						<td>{{ item.Cable4 }}</td>
+						<td class="{{ item.Bloqueado1 ? '' : 'red' }}">{{ item.Cable1 }}</td>
+						<td class="{{ item.Bloqueado2 ? '' : 'red' }}">{{ item.Cable2 }}</td>
+						<td class="{{ item.Bloqueado3 ? '' : 'red' }}">{{ item.Cable3 }}</td>
+						<td class="{{ item.Bloqueado4 ? '' : 'red' }}">{{ item.Cable4 }}</td>
 					</tr>
 				</tbody>
 
