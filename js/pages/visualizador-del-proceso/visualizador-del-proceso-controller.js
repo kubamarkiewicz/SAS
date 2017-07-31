@@ -44,8 +44,6 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
 	/* mapa *********************************************************************************/
 
 	$scope.zoom = 1;
-	$scope.minZoom = 1;
-	$scope.maxZoom = 6;
 
 	var mapaElement = $('#mapa');
 
@@ -57,8 +55,8 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
 	$scope.zoomIn = function(focal, animate) 
 	{
 		$scope.zoom = 1.2 * $scope.zoom;
-		if ($scope.zoom > $scope.maxZoom) {
-			$scope.zoom = $scope.maxZoom;
+		if ($scope.zoom > config.map.maxZoom) {
+			$scope.zoom = config.map.maxZoom;
 		}
 		mapaElement.panzoom("zoom", $scope.zoom, {
 			'animate':animate === undefined ? true : animate, 
@@ -72,8 +70,8 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
 	$scope.zoomOut = function(focal, animate) 
 	{
 		$scope.zoom = 1 / 1.2 * $scope.zoom;
-		if ($scope.zoom < $scope.minZoom) {
-			$scope.zoom = $scope.minZoom;
+		if ($scope.zoom < config.map.minZoom) {
+			$scope.zoom = config.map.minZoom;
 		}
 		mapaElement.panzoom("zoom", $scope.zoom, {
 			'animate':animate === undefined ? true : animate, 
@@ -368,10 +366,12 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
     ArtisterilIntervalService.start($scope.loadStoragePositionData);
     // $scope.loadStoragePositionData();
 
+
+
     // load storage positions coordinates
     $http({
         method  : 'GET',
-        url     : config.map.coordinates_urls.storage_positions
+        url     : "js/pages/visualizador-del-proceso/storage_positions_coordinates.json"
      })
     .then(function(response) {
         $scope.storagePositionsCoordinates = response.data;
