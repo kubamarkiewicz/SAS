@@ -124,7 +124,7 @@ body.page-visualizador-del-proceso .position {
     cursor: pointer;
     background-color: rgb(2, 118, 175);
     opacity: 0.35;
-	transition: opacity .15s ease-out;
+	/*transition: opacity .15s ease-out;*/
     outline: none;
     height: 2.3%;
     width: 4.7%;

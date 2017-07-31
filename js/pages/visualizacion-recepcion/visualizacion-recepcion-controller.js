@@ -1,8 +1,21 @@
 app.controller('VisualizacionRecepcionController', function($scope, $rootScope, $http, $routeParams, config, ArtisterilIntervalService, $mdToast) {  
 
 
+
+    // ASN
+
+    $scope.sendASN = function() 
+    {
+        // start timers
+        ArtisterilIntervalService.start($scope.getGltInAsnData);
+        ArtisterilIntervalService.start($scope.getReadInProcessData);
+        ArtisterilIntervalService.start($scope.getGltIncomingData);
+    }
+
+
     // GLT in ASN
 
+    
     $scope.gltInAsnData = [];
     
     $scope.getGltInAsnData = function()
@@ -37,7 +50,7 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
             $scope.readInProcessData = response.data.reception_get_read_in_processResult;
         });
     }
-    ArtisterilIntervalService.start($scope.getReadInProcessData);
+    // ArtisterilIntervalService.start($scope.getReadInProcessData);
     // $scope.getAlertsData();
 
 
@@ -104,7 +117,7 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
             $scope.gltIncomingData = response.data.reception_get_glt_incomingResult;
         });
     }
-    ArtisterilIntervalService.start($scope.getGltIncomingData);
+    // ArtisterilIntervalService.start($scope.getGltIncomingData);
     // $scope.getAlertsData();
 
 
