@@ -8,7 +8,7 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
     {
         // start timers
         ArtisterilIntervalService.start($scope.getGltInAsnData);
-        ArtisterilIntervalService.start($scope.getReadInProcessData);
+        ArtisterilIntervalService.start($scope.getReadInProcessData, 3000);
         ArtisterilIntervalService.start($scope.getGltIncomingData);
     }
 
@@ -47,7 +47,10 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
             }
          })
         .then(function(response) {
-            $scope.readInProcessData = response.data.reception_get_read_in_processResult;
+            $scope.readInProcessData = {};
+            if (response.data.reception_get_read_in_processResult.ReadWire1) {
+                $scope.readInProcessData = response.data.reception_get_read_in_processResult;
+            } 
         });
     }
     // ArtisterilIntervalService.start($scope.getReadInProcessData);
