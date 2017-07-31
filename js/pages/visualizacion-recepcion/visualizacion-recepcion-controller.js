@@ -8,7 +8,7 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
     {
         // start timers
         ArtisterilIntervalService.start($scope.getGltInAsnData);
-        ArtisterilIntervalService.start($scope.getReadInProcessData, 3000);
+        ArtisterilIntervalService.start($scope.getReadInProcessData, 500);
         ArtisterilIntervalService.start($scope.getGltIncomingData);
     }
 
@@ -48,6 +48,11 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
          })
         .then(function(response) {
             $scope.readInProcessData = {};
+            for (i = 1; i <= 4; ++i) {
+                if (response.data.reception_get_read_in_processResult['ReadWire' + i] == "Código de cable") {
+                    return;
+                }
+            }
             if (response.data.reception_get_read_in_processResult.ReadWire1) {
                 $scope.readInProcessData = response.data.reception_get_read_in_processResult;
             } 
