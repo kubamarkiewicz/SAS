@@ -14,8 +14,7 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
 
 
     // GLT in ASN
-
-    
+  
     $scope.gltInAsnData = [];
     
     $scope.getGltInAsnData = function()
@@ -33,6 +32,7 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
     }
 
 
+
     // Read in process
 
     $scope.readInProcessData = [];
@@ -48,18 +48,18 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
          })
         .then(function(response) {
             $scope.readInProcessData = {};
-            for (i = 1; i <= 4; ++i) {
-                if (response.data.reception_get_read_in_processResult['ReadWire' + i] == "Código de cable") {
-                    return;
+            if (response.data.reception_get_read_in_processResult) {
+                for (i = 1; i <= 4; ++i) {
+                    if (response.data.reception_get_read_in_processResult['ReadWire' + i] == "Código de cable") {
+                        return;
+                    }
                 }
+                if (response.data.reception_get_read_in_processResult.ReadWire1) {
+                    $scope.readInProcessData = response.data.reception_get_read_in_processResult;
+                } 
             }
-            if (response.data.reception_get_read_in_processResult.ReadWire1) {
-                $scope.readInProcessData = response.data.reception_get_read_in_processResult;
-            } 
         });
     }
-    // ArtisterilIntervalService.start($scope.getReadInProcessData);
-    // $scope.getAlertsData();
 
 
 
@@ -91,7 +91,7 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
 
     // Alerts
 
-	$scope.alertsData = [];
+    $scope.alertsData = [];
     
     $scope.getAlertsData = function()
     {
@@ -104,7 +104,6 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
         });
     }
     ArtisterilIntervalService.start($scope.getAlertsData);
-    // $scope.getAlertsData();
 
 
 
@@ -125,10 +124,6 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
             $scope.gltIncomingData = response.data.reception_get_glt_incomingResult;
         });
     }
-    // ArtisterilIntervalService.start($scope.getGltIncomingData);
-    // $scope.getAlertsData();
-
-
 
 
 });

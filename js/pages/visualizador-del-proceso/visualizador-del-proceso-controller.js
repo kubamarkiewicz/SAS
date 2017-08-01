@@ -132,22 +132,22 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
 
     $scope.metersToPxX = function(y)
     {
-        return (parseFloat(config.map.meters_offset_x) - parseFloat(y)) * parseFloat(mapImg.width()) / parseFloat(config.map.meters_width);
+        return (parseFloat(config.map.meters_offset_y) - parseFloat(y)) * parseFloat(mapImg.width()) / parseFloat(config.map.meters_width);
     }
     
     $scope.metersToPxY = function(x) 
     {
-        return (parseFloat(config.map.meters_offset_y) - parseFloat(x)) * parseFloat(mapImg.height()) / parseFloat(config.map.meters_height);
+        return (parseFloat(config.map.meters_offset_x) - parseFloat(x)) * parseFloat(mapImg.height()) / parseFloat(config.map.meters_height);
     }
 
     $scope.pxToMetersX = function(y)
     {
-        return parseFloat(config.map.meters_offset_x) - parseFloat(y) * parseFloat(config.map.meters_width) / parseFloat(mapImg.width());
+        return parseFloat(config.map.meters_offset_x) - parseFloat(y) * parseFloat(config.map.meters_height) / parseFloat(mapImg.height());
     }
 
     $scope.pxToMetersY = function(x) 
     {
-        return parseFloat(config.map.meters_offset_y) - parseFloat(x) * parseFloat(config.map.meters_height) / parseFloat(mapImg.height());
+        return parseFloat(config.map.meters_offset_y) - parseFloat(x) * parseFloat(config.map.meters_width) / parseFloat(mapImg.width());
     }
 
     $scope.pxToPercentsX = function(x)

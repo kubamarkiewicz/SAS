@@ -18,6 +18,8 @@
 
         "AsnWire4"      : "1234567894",
         "ReadWire4"     : "1234567894",
-        "StatusWire4"   : "red"
+        "StatusWire4"   : "red",
+
+        "Repeated"      : true
     }
 }
