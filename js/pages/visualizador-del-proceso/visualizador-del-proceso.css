@@ -123,12 +123,12 @@ body.page-visualizador-del-proceso .position {
     z-index: 10;
     cursor: pointer;
     background-color: rgb(2, 118, 175);
-    opacity: 0.35;
+    opacity: 0.6;
 	/*transition: opacity .15s ease-out;*/
     outline: none;
-    height: 2.3%;
-    width: 4.7%;
-    /*mix-blend-mode: overlay;*/
+    height: 2.5%;
+    width: 1.2%;
+    mix-blend-mode: color;
 }
 body.page-visualizador-del-proceso .position:hover,
 body.page-visualizador-del-proceso .position.selected {

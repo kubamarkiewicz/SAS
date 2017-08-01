@@ -47,7 +47,7 @@
 	<h3>POSICIÓN {{ selectedPosition.Id }}</h3>
 	<p ng-repeat="niche in selectedPosition.Niches">
 		Height: {{ niche.Height }}
-		<span ng-repeat="product in niche.Product"><br>Producto: {{ product }}</span>
+		<span><br>Producto: {{ niche.Product }}</span>
 	</p>
 </div>
 
@@ -94,7 +94,7 @@
 		class="position" 
 		id="position-{{ position.Id }}"
 		data-storage-position-id="{{ position.Id }}"
-		style="transform: translate({{ metersToPxX(storagePositionsCoordinates[position.Id].x) }}px, {{ metersToPxY(storagePositionsCoordinates[position.Id].y) }}px)"
+		style="left: {{ storagePositionsCoordinates[position.Id].x }}%; top: {{ storagePositionsCoordinates[position.Id].y }}%"
 		ng-click="openPositionPopup($event, position)">
 	</div>
 

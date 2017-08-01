@@ -112,6 +112,7 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
         $scope.deselectAllObjects();
 
         // console.log($scope.pxToMetersX(event.offsetX) + ' : ' + $scope.pxToMetersY(event.offsetY));
+        console.log($scope.pxToPercentsX(event.offsetX) + ' : ' + $scope.pxToPercentsY(event.offsetY));
     });
 
 
@@ -147,6 +148,16 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
     $scope.pxToMetersY = function(y) 
     {
         return parseFloat(y) * parseFloat(config.map.height) / parseFloat(mapImg.height()) - parseFloat(config.map.offset_y);
+    }
+
+    $scope.pxToPercentsX = function(x)
+    {
+        return (parseFloat(x) / parseFloat(mapImg.width()) * 100).toFixed(2);
+    }
+
+    $scope.pxToPercentsY = function(y) 
+    {
+        return (parseFloat(y) / parseFloat(mapImg.height()) * 100).toFixed(2);
     }
 
 
@@ -363,8 +374,8 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             }
         });
     }
-    ArtisterilIntervalService.start($scope.loadStoragePositionData);
-    // $scope.loadStoragePositionData();
+    // ArtisterilIntervalService.start($scope.loadStoragePositionData);
+    $scope.loadStoragePositionData();
 
 
 
