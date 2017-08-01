@@ -2,6 +2,7 @@
 
 /* Page Visualizacion recepcion *******************************************************************************/
 
+
 body.page-visualizacion-recepcion > main {
 	overflow: hidden;
 }
@@ -42,6 +43,9 @@ body.page-visualizacion-recepcion main section.glt-in-asn table {
 body.page-visualizacion-recepcion main section.asn {
 	margin-bottom: 24px;
 }
+body.page-visualizacion-recepcion main section.asn h2 {
+	white-space: nowrap;
+}
 body.page-visualizacion-recepcion main section.asn td {
 	background-color: #00557e;
 	color: #ffffff;
@@ -54,8 +58,19 @@ body.page-visualizacion-recepcion main section.asn .generate-notification {
 body.page-visualizacion-recepcion main section.read-in-process {
 	margin-bottom: 24px;
 }
+body.page-visualizacion-recepcion main section.read-in-process td {
+	min-width: 8em;
+}
+body.page-visualizacion-recepcion main section.read-in-process td.status {
+	min-width: 0;
+}
 body.page-visualizacion-recepcion main section.read-in-process h2 .repeated {
-	font-size: 80%;
+	font-size: 82%;
+	background-color: #7dbe02;
+	padding: 2px 11px;
+	float: right;
+	color: #ffffff;
+	border-radius: 10px;;
 }
 
 body.page-visualizacion-recepcion main section.alerts {

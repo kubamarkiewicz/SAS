@@ -5,7 +5,7 @@
 		
 		<section class="glt-in-asn">
 			
-			<h2>GLT in ASN ({{ gltInAsnData.length }})</h2>
+			<h2>GLT en ASN <span class="badge">{{ gltInAsnData.length }}</span></h2>
 
 
 			<table class="scroll-table">
@@ -38,7 +38,7 @@
 		
 		<section class="asn">
 			
-			<h2>ASN</h2>
+			<h2>SELABE/Numéro de transporte</h2>
 
 			<form ng-submit="sendASN()">
 				<md-input-container md-no-float>
@@ -47,7 +47,7 @@
 			    <md-button type="submit" class="md-raised md-primary">Enviar <md-progress-circular></md-progress-circular></md-button>
 		   	</form>
 
-			<md-button class="md-raised md-warn generate-notification" ng-click="generateNotification()">Generar notificación <md-progress-circular></md-progress-circular></md-button>
+			<md-button class="md-raised md-primary generate-notification" ng-click="generateNotification()">Generar notificación <md-progress-circular></md-progress-circular></md-button>
 
 		</section>
 
@@ -55,7 +55,7 @@
 		
 		<section class="read-in-process">
 			
-			<h2>READ IN PROCESS <span class="repeated" ng-show="readInProcessData.Repeated">(Repeated)</span></h2>
+			<h2>Lectura en proceso <span class="repeated" ng-show="readInProcessData.Repeated">Repetida</span></h2>
 
 			<table class="my-table">
 
@@ -71,7 +71,7 @@
 					<tr class="grey">
 						<td>{{ readInProcessData.AsnGlt }}</td>
 						<td>{{ readInProcessData.ReadGlt }}</td>
-						<td>&nbsp;</td>
+						<td class="status">&nbsp;</td>
 					</tr>
 					<tr>
 						<td>{{ readInProcessData.AsnWire1 }}</td>
@@ -126,7 +126,7 @@
 		
 		<section class="glt-incoming">
 			
-			<h2>GLT INCOMING ({{ gltIncomingData.length }})</h2>
+			<h2>GLT recepcionado <span class="badge">{{ gltIncomingData.length }}</span></h2>
 
 
 			<table class="scroll-table">
