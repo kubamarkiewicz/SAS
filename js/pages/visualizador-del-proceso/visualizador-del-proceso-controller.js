@@ -111,8 +111,8 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
         // $('body.page-visualizador-del-proceso .popup').removeClass('open');
         $scope.deselectAllObjects();
 
-        console.log($scope.pxToMetersX(event.offsetY) + ' : ' + $scope.pxToMetersY(event.offsetX));
-        // console.log($scope.pxToPercentsX(event.offsetX) + ' : ' + $scope.pxToPercentsY(event.offsetY));
+        // console.log($scope.pxToMetersX(event.offsetY) + ' : ' + $scope.pxToMetersY(event.offsetX));
+        console.log($scope.pxToPercentsX(event.offsetX) + ' : ' + $scope.pxToPercentsY(event.offsetY));
     });
 
 

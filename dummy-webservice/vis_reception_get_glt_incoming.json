@@ -10,6 +10,17 @@
 	        "Bloqueado2":true,
 	        "Bloqueado3":true,
 	        "Bloqueado4":true
+	    },
+	    {
+	        "Cable1": "1234567890",
+	        "Cable2": "1234567890",
+	        "Cable3": "1234567890",
+	        "Cable4": null,
+	        "Nefab": "123456789012",
+	        "Bloqueado1":true,
+	        "Bloqueado2":true,
+	        "Bloqueado3":true,
+	        "Bloqueado4":true
 	    }
 	]
 }
