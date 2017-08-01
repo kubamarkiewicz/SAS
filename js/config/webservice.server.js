@@ -50,8 +50,8 @@ window.config.webservice = {
         "select_action"                 : "http://10.12.1.233:8888/SAS/Manual/api/select_action",
         "manual_get_file_actions"       : "http://10.12.1.233:8888/SAS/Manual/api/get_file_actions",
         "upload_actions_file"           : "http://10.12.1.233:8888/SAS/Manual/api/upload_actions_file",
-        "manual_get_pdf_actions"        : "http://10.12.1.233:8888/SAS/Manual/api/get_pdf_actions",
-        "manual_generate_pdf"           : "http://10.12.1.233:8888/SAS/Manual/api/generate_pdf",
+        "manual_get_notification_actions"        : "http://10.12.1.233:8888/SAS/Manual/api/get_notification_actions",
+        "manual_generate_notification"           : "http://10.12.1.233:8888/SAS/Manual/api/generate_notification",
                 
         "get_parameters"                : "http://10.12.1.233:8888/SAS/Parameters/api/get_parameters",
         "save_parameters"               : "http://10.12.1.233:8888/SAS/Parameters/api/save_parameters",

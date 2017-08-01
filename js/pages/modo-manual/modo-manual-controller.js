@@ -102,7 +102,7 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             params  : {
                 "action" : $scope.action, 
                 "reader" : $scope.readerId, 
-                "product" : JSON.stringify([
+                "product" : $scope.action == $scope.pdfAction ? $scope.cable : JSON.stringify([
                     $scope.nefab, 
                     $scope.cable1,
                     $scope.cable2,
@@ -123,7 +123,7 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
 
             $('button.execute-acton').attr("disabled", false).removeClass('loading');
 
-            // reset form and disable error messages
+            // reset fields
             $scope.action = null;
             $scope.readerId = null;
             $scope.nefab = '';
@@ -131,6 +131,9 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             $scope.cable2 = '';
             $scope.cable3 = '';
             $scope.cable4 = '';
+            $scope.cable = '';
+
+            // reset form and disable error messages
             $scope.actionForm.$setPristine();
             $scope.actionForm.$setUntouched();
         });
@@ -142,6 +145,27 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
         $scope.productId = '';
     }
 
+
+
+    // open PDF 
+
+    $scope.pdfAction = "Informe de cable";
+
+    $scope.openPDF = function()
+    {
+        if (!$scope.action) {
+            return;
+        }
+
+        $window.open(config.webservice.urls.select_action + '?action=' + $scope.action + '&product=' + $scope.cable);
+
+        // reset fields
+        $scope.cable = '';
+
+        // reset form and disable error messages
+        $scope.actionForm.$setPristine();
+        $scope.actionForm.$setUntouched();
+    }
 
 
 
@@ -208,48 +232,47 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
 
 
 
-    // get PDF actions
+    // get notification actions
 
-    $scope.pdfActionsData = [];
+    $scope.notificationActionsData = [];
 
-    $scope.getPdfActionsData = function()
+    $scope.getNotificationActionsData = function()
     {
         $http({
             method  : 'GET',
-            url     : config.webservice.urls.manual_get_pdf_actions
+            url     : config.webservice.urls.manual_get_notification_actions
          })
         .then(function(response) {
-            $scope.pdfActionsData = response.data.get_pdf_actionsResult;
+            $scope.notificationActionsData = response.data.get_notification_actionsResult;
         });
     }
-    $scope.getPdfActionsData();
+    $scope.getNotificationActionsData();
 
 
-    // generate PDF 
+    // generate notification 
 
-    $scope.generatePDF = function()
+    $scope.generateNotification = function()
     {
-        if (!$scope.pdfAction) {
+        if (!$scope.notificationAction) {
             return;
         }
 
         $http({
             method  : 'GET',
-            url     : config.webservice.urls.manual_generate_pdf,
-            params  : {"action" : $scope.pdfAction}
+            url     : config.webservice.urls.manual_generate_notification,
+            params  : {
+                "action" : $scope.notificationAction
+            }
          })
         .then(function(response) {
-            $rootScope.toast.content(response.data.generate_pdfResult.Message);
-            if (response.data.generate_pdfResult.Result === true) {
+            $rootScope.toast.content(response.data.generate_notificationResult.Message);
+            if (response.data.generate_notificationResult.Result === true) {
                 $rootScope.toast.toastClass('toast-success');
             }
             else {
                 $rootScope.toast.toastClass('toast-error');
             }
             $mdToast.show($rootScope.toast);
-            
-            $('form.upload-file button').attr("disabled", false).removeClass('loading');
-            $('#uploadFileInput').val('');
         });
     }
 

@@ -142,12 +142,12 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
 
     $scope.pxToMetersX = function(y)
     {
-        return parseFloat(y) * parseFloat(config.map.meters_width) / parseFloat(mapImg.width()) - parseFloat(config.map.meters_offset_x);
+        return parseFloat(config.map.meters_offset_x) - parseFloat(y) * parseFloat(config.map.meters_width) / parseFloat(mapImg.width());
     }
 
     $scope.pxToMetersY = function(x) 
     {
-        return parseFloat(x) * parseFloat(config.map.meters_height) / parseFloat(mapImg.height()) - parseFloat(config.map.meters_offset_y);
+        return parseFloat(config.map.meters_offset_y) - parseFloat(x) * parseFloat(config.map.meters_height) / parseFloat(mapImg.height());
     }
 
     $scope.pxToPercentsX = function(x)

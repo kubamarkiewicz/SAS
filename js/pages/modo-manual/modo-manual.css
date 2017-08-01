@@ -54,14 +54,14 @@ body.page-modo-manual > main p.product-id button.clear {
 	margin: 0;
 }
 
-body.page-modo-manual > main form.pdfForm {
+body.page-modo-manual > main form.notificationForm {
 }
-body.page-modo-manual > main form.pdfForm p.action {
+body.page-modo-manual > main form.notificationForm p.action {
 }
-body.page-modo-manual > main form.pdfForm p md-input-container {
+body.page-modo-manual > main form.notificationForm p md-input-container {
 	width: 100%;
 }
-body.page-modo-manual > main form.pdfForm p .md-button.md-warn.md-raised {
+body.page-modo-manual > main form.notificationForm p .md-button.md-warn.md-raised {
 	margin-top: 0;
 }
 

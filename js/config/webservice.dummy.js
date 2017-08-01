@@ -43,14 +43,14 @@ window.config.webservice = {
         "receive_products_from_file"    : "dummy-webservice/receive_products_from_file.json",
         
         "get_readers_for_manual_mode"   : "dummy-webservice/get_readers.json",
-        "get_actions"                   : "dummy-webservice/get_actions.json",
+        "get_actions"                   : "dummy-webservice/manual_get_actions.json",
         "select_reader_for_manual_mode" : "dummy-webservice/select_reader.json",
         "get_reading_for_manual_mode"   : "dummy-webservice/get_reading_for_manual_mode.json",
         "select_action"                 : "dummy-webservice/select_action.json",
         "manual_get_file_actions"       : "dummy-webservice/manual_get_file_actions.json",
         "upload_actions_file"           : "dummy-webservice/upload_actions_file.json",
-        "manual_get_pdf_actions"        : "dummy-webservice/manual_get_pdf_actions.json",
-        "manual_generate_pdf"           : "dummy-webservice/manual_generate_pdf.json",
+        "manual_get_notification_actions"        : "dummy-webservice/manual_get_notification_actions.json",
+        "manual_generate_notification"           : "dummy-webservice/manual_generate_notification.json",
 
         "get_parameters"                : "dummy-webservice/get_parameters.json",
         "save_parameters"               : "dummy-webservice/empty.json",
