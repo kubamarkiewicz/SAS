@@ -53,6 +53,7 @@
 
 
 
+<!-- map container -->
 <div id="mapa">
 	
 	<!-- AGVs -->
@@ -62,7 +63,7 @@
 		class="agv" 
 		id="agv-{{ agv.Id }}"
 		data-agv-id="{{ agv.Id }}"
-		style="transform: translate({{ metersToPxX(agv.X) }}px, {{ metersToPxY(agv.Y) }}px) rotate({{ agv.Orientation }}deg)">
+		style="transform: translate({{ metersToPxX(agv.Y) }}px, {{ metersToPxY(agv.X) }}px) rotate({{ agv.Orientation }}deg)">
 		{{ agv.Id }}
 	</div>
 	
@@ -73,7 +74,7 @@
 		class="semaphore" 
 		id="semaphore-{{ semaphore.Id }}"
 		data-semaphore-id="{{ semaphore.Id }}"
-		style="transform: translate({{ metersToPxX(semaphore.X) }}px, {{ metersToPxY(semaphore.Y) }}px)">
+		style="transform: translate({{ metersToPxX(semaphore.Y) }}px, {{ metersToPxY(semaphore.X) }}px)">
 	</div>
 	
 	<!-- transport belts -->
@@ -83,7 +84,7 @@
 		class="transport-belt" 
 		id="transport-belt-{{ transportBelt.Id }}"
 		data-transport-belt-id="{{ transportBelt.Id }}"
-		style="transform: translate({{ metersToPxX(transportBelt.X) }}px, {{ metersToPxY(transportBelt.Y) }}px)">
+		style="transform: translate({{ metersToPxX(transportBelt.Y) }}px, {{ metersToPxY(transportBelt.X) }}px)">
 		CT{{ transportBelt.Id }}
 	</div>
 
@@ -98,8 +99,7 @@
 		ng-click="openPositionPopup($event, position)">
 	</div>
 
-	<!-- map images -->
-	<!-- <img id="map-image" src="map/plano_AGV_SAS_MASTER_v3_x6_BORRADO_2.svg" alt=""> -->
-	<img id="map-image" src="map/plano_AGV_SAS_MASTER_v4_RECORTADO_EXPORT_2.svg" alt="">
+	<!-- map image -->
+	<img id="map-image" src="js/pages/visualizador-del-proceso/map/plano_AGV_SAS_MASTER_v4_RECORTADO_EXPORT_2.svg" alt="">
 
 </div> 

@@ -55,8 +55,8 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
 	$scope.zoomIn = function(focal, animate) 
 	{
 		$scope.zoom = 1.2 * $scope.zoom;
-		if ($scope.zoom > config.map.maxZoom) {
-			$scope.zoom = config.map.maxZoom;
+		if ($scope.zoom > config.map.max_zoom) {
+			$scope.zoom = config.map.max_zoom;
 		}
 		mapaElement.panzoom("zoom", $scope.zoom, {
 			'animate':animate === undefined ? true : animate, 
@@ -70,8 +70,8 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
 	$scope.zoomOut = function(focal, animate) 
 	{
 		$scope.zoom = 1 / 1.2 * $scope.zoom;
-		if ($scope.zoom < config.map.minZoom) {
-			$scope.zoom = config.map.minZoom;
+		if ($scope.zoom < config.map.min_zoom) {
+			$scope.zoom = config.map.min_zoom;
 		}
 		mapaElement.panzoom("zoom", $scope.zoom, {
 			'animate':animate === undefined ? true : animate, 
@@ -111,8 +111,8 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
         // $('body.page-visualizador-del-proceso .popup').removeClass('open');
         $scope.deselectAllObjects();
 
-        // console.log($scope.pxToMetersX(event.offsetX) + ' : ' + $scope.pxToMetersY(event.offsetY));
-        console.log($scope.pxToPercentsX(event.offsetX) + ' : ' + $scope.pxToPercentsY(event.offsetY));
+        console.log($scope.pxToMetersX(event.offsetY) + ' : ' + $scope.pxToMetersY(event.offsetX));
+        // console.log($scope.pxToPercentsX(event.offsetX) + ' : ' + $scope.pxToPercentsY(event.offsetY));
     });
 
 
@@ -130,24 +130,24 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
 
     var mapImg = $('#map-image');
 
-    $scope.metersToPxX = function(x)
+    $scope.metersToPxX = function(y)
     {
-        return (parseFloat(config.map.offset_x) + parseFloat(x)) * parseFloat(mapImg.width()) / parseFloat(config.map.width);
+        return (parseFloat(config.map.meters_offset_x) - parseFloat(y)) * parseFloat(mapImg.width()) / parseFloat(config.map.meters_width);
     }
     
-    $scope.metersToPxY = function(y) 
+    $scope.metersToPxY = function(x) 
     {
-        return (parseFloat(config.map.offset_y) + parseFloat(y)) * parseFloat(mapImg.height()) / parseFloat(config.map.height);
+        return (parseFloat(config.map.meters_offset_y) - parseFloat(x)) * parseFloat(mapImg.height()) / parseFloat(config.map.meters_height);
     }
 
-    $scope.pxToMetersX = function(x)
+    $scope.pxToMetersX = function(y)
     {
-        return parseFloat(x) * parseFloat(config.map.width) / parseFloat(mapImg.width()) - parseFloat(config.map.offset_x);
+        return parseFloat(y) * parseFloat(config.map.meters_width) / parseFloat(mapImg.width()) - parseFloat(config.map.meters_offset_x);
     }
 
-    $scope.pxToMetersY = function(y) 
+    $scope.pxToMetersY = function(x) 
     {
-        return parseFloat(y) * parseFloat(config.map.height) / parseFloat(mapImg.height()) - parseFloat(config.map.offset_y);
+        return parseFloat(x) * parseFloat(config.map.meters_height) / parseFloat(mapImg.height()) - parseFloat(config.map.meters_offset_y);
     }
 
     $scope.pxToPercentsX = function(x)
