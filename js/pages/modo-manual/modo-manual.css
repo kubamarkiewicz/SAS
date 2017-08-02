@@ -11,6 +11,9 @@ body.page-modo-manual > main .container {
 	max-width: 1050px;
 	margin: 0 auto;
 }
+body.page-modo-manual md-tab-content {
+	padding: 25px !important;
+} 
 body.page-modo-manual > main h2 {
 	border-bottom: 8px solid #0475b1;
 	padding-bottom: 8px;
@@ -54,6 +57,10 @@ body.page-modo-manual > main p.product-id button.clear {
 	margin: 0;
 }
 
+body.page-modo-manual > main form.fileForm p md-input-container {
+	width: 100%;
+}
+
 body.page-modo-manual > main form.notificationForm {
 }
 body.page-modo-manual > main form.notificationForm p.action {
@@ -64,6 +71,8 @@ body.page-modo-manual > main form.notificationForm p md-input-container {
 body.page-modo-manual > main form.notificationForm p .md-button.md-warn.md-raised {
 	margin-top: 0;
 }
+
+
 
 
 

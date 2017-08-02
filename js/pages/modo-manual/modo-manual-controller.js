@@ -124,7 +124,7 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             $('button.execute-acton').attr("disabled", false).removeClass('loading');
 
             // reset fields
-            $scope.action = null;
+            // $scope.action = null;
             $scope.readerId = null;
             $scope.nefab = '';
             $scope.cable1 = '';
@@ -220,7 +220,14 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             $mdToast.show($rootScope.toast);
             
             $('form.upload-file button').attr("disabled", false).removeClass('loading');
-            $('#uploadFileInput').val('');
+            
+            // reset fields
+            // $scope.fileAction = '';
+            // $('#uploadFileInput').val('');
+
+            // reset form and disable error messages
+            $scope.fileForm.$setPristine();
+            $scope.fileForm.$setUntouched();
         });
     }
 
@@ -273,6 +280,13 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
                 $rootScope.toast.toastClass('toast-error');
             }
             $mdToast.show($rootScope.toast);
+
+            // reset fields
+            // $scope.notificationActionsData = '';
+
+            // reset form and disable error messages
+            $scope.notificationForm.$setPristine();
+            $scope.notificationForm.$setUntouched();
         });
     }
 

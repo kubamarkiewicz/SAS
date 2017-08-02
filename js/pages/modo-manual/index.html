@@ -1,107 +1,111 @@
 
 <div class="container">
+
+	<md-tabs md-dynamic-height md-border-bottom>
+    	
+    	<md-tab label="Por teclado">
 		
-	<h2>Seleccione la acción y el lector</h2>
+			<!-- <p>Seleccione la acción y el lector</p> -->
 
-	<form name="actionForm" ng-submit="action == pdfAction ? openPDF() : executeAction()">
+			<form name="actionForm" ng-submit="action == pdfAction ? openPDF() : executeAction()">
 
-		<div class="row">
-			
-			<div class="col-6">
-				
-				<p class="action">
-					<label>ACCIÓN</label>
-					<md-input-container md-no-float>
-						<md-select ng-model="action" placeholder="Seleccionar acción" ng-change="selectAction()" required md-no-asterisk>
-							<md-option ng-repeat="action in actionsData" ng-value="action">{{ action }}</md-option>
-						</md-select>
-					</md-input-container>
-				</p>
-
-				<p class="reader" ng-hide="action == pdfAction">
-					<label>LECTOR</label>
-					<md-input-container md-no-float>
-						<md-select ng-model="readerId" placeholder="Seleccionar lector" ng-change="selectReader()">
-		    				<md-option ng-repeat="reader in readersData" ng-value="reader">{{ reader }}</md-option>
-		  				</md-select>
-					</md-input-container>
-				</p>
-
-			</div><!-- /.col-6 -->
-
-			<div class="col-6">
-
-				<div ng-hide="action == pdfAction">
+				<div class="row">
 					
-					<p class="product-id">
-						<label>LECTURA NEFAB (opcionalmente manual)</label>
-						<md-input-container md-no-float>
-					        <input type="text" name="nefab" ng-model="nefab" placeholder="Código de nefab" maxlength="{{ nefab_code_length }}" minlength="{{ nefab_code_length }}" ng-required="action != pdfAction">
-					        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
-					    </md-input-container>
-					</p>
-					
-					<p class="product-id">
-						<label>LECTURA CABLES (opcionalmente manual)</label>
-						<md-input-container md-no-float>
-					        <input type="text" name="cable1" ng-model="cable1" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}" ng-required="action != pdfAction">
-					        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
-					    </md-input-container>
-					</p>
-					
-					<p class="product-id">
-						<md-input-container md-no-float>
-					        <input type="text" name="cable2" ng-model="cable2" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
-					        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
-					    </md-input-container>
-					</p>
-					
-					<p class="product-id">
-						<md-input-container md-no-float>
-					        <input type="text" name="cable3" ng-model="cable3" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
-					        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
-					    </md-input-container>
-					</p>
-					
-					<p class="product-id">
-						<md-input-container md-no-float>
-					        <input type="text" name="cable4" ng-model="cable4" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
-					        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
-					    </md-input-container>
-					</p>
-
-				</div>
-
-				<div ng-show="action == pdfAction">
+					<div class="col-6">
 						
-					<p>
-						<label>REFERENICA DE CABLE</label>
-						<md-input-container md-no-float>
-					        <input type="text" name="cable" ng-model="cable" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}" ng-required="action == pdfAction">
-					    </md-input-container>
-					</p>
+						<p class="action">
+							<label>ACCIÓN</label>
+							<md-input-container md-no-float>
+								<md-select ng-model="action" placeholder="Seleccionar acción" ng-change="selectAction()" required md-no-asterisk>
+									<md-option ng-repeat="action in actionsData" ng-value="action">{{ action }}</md-option>
+								</md-select>
+							</md-input-container>
+						</p>
 
-				</div>
-				
-				
+						<p class="reader" ng-hide="action == pdfAction">
+							<label>SCANER</label>
+							<md-input-container md-no-float>
+								<md-select ng-model="readerId" placeholder="Seleccionar scaner" ng-change="selectReader()">
+				    				<md-option ng-repeat="reader in readersData" ng-value="reader">{{ reader }}</md-option>
+				  				</md-select>
+							</md-input-container>
+						</p>
 
-			</div><!-- /.col-6 -->
+					</div><!-- /.col-6 -->
 
-		</div><!-- /.row -->	
+					<div class="col-6">
 
-		<p>
-		    <md-button type="submit" class="md-raised md-primary btn-block execute-action">Confirmar <md-progress-circular></md-progress-circular></md-button>
-		</p>
-	</form>
+						<div ng-hide="action == pdfAction">
+							
+							<p class="product-id">
+								<label>LECTURA NEFAB (opcionalmente manual)</label>
+								<md-input-container md-no-float>
+							        <input type="text" name="nefab" ng-model="nefab" placeholder="Código de nefab" maxlength="{{ nefab_code_length }}" minlength="{{ nefab_code_length }}" ng-required="action != pdfAction">
+							        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
+							    </md-input-container>
+							</p>
+							
+							<p class="product-id">
+								<label>LECTURA CABLES (opcionalmente manual)</label>
+								<md-input-container md-no-float>
+							        <input type="text" name="cable1" ng-model="cable1" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}" ng-required="action != pdfAction">
+							        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
+							    </md-input-container>
+							</p>
+							
+							<p class="product-id">
+								<md-input-container md-no-float>
+							        <input type="text" name="cable2" ng-model="cable2" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
+							        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
+							    </md-input-container>
+							</p>
+							
+							<p class="product-id">
+								<md-input-container md-no-float>
+							        <input type="text" name="cable3" ng-model="cable3" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
+							        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
+							    </md-input-container>
+							</p>
+							
+							<p class="product-id">
+								<md-input-container md-no-float>
+							        <input type="text" name="cable4" ng-model="cable4" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
+							        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
+							    </md-input-container>
+							</p>
 
-	<hr>
-	<br>
+						</div>
 
-	<div class="row">
+						<div ng-show="action == pdfAction">
+								
+							<p>
+								<label>REFERENICA DE CABLE</label>
+								<md-input-container md-no-float>
+							        <input type="text" name="cable" ng-model="cable" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}" ng-required="action == pdfAction">
+							    </md-input-container>
+							</p>
+
+						</div>
+						
+						
+
+					</div><!-- /.col-6 -->
+
+				</div><!-- /.row -->	
+
+				<p>
+				    <md-button type="submit" class="md-raised md-primary btn-block execute-action">Confirmar <md-progress-circular></md-progress-circular></md-button>
+				</p>
+			</form>
+
+
+
+		</md-tab>
+    	
+    	<md-tab label="Por archivo">
+		
 			
-		<div class="col-6">		
-
-			<form name="fileForm" ng-submit="uploadFile()" class="upload-file">
+			<form name="fileForm" class="fileForm" ng-submit="uploadFile()" class="upload-file">
 				
 				<p class="action">
 					<label>ACCIÓN</label>
@@ -128,14 +132,14 @@
 
 		   	</form>
 
-		</div><!-- /.col-6 -->
-
-		<div class="col-6">	
-			
-			<form class="notificationForm" ng-submit="generateNotification()">
+		</md-tab>
+    	
+    	<md-tab label="Notificación">
+		
+			<form name="notificationForm" class="notificationForm" ng-submit="generateNotification()">
 				
 				<p class="action">
-					<label>Notificación</label>
+					<label>NOTIFICACIÓN</label>
 					<md-input-container md-no-float>
 						<md-select ng-model="notificationAction" placeholder="Seleccionar notificación" required md-no-asterisk>
 							<md-option ng-repeat="action in notificationActionsData" ng-value="action">{{ action }}</md-option>
@@ -150,9 +154,11 @@
 		   	</form>
 
 
-		</div><!-- /.col-6 -->
 
-	</div><!-- /.row -->	
+
+		</md-tab>
+
+	</md-tabs>
 
 
 </div>

@@ -104,6 +104,18 @@ md-toast.toast-error .md-toast-content {
 	font-size: 100%;
 	text-transform: uppercase;
 }
+md-tabs md-ink-bar {
+    color: rgb(2,118,175) !important;
+    background-color: rgb(2,118,175) !important;
+    height: 4px;
+}
+md-tab-item {
+	font-size: 18px !important;
+	font-weight: 700 !important;
+}
+md-tab-item.md-active {
+    color: rgba(0,0,0,0.87) !important;
+}
 
 
 /***************************************************************************************************/
