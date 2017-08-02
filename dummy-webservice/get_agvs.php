@@ -2,7 +2,7 @@
     "get_agvsResult" :
     [
 		{
-			"Id"			: "1",
+			"Id"			: "12",
 			"X"				: "<?=rand(50, 51)?>",
 			"Y"				: "<?=rand(50, 52)?>",
 			"Orientation"	: "<?=rand(0, 90)?>",

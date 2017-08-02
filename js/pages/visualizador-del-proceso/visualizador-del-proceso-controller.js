@@ -190,7 +190,7 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
             }
         });
     }
-    ArtisterilIntervalService.start($scope.loadAGVData);
+    ArtisterilIntervalService.start($scope.loadAGVData, 500);
     // $scope.loadAGVData();
 
 

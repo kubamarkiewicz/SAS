@@ -524,6 +524,7 @@ section.popup-alerts .open {
 	transition: visibility 0s linear 0.25s, opacity 0.05s ease-out, transform 0.25s ease-out;
 	border-left: 50px solid #a50f10;
 	margin-left: -50px;
+	min-width: 73px;
 }
 section.popup-alerts .open .count {
 }
