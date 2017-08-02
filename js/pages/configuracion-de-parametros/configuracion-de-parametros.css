@@ -118,5 +118,11 @@ body.page-configuracion-de-parametros .md-button.save {
 
 	body.page-configuracion-de-parametros section.parameters .parameter {
 		font-size: 14px;
+		margin-bottom: 20px;
 	}
+	body.page-configuracion-de-parametros section.parameters .parameter h2 {
+		margin-bottom: 20px;
+		border-bottom-width: 4px;
+	}
+	
 }
