@@ -12,7 +12,7 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
     {
         $http({
             method  : 'GET',
-            url     : config.webservice.urls.process_get_popup_alerts
+            url     : config.webservice.urls.data_get_popup_alerts
          })
         .then(function(response) {
             $scope.popupAlertsData = {};
@@ -25,6 +25,8 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
     }
     ArtisterilIntervalService.start($scope.getPopupAlertsData);
     // $scope.getPopupAlertsData();
+
+
 
 
     $("section.popup-alerts .open").click(function(){

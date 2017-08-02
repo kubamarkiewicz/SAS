@@ -401,8 +401,8 @@ section.popup-alerts {
 	position: absolute;
 	z-index: 100;
 	top: 10px;
-	height: calc(100% - 20px);
 	left: 0;
+	height: calc(100% - 20px);
 }
 section.popup-alerts.hide {
 	visibility: hidden;
@@ -425,7 +425,6 @@ section.popup-alerts.closed .alerts {
 	transform: translateX(-100vw);
 }
 section.popup-alerts .alert {
-	background-color: #a50f10;
 	color: #ffffff;
 	padding: 14px 18px;
 	margin-bottom: 10px;
@@ -433,6 +432,14 @@ section.popup-alerts .alert {
 	border-radius: 2px;
 	width: 300px;
 	break-inside: avoid;
+	visibility: visible;
+  	opacity: 1;
+	transition: visibility 0s linear 0, opacity 0.35s ease-out;
+}
+section.popup-alerts.closed .alert {
+	visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.35s, opacity 0.35s ease-out;
 }
 section.popup-alerts .alert h3 {
 	padding: 0;
@@ -469,7 +476,6 @@ section.popup-alerts.closed .close {
 }
 section.popup-alerts .open {
 	position: absolute;
-	top: 36px;
 	color: #ffffff;
 	background-color: #a50f10;
 	border-radius: 0 2px 2px 0;
@@ -586,25 +592,28 @@ table.scroll-table tbody tr {
 
 
 
-.alert-primary {
+.alert {
 	background-color: #00557e;
 }
-.alert-success {
+.alert.alert-primary {
+	background-color: #00557e;
+}
+.alert.alert-success {
 	background-color: #7dbe02;
 }
-.alert-info {
+.alert.alert-info {
 	background-color: #0276af;
 }
-.alert-warning {
+.alert.alert-warning {
 	background-color: #ff7e00;
 }
-.alert-danger {
+.alert.alert-danger {
 	background-color: #a50f10;
 }
-.alert-muted {
+.alert.alert-muted {
 	background-color: #4b4b4b;
 }
-.alert-white {
+.alert.alert-white {
 	background-color: #ffffff;
 	color: #2a2b2d !important;
 }

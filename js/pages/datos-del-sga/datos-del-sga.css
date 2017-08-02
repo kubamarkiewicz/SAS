@@ -23,7 +23,7 @@ body.page-datos-del-sga > main .col-right {
 	height: 100%;
 }
 body.page-datos-del-sga > main .flow-wrap {
-	height: 50%;
+	height: 75%;
 	display: flex;
 	justify-content: space-between;
 	padding-bottom: 15px;
@@ -133,54 +133,7 @@ body.page-datos-del-sga main section.blocked-products .item {
 
 
 
-/* mobile */
-@media screen and (max-width: 1400px) {
 
-	body.page-datos-del-sga > main .col-left {
-		width: calc(66% - 12px);
-	}
-	body.page-datos-del-sga > main .col-right {
-		width: calc(33% - 12px);
-	}
 
-	body.page-datos-del-sga th.status, 
-	body.page-datos-del-sga td.status {
-		width: 75px;
-	}
-
-	body.page-datos-del-sga > main h2 {
-		font-size: 18px;
-	}
-	body.page-datos-del-sga > main .flow-wrap > * {
-		width: calc(50% - 15px);
-	}
-
-	body.page-datos-del-sga main section.alerts .alert {
-		width: calc(33% - 26px);
-		padding: 7px 13px;
-	}
-	body.page-datos-del-sga main section.alerts .alert h3 {
-		font-size: 16px;
-		margin-bottom: 4px;
-	}
-	body.page-datos-del-sga main section.alerts .alert main {
-		font-size: 16px;
-		line-height: 130%;
-	}
-	body.page-datos-del-sga main section.blocked-products .list {
-		margin-left: -15px;
-	}
-	body.page-datos-del-sga main section.blocked-products .item {
-		font-size: 16px;
-		padding: 2px;
-		width: calc(20% - 15px);
-		margin-left: 15px;
-	}
-
+@media screen and (max-width: 1900px) {
 }
-
-
-
-
-
-

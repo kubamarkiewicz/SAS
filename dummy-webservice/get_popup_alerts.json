@@ -3,31 +3,38 @@
 	[
 		{
 			"Title": "Lorem ipsum",
-			"Message": "dolor sit amet, consectetur adipiscing elit"
+			"Message": "dolor sit amet, consectetur adipiscing elit",
+			"Color": "danger"
 		},
 		{
 			"Title": "Sed do eiusmod tempor",
-			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+			"Color": "primary"
 		},
 		{
 			"Title": "Lorem ipsum 2",
-			"Message": "dolor sit amet, consectetur adipiscing elit"
+			"Message": "dolor sit amet, consectetur adipiscing elit",
+			"Color": "success"
 		},
 		{
 			"Title": "Sed do eiusmod tempor 2",
-			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+			"Color": "info"
 		},
 		{
 			"Title": "Lorem ipsum 3",
-			"Message": "dolor sit amet, consectetur adipiscing elit"
+			"Message": "dolor sit amet, consectetur adipiscing elit",
+			"Color": "warning"
 		},
 		{
 			"Title": "Sed do eiusmod tempor 3",
-			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+			"Color": "muted"
 		},
 		{
 			"Title": "Lorem ipsum 4",
-			"Message": "dolor sit amet, consectetur adipiscing elit"
+			"Message": "dolor sit amet, consectetur adipiscing elit",
+			"Color": "white"
 		},
 		{
 			"Title": "Sed do eiusmod tempor 4",

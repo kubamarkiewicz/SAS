@@ -2,14 +2,14 @@
 <!-- popup alerts -->
 <section class="popup-alerts closed" ng-class="{hide: !popupAlertsCount}">
 	<div class="alerts">
-		<a class="close">✕</a>
-		<div class="alert" ng-repeat="item in popupAlertsData">
+		<a class="close">←</a>
+		<div ng-repeat="item in popupAlertsData" class="alert alert-{{ item.Color }}">
 			<h3>{{ item.Title }}</h3>
 			<main>{{ item.Message }}</main>
 		</div>
 	</div>
 	<a class="open">
-		(<span class="count">{{ popupAlertsCount }}</span>)
+		<span class="count">{{ popupAlertsCount }}</span>
 	</a> 
 </section>
 
@@ -155,22 +155,6 @@
 		</section>
 
 	</div><!-- /.flow-wrap -->
-
-
-	<section class="alerts">
-		
-		<h2>ALERTAS y AVISOS</h2>
-
-		<div class="list"> 
-			
-			<div ng-repeat="item in alertsData" class="alert alert-{{ item.Color }}" >
-				<h3>{{ item.Title }}</h3>
-				<main>{{ item.Message }}</main>
-			</div>
-
-		</div>
-
-	</section>
 
 
 
