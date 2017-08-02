@@ -21,7 +21,8 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
             }
         });
     }
-    ArtisterilIntervalService.start($scope.getPopupAlertsData);
+    // ArtisterilIntervalService.start($scope.getPopupAlertsData);
+    $scope.getPopupAlertsData();
 
 
     $("section.popup-alerts .open").click(function(){
