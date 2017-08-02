@@ -24,7 +24,7 @@
 					<md-input-container md-no-float>
 				        <input type="text" name="productId" ng-model="productId" placeholder="Código de producto" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
 				    </md-input-container>
-				    <md-button type="submit" class="block-product"></md-button>
+				    <md-button type="submit" class="block-product"><md-tooltip md-direction="top">Seleccionar</md-tooltip></md-button>
 				</p>
 		   	</form>
 
@@ -67,7 +67,7 @@
 				</div>
 			</div>
 
-			<md-button class="md-raised md-warn block-products" ng-click="blockProducts()">{{action == 'block' ? 'bloquear' : 'desbloquear'}} <md-progress-circular></md-progress-circular></md-button>
+			<md-button class="md-raised md-primary block-products" ng-click="blockProducts()">{{action == 'block' ? 'bloquear' : 'desbloquear'}} <md-progress-circular></md-progress-circular></md-button>
 			
 		</section>
 
@@ -79,7 +79,7 @@
 
 		<div class="list" ng-show="action">
 			<div class="item" ng-repeat="item in blockedProductsData track by $index">
-				<div class="unblock" ng-click="selectProduct(item)" ng-show="action == 'unblock'"></div>
+				<div class="unblock" ng-click="selectProduct(item)" ng-show="action == 'unblock'"><md-tooltip md-direction="top">DESBLOQUEAR</md-tooltip></div>
 				{{ item }}
 			</div>
 		</div>

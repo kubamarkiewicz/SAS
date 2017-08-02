@@ -23,7 +23,7 @@
 	        <input ng-model="parametersData[key].Values[$index].End">
 	    </md-input-container>
 	    <md-checkbox ng-model="parametersData[key].Values[$index].Activated"></md-checkbox>
-	    <span class="add" ng-click="addHourBelow($index, parametersData[key])"></span>
-	    <span class="remove" ng-click="removeHour($index, parametersData[key])"></span>
+	    <span class="add" ng-click="addHourBelow($index, parametersData[key])"><md-tooltip md-direction="top">Añadir</md-tooltip></span>
+	    <span class="remove" ng-click="removeHour($index, parametersData[key])"><md-tooltip md-direction="top">Borrar</md-tooltip></span>
 	</div>
 

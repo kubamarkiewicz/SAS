@@ -13,7 +13,7 @@
 					<md-input-container md-no-float>
 				        <input type="text" name="nefab" ng-model="nefab" placeholder="Código de nefab" maxlength="{{ nefab_code_length }}" minlength="{{ nefab_code_length }}" required>
 				    </md-input-container>
-				    <md-button type="submit" class="receive-product"></md-button>
+				    <md-button type="submit" class="receive-product"><md-tooltip md-direction="top">Seleccionar</md-tooltip>	</md-button>
 				</p>
 				<br>
 				<p>
@@ -80,7 +80,7 @@
 
 		<div class="list" flex>
 			<div class="item" ng-repeat="item in selectedProducts track by $index">
-				<div class="remove" ng-click="removeFromSelection(item)"></div>
+				<div class="remove" ng-click="removeFromSelection(item)"><md-tooltip md-direction="top">Borrar</md-tooltip></div>
 				<div class="nefab">{{ item[0] }}</div>
 				<div class="cable">{{ item[1] }}</div>
 				<div class="cable">{{ item[2] }}</div>
@@ -89,7 +89,7 @@
 			</div>
 		</div>
 
-		<md-button class="md-raised md-warn receive-products" ng-click="receiveProducts()">Insertar a recibidos <md-progress-circular></md-progress-circular></md-button>
+		<md-button class="md-raised md-primary receive-products" ng-click="receiveProducts()">Insertar a recibidos <md-progress-circular></md-progress-circular></md-button>
 		
 	</section>
 

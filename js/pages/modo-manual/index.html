@@ -37,7 +37,7 @@
 						<label>LECTURA NEFAB (opcionalmente manual)</label>
 						<md-input-container md-no-float>
 					        <input type="text" name="nefab" ng-model="nefab" placeholder="Código de nefab" maxlength="{{ nefab_code_length }}" minlength="{{ nefab_code_length }}" ng-required="action != pdfAction">
-					        <md-button class="clear"></md-button>
+					        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
 					    </md-input-container>
 					</p>
 					
@@ -45,28 +45,28 @@
 						<label>LECTURA CABLES (opcionalmente manual)</label>
 						<md-input-container md-no-float>
 					        <input type="text" name="cable1" ng-model="cable1" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}" ng-required="action != pdfAction">
-					        <md-button class="clear"></md-button>
+					        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
 					    </md-input-container>
 					</p>
 					
 					<p class="product-id">
 						<md-input-container md-no-float>
 					        <input type="text" name="cable2" ng-model="cable2" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
-					        <md-button class="clear"></md-button>
+					        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
 					    </md-input-container>
 					</p>
 					
 					<p class="product-id">
 						<md-input-container md-no-float>
 					        <input type="text" name="cable3" ng-model="cable3" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
-					        <md-button class="clear"></md-button>
+					        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
 					    </md-input-container>
 					</p>
 					
 					<p class="product-id">
 						<md-input-container md-no-float>
 					        <input type="text" name="cable4" ng-model="cable4" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
-					        <md-button class="clear"></md-button>
+					        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
 					    </md-input-container>
 					</p>
 
@@ -90,7 +90,7 @@
 		</div><!-- /.row -->	
 
 		<p>
-		    <md-button type="submit" class="md-raised md-warn execute-action">Confirmar <md-progress-circular></md-progress-circular></md-button>
+		    <md-button type="submit" class="md-raised md-primary btn-block execute-action">Confirmar <md-progress-circular></md-progress-circular></md-button>
 		</p>
 	</form>
 
@@ -122,7 +122,7 @@
 
 				    <br>
 
-					<md-button type="submit" class="md-raised md-warn generate-pdf">Enviar <md-progress-circular></md-progress-circular></md-button>
+					<md-button type="submit" class="md-raised md-primary btn-block generate-pdf">Enviar <md-progress-circular></md-progress-circular></md-button>
 				</p>
 
 
@@ -144,7 +144,7 @@
 				</p>
 
 				<p>
-				    <md-button type="submit" class="md-raised md-warn generate-notification">Generar notificación</md-button>
+				    <md-button type="submit" class="md-raised md-primary btn-block generate-notification">Generar notificación</md-button>
 				</p>
 
 		   	</form>
