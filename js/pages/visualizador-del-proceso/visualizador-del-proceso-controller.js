@@ -50,14 +50,17 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
 
 	var mapaElement = $('#mapa');
 
-	var defaultFocal = {
+	var centerFocal = {
 		'clientX': mapaElement.parent().width()/2, 
 		'clientY': mapaElement.parent().height()/2
 	}
+    var defaultFocal = centerFocal;
+
+    var defaultZoomRate = 1.2;
 	
-	$scope.zoomIn = function(focal, animate) 
+	$scope.zoomIn = function(focal, animate, zoomRate) 
 	{
-		$scope.zoom = 1.2 * $scope.zoom;
+		$scope.zoom = (zoomRate ? zoomRate : defaultZoomRate) * $scope.zoom;
 		if ($scope.zoom > config.map.max_zoom) {
 			$scope.zoom = config.map.max_zoom;
 		}
@@ -70,9 +73,12 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
         $('body.page-visualizador-del-proceso .popup').removeClass('open');
 	}
 	
-	$scope.zoomOut = function(focal, animate) 
+	$scope.zoomOut = function(focal, animate, zoomRate) 
 	{
-		$scope.zoom = 1 / 1.2 * $scope.zoom;
+        if (focal) {
+            defaultFocal = focal;
+        }
+		$scope.zoom = 1 / (zoomRate ? zoomRate : defaultZoomRate) * $scope.zoom;
 		if ($scope.zoom < config.map.min_zoom) {
 			$scope.zoom = config.map.min_zoom;
 		}
@@ -95,17 +101,16 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
         var delta = e.delta || e.originalEvent.wheelDelta;
         var zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
         if (zoomOut) {
-        	$scope.zoomOut(e, false);
+        	$scope.zoomOut(e, false, 1.1);
         }
         else {
-        	$scope.zoomIn(e, false);
+        	$scope.zoomIn(e, false, 1.1);
         }
     });
 
     // double click to zoom in
     mapaElement.dblclick(function(e) {
-    	$scope.zoomIn(e, true);
-    	$scope.zoomIn(e, true);
+    	$scope.zoomIn(e, true, 1.44);
 	});
 
     // on map click
