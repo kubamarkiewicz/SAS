@@ -451,7 +451,7 @@ section.popup-alerts .alert main {
 }
 section.popup-alerts .close {
 	color: #ffffff;
-	background-color: #024160;
+	background-color: #4b4b4b;
 	border-radius: 50%;
 	width: 30px;
 	height: 30px;
@@ -477,7 +477,7 @@ section.popup-alerts.closed .close {
 section.popup-alerts .open {
 	position: absolute;
 	color: #ffffff;
-	background-color: #a50f10;
+	background-color: #A50F0B;
 	border-radius: 0 2px 2px 0;
 	text-align: center;
 	line-height: 30px;
@@ -487,17 +487,25 @@ section.popup-alerts .open {
 	text-transform: uppercase;
 	padding: 23px 5px 0 5px;
 	background-image: url(../images/alert.png);
-	background-size: 20px;
 	background-repeat: no-repeat;
 	background-position: center 6px;
 	transition: transform 0.25s ease-out;
-	transform: translateX(-100%);
 	z-index: 10;
+	background-size: 19px;
+	opacity: 0;
+	visibility: hidden;	
+	transform: translateX(100%);
+	transition: visibility 0s linear 0.25s, opacity 0.05s ease-out, transform 0.25s ease-out;
+	border-left: 50px solid #a50f10;
+	margin-left: -50px;
 }
 section.popup-alerts .open .count {
 }
 section.popup-alerts.closed .open {
-	transform: translateX(0%);
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(0);
+	transition-delay:0s;
 }
 
 table.my-table {    
