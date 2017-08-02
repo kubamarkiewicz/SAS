@@ -189,6 +189,10 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
 
     $scope.uploadFile = function()
     {
+        if (!$scope.fileAction) {
+            return;
+        }
+
         $('form.upload-file button').attr("disabled", true).addClass('loading');
 
         // read file as text
