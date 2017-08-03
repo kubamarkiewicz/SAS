@@ -43,6 +43,7 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
     // select reader
 
     $scope.readerId = '';
+    $scope.lastReading = null;
 
     $scope.selectReader = function()
     {
@@ -68,6 +69,18 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
 
             // add product to input
             if (response.data.get_reader_readingResult) {
+
+                // do not repeat reading
+                if ($scope.lastReading 
+                        && ($scope.lastReading.Nefab == response.data.get_reader_readingResult.Nefab)
+                        && ($scope.lastReading.Cable1 == response.data.get_reader_readingResult.Cable1)
+                        && ($scope.lastReading.Cable2 == response.data.get_reader_readingResult.Cable2)
+                        && ($scope.lastReading.Cable3 == response.data.get_reader_readingResult.Cable3)
+                        && ($scope.lastReading.Cable4 == response.data.get_reader_readingResult.Cable4)
+                    ) {
+                    return;
+                }
+
                 $scope.nefab = response.data.get_reader_readingResult.Nefab;
                 $scope.cable1 = response.data.get_reader_readingResult.Cable1;
                 $scope.cable2 = response.data.get_reader_readingResult.Cable2;
@@ -76,6 +89,8 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
 
                 // stop interval
                 // ArtisterilIntervalService.stop('getReaderReading');
+
+                $scope.lastReading = response.data.get_reader_readingResult;
             }
         });
     }
@@ -125,7 +140,7 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
 
             // reset fields
             // $scope.action = null;
-            $scope.readerId = null;
+            // $scope.readerId = null;
             $scope.nefab = '';
             $scope.cable1 = '';
             $scope.cable2 = '';
