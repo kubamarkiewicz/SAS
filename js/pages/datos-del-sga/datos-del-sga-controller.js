@@ -13,12 +13,7 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
             url     : config.webservice.urls.data_get_popup_alerts
          })
         .then(function(response) {
-            $scope.popupAlertsData = {};
-            $scope.popupAlertsCount = 0;
-            for (i in response.data.get_popup_alertsResult) {
-                $scope.popupAlertsData[response.data.get_popup_alertsResult[i].Title + response.data.get_popup_alertsResult[i].Message] = response.data.get_popup_alertsResult[i];
-                $scope.popupAlertsCount += 1;
-            }
+            $scope.popupAlertsData = response.data.get_popup_alertsResult;
         });
     }
     ArtisterilIntervalService.start($scope.getPopupAlertsData);
