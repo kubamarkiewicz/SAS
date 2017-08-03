@@ -60,7 +60,7 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
 
     $scope.getReaderReading = function()
     {
-        return $http({
+        $http({
             method  : 'GET',
             url     : config.webservice.urls.get_reading_for_manual_mode
          })
@@ -75,7 +75,7 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
                 $scope.cable4 = response.data.get_reader_readingResult.Cable4;
 
                 // stop interval
-                ArtisterilIntervalService.stop('getReaderReading');
+                // ArtisterilIntervalService.stop('getReaderReading');
             }
         });
     }
