@@ -5,7 +5,7 @@
 
 		<section class="action-switch">
 			
-			<h2>Acción a realizar</h2>
+			<h2 class="{{ action ? 'selected' : '' }}">Acción a realizar</h2>
 
 			<div class="buttons">
 				<md-button md-colors="{background: 'blue'}" ng-click="setAction('block')" ng-class="{'selected': action == 'block'}">Bloquear</md-button>
@@ -62,7 +62,7 @@
 
 			<div class="list" flex>
 				<div class="item" ng-repeat="item in selectedProducts track by $index">
-					<div class="remove" ng-click="removeFromSelection(item)"></div>
+					<div class="remove" ng-click="removeFromSelection(item)"><md-tooltip md-direction="top">Borrar</md-tooltip></div>
 					{{ item }}
 				</div>
 			</div>

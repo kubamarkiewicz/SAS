@@ -4,7 +4,6 @@
 
 
 body.page-bloqueo-de-productos > main {
-	padding: 50px 25px 25px 25px;
 }
 body.page-bloqueo-de-productos > main > .layout-row {
 	height: 100%;
@@ -13,7 +12,7 @@ body.page-bloqueo-de-productos > main > .layout-row > * {
 	margin: 0px 25px; 
 }
 body.page-bloqueo-de-productos > main section {
-	margin-bottom: 35px;
+	margin-bottom: 30px;
 }
 body.page-bloqueo-de-productos > main section > h2 {
 	border-bottom: 8px solid #0276af;
@@ -109,13 +108,15 @@ body.page-bloqueo-de-productos section.blocked-products .item .unblock {
 
 body.page-bloqueo-de-productos section.selected-products {
 	overflow: visible;
+	margin-bottom: 0;
+	margin-top: -15px;
 }
 body.page-bloqueo-de-productos section.selected-products .list {
 	display: flex;
 	flex-wrap: wrap;
 	align-content: flex-start;
 	overflow-y: auto;
-	min-height: 38px;
+	min-height: 48px;
 }
 body.page-bloqueo-de-productos section.selected-products .list .item {
 	background-color: #ffffff;
@@ -145,14 +146,25 @@ body.page-bloqueo-de-productos section.selected-products button.block-products {
 
 
 /* mobile */
-@media screen and (max-width: 1150px) {
-	body.page-bloqueo-de-productos section.blocked-products .item {
-		font-size: 18px;
+@media screen and (max-width: 1900px) {
+
+	body.page-bloqueo-de-productos section.action-switch h2.selected {
+		display: none;
 	}
-}
-@media screen and (max-width: 1430px) {
 
 	body.page-bloqueo-de-productos section.actions p label {
 		display: block;
+		font-size: 16px;
+	}
+
+	body.page-bloqueo-de-productos > main section > h2 {
+		border-bottom-width: 4px;
+	}
+
+	body.page-bloqueo-de-productos section.blocked-products .item {
+		font-size: 16px;
+	}
+	body.page-bloqueo-de-productos section.selected-products .list .item {
+		font-size: 16px;
 	}
 }

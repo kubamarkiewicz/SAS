@@ -5,7 +5,6 @@
 
 
 body.page-recepcion-de-productos > main {
-	padding: 50px 25px 40px 25px;
 }
 body.page-recepcion-de-productos > main > .layout-row {
 	height: 100%;
@@ -89,12 +88,21 @@ body.page-recepcion-de-productos .selected-products .list .item .cable {
 
 
 /* mobile */
-@media screen and (max-width: 1150px) {
-}
-@media screen and (max-width: 1430px) {
+@media screen and (max-width: 1900px) {
 
 	body.page-recepcion-de-productos section.actions p label {
+		font-size: 16px;
 		display: block;
+	}
+	body.page-recepcion-de-productos > main section > h2 {
+		border-bottom-width: 4px;
+	}
+	body.page-recepcion-de-productos .selected-products .list .item {
+		font-size: 16px;
+		height: 107px;
+	}
+	body.page-recepcion-de-productos .selected-products .list .item .cable {
+		font-size: 14px;
 	}
 }
 
