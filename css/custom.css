@@ -253,6 +253,9 @@ md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-
 md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-text {
 color: inherit !important; } 
 
+
+
+
 /***************************************************************************************************/
 /* Layout Divs                                                                                     */
 /***************************************************************************************************/
@@ -703,7 +706,8 @@ table.scroll-table tbody tr {
 		margin-left: 10px;
 	}
 
-	md-input-container .md-input {
+	md-input-container .md-input,
+	md-input-container input[type="file"].md-input {
     	font-size: 14px;
 	}
 
