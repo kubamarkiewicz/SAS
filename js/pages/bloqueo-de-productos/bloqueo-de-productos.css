@@ -146,7 +146,7 @@ body.page-bloqueo-de-productos section.selected-products button.block-products {
 
 
 /* mobile */
-@media screen and (max-width: 1900px) {
+@media screen and (max-width: 1850px) {
 
 	body.page-bloqueo-de-productos section.action-switch h2.selected {
 		display: none;

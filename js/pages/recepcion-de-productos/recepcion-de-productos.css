@@ -88,7 +88,7 @@ body.page-recepcion-de-productos .selected-products .list .item .cable {
 
 
 /* mobile */
-@media screen and (max-width: 1900px) {
+@media screen and (max-width: 1850px) {
 
 	body.page-recepcion-de-productos section.actions p label {
 		font-size: 16px;

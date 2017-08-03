@@ -287,7 +287,7 @@ body > footer {
 
 
 /* mobile */
-@media screen and (max-width: 1900px) {
+@media screen and (max-width: 1850px) {
 
 	body > header {
 		height: 80px;
@@ -670,7 +670,7 @@ table.scroll-table tbody tr {
 
 
 /* mobile */
-@media screen and (max-width: 1900px) {
+@media screen and (max-width: 1850px) {
 
 	body {
 		font-size: 12px;

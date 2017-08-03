@@ -110,7 +110,7 @@ body.page-configuracion-de-parametros .md-button.save {
 @media screen and (max-width: 1150px) {
 }
 
-@media screen and (max-width: 1900px) {
+@media screen and (max-width: 1850px) {
 
 	body.page-configuracion-de-parametros section.parameters .parameter.hourlytable .state {
 		float: none;

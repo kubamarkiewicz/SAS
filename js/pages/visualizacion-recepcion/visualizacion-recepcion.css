@@ -127,7 +127,7 @@ body.page-visualizacion-recepcion main section.glt-incoming td {
 	}
 }
 
-@media screen and (max-width: 1900px) {
+@media screen and (max-width: 1850px) {
 
 	body.page-visualizacion-recepcion main section.asn input[type="text"] {
 		width: 148px;

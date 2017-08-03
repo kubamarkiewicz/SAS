@@ -135,5 +135,9 @@ body.page-datos-del-sga main section.blocked-products .item {
 
 
 
-@media screen and (max-width: 1900px) {
+@media screen and (max-width: 1850px) {
+
+	body.page-datos-del-sga main section.blocked-products .item {
+		font-size: 14px;
+	}
 }
