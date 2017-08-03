@@ -16,6 +16,7 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
     // GLT in ASN
   
     $scope.gltInAsnData = [];
+    $scope.gltInAsnCablesCount = 0;
     
     $scope.getGltInAsnData = function()
     {
@@ -28,6 +29,14 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
          })
         .then(function(response) {
             $scope.gltInAsnData = response.data.reception_get_glt_in_asnResult;
+            // count cables
+            $scope.gltInAsnCablesCount = 0;
+            for (i in $scope.gltInAsnData) {
+                if ($scope.gltInAsnData[i].Cable1) $scope.gltInAsnCablesCount++;
+                if ($scope.gltInAsnData[i].Cable2) $scope.gltInAsnCablesCount++;
+                if ($scope.gltInAsnData[i].Cable3) $scope.gltInAsnCablesCount++;
+                if ($scope.gltInAsnData[i].Cable4) $scope.gltInAsnCablesCount++;
+            }
         });
     }
 
@@ -110,6 +119,7 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
     // GLT incoming 
 
     $scope.gltIncomingData = [];
+    $scope.gltIncomingCablesCount = 0;
     
     $scope.getGltIncomingData = function()
     {
@@ -122,6 +132,14 @@ app.controller('VisualizacionRecepcionController', function($scope, $rootScope, 
          })
         .then(function(response) {
             $scope.gltIncomingData = response.data.reception_get_glt_incomingResult;
+            // count cables
+            $scope.gltIncomingCablesCount = 0;
+            for (i in $scope.gltIncomingData) {
+                if ($scope.gltIncomingData[i].Cable1) $scope.gltIncomingCablesCount++;
+                if ($scope.gltIncomingData[i].Cable2) $scope.gltIncomingCablesCount++;
+                if ($scope.gltIncomingData[i].Cable3) $scope.gltIncomingCablesCount++;
+                if ($scope.gltIncomingData[i].Cable4) $scope.gltIncomingCablesCount++;
+            }
         });
     }
 

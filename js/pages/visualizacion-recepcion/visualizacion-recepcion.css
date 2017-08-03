@@ -6,6 +6,13 @@
 body.page-visualizacion-recepcion > main {
 	overflow: hidden;
 }
+body.page-visualizacion-recepcion > main h2 .cables {
+	float: right;
+	margin-right: 15px;
+}
+body.page-visualizacion-recepcion > main h2 .cables .badge {
+	background-color: #024160;
+}
 body.page-visualizacion-recepcion > main .row {
 	height: 100%;
 }

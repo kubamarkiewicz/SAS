@@ -8,20 +8,22 @@
     <title ng-bind="pageTitle + ' - SAS Automtotive Systems'">SAS Automtotive Systems</title>
     
     <script>
-        var version = "3";
+        var version = "6";
     </script>
 
     <!-- Le styles -->
     <link href="js/libraries/angular-material/angular-material.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-    <link href="js/pages/login/login.css" rel="stylesheet">
-    <link href="js/pages/visualizador-del-proceso/visualizador-del-proceso.css" rel="stylesheet">
-    <link href="js/pages/datos-del-sga/datos-del-sga.css" rel="stylesheet">
-    <link href="js/pages/bloqueo-de-productos/bloqueo-de-productos.css" rel="stylesheet">
-    <link href="js/pages/modo-manual/modo-manual.css" rel="stylesheet">
-    <link href="js/pages/recepcion-de-productos/recepcion-de-productos.css" rel="stylesheet">
-    <link href="js/pages/configuracion-de-parametros/configuracion-de-parametros.css" rel="stylesheet">
-    <link href="js/pages/visualizacion-recepcion/visualizacion-recepcion.css" rel="stylesheet">
+    <script>
+        document.write("<link href='css/custom.css?v="+version+"' rel='stylesheet'>");
+        document.write("<link href='js/pages/login/login.css?v="+version+"' rel='stylesheet'>");
+        document.write("<link href='js/pages/visualizador-del-proceso/visualizador-del-proceso.css?v="+version+"' rel='stylesheet'>");
+        document.write("<link href='js/pages/datos-del-sga/datos-del-sga.css?v="+version+"' rel='stylesheet'>");
+        document.write("<link href='js/pages/bloqueo-de-productos/bloqueo-de-productos.css?v="+version+"' rel='stylesheet'>");
+        document.write("<link href='js/pages/modo-manual/modo-manual.css?v="+version+"' rel='stylesheet'>");
+        document.write("<link href='js/pages/recepcion-de-productos/recepcion-de-productos.css?v="+version+"' rel='stylesheet'>");
+        document.write("<link href='js/pages/configuracion-de-parametros/configuracion-de-parametros.css?v="+version+"' rel='stylesheet'>");
+        document.write("<link href='js/pages/visualizacion-recepcion/visualizacion-recepcion.css?v="+version+"' rel='stylesheet'>");
+    </script>    
     
     <link rel="shortcut icon" href="images/favicon.ico">
 </head>
