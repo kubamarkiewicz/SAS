@@ -1,4 +1,5 @@
 
+
 var app = angular.module("myApp", [
     "ngRoute",
     "ngMaterial",
@@ -18,35 +19,35 @@ app.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
 
         .when('/login', { 
             controller: 'LoginController', 
-            templateUrl: 'js/pages/login/index.html' 
+            templateUrl: 'js/pages/login/index.html?v=' + version 
         })     
         .when('/visualizador-del-proceso', { 
             controller: 'VisualizadorDelProcesoController', 
-            templateUrl: 'js/pages/visualizador-del-proceso/index.html' 
+            templateUrl: 'js/pages/visualizador-del-proceso/index.html?v=' + version 
         })      
         .when('/datos-del-sga', { 
             controller: 'DatosDelSGAController', 
-            templateUrl: 'js/pages/datos-del-sga/index.html' 
+            templateUrl: 'js/pages/datos-del-sga/index.html?v=' + version 
         })    
         .when('/bloqueo-de-productos', { 
             controller: 'BloqueoDeProductosController', 
-            templateUrl: 'js/pages/bloqueo-de-productos/index.html' 
+            templateUrl: 'js/pages/bloqueo-de-productos/index.html?v=' + version 
         })    
         .when('/recepcion-de-productos', { 
             controller: 'RecepcionDeProductosController', 
-            templateUrl: 'js/pages/recepcion-de-productos/index.html' 
+            templateUrl: 'js/pages/recepcion-de-productos/index.html?v=' + version 
         })    
         .when('/modo-manual', { 
             controller: 'ModoManualProductosController', 
-            templateUrl: 'js/pages/modo-manual/index.html' 
+            templateUrl: 'js/pages/modo-manual/index.html?v=' + version 
         })   
         .when('/configuracion-de-parametros', { 
             controller: 'ConfiguracionDeParametrosController', 
-            templateUrl: 'js/pages/configuracion-de-parametros/index.html' 
+            templateUrl: 'js/pages/configuracion-de-parametros/index.html?v=' + version 
         })   
         .when('/visualizacion-recepcion', { 
             controller: 'VisualizacionRecepcionController', 
-            templateUrl: 'js/pages/visualizacion-recepcion/index.html' 
+            templateUrl: 'js/pages/visualizacion-recepcion/index.html?v=' + version 
         })   
         .otherwise({ 
             redirectTo: '/visualizador-del-proceso' 
