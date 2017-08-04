@@ -163,6 +163,11 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
         return (parseFloat(y) / parseFloat(mapImg.height()) * 100).toFixed(2);
     }
 
+    $scope.calculateRotation = function(angle) 
+    {
+        return 180 - parseFloat(angle);
+    }
+
 
 
     /* AGVs *********************************************************************************/
