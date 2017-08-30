@@ -720,6 +720,11 @@ table.scroll-table tbody tr {
 	    font-size: 14px;
 	}
 
+	.btn-block {
+	    margin-top: 20px;
+	    min-height: 0;
+	}
+
 	.burger {
 		margin-right: 0;
 	}

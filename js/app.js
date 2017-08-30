@@ -49,6 +49,10 @@ app.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
             controller: 'VisualizacionRecepcionController', 
             templateUrl: 'js/pages/visualizacion-recepcion/index.html?v=' + version 
         })   
+        .when('/localizacion-de-articulos', { 
+            controller: 'LocalizacionDeArticulosController', 
+            templateUrl: 'js/pages/localizacion-de-articulos/index.html?v=' + version 
+        })   
         .otherwise({ 
             redirectTo: '/visualizador-del-proceso' 
         }); 

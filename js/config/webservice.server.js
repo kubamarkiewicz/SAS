@@ -62,6 +62,8 @@ window.config.webservice = {
         "vis_reception_get_alerts"          : "http://10.12.1.233:8888/SAS/VReception/api/get_alerts",
         "vis_reception_get_glt_incoming"    : "http://10.12.1.233:8888/SAS/VReception/api/get_glt_incoming",
         "vis_reception_generate_notification" : "http://10.12.1.233:8888/SAS/VReception/api/generate_notification",
+
+        "localizacion_articulos_search_article" : "dummy-webservice/localizacion_articulos_search_article.json",
                 
         "enter_Login"                   : "http://10.12.1.233:8888/SAS/Login/api/enter_Login",
         "enter_Data"                    : "http://10.12.1.233:8888/SAS/Data/api/enter_Data",

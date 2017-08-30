@@ -8,7 +8,7 @@
     <title ng-bind="pageTitle + ' - SAS Automtotive Systems'">SAS Automtotive Systems</title>
     
     <script>
-        var version = "7";
+        var version = "8";
     </script>
 
     <!-- Le styles -->
@@ -23,6 +23,7 @@
         document.write("<link href='js/pages/recepcion-de-productos/recepcion-de-productos.css?v="+version+"' rel='stylesheet'>");
         document.write("<link href='js/pages/configuracion-de-parametros/configuracion-de-parametros.css?v="+version+"' rel='stylesheet'>");
         document.write("<link href='js/pages/visualizacion-recepcion/visualizacion-recepcion.css?v="+version+"' rel='stylesheet'>");
+        document.write("<link href='js/pages/localizacion-de-articulos/localizacion-de-articulos.css?v="+version+"' rel='stylesheet'>");
     </script>    
     
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -61,6 +62,9 @@
                 </md-menu-item>
                 <md-menu-item ng-hide="!user_permissions['visualizacion-recepcion']">
                     <md-button ng-href="#visualizacion-recepcion" md-colors="{background: 'blue'}">Visualización recepción</md-button>
+                </md-menu-item>
+                <md-menu-item ng-hide="!user_permissions['localizacion-de-articulos']">
+                    <md-button ng-href="#localizacion-de-articulos" md-colors="{background: 'blue'}">LOCALIZACIÓN DE ARTÍCULOS</md-button>
                 </md-menu-item>
                 <md-menu-item>
                     <md-button ng-click="logout()" md-colors="{background: 'blue'}">Salir</md-button>
@@ -115,6 +119,7 @@
         document.write("<script src='js/pages/modo-manual/modo-manual-controller.js?v="+version+"'><\/script>");
         document.write("<script src='js/pages/configuracion-de-parametros/configuracion-de-parametros-controller.js?v="+version+"'><\/script>");
         document.write("<script src='js/pages/visualizacion-recepcion/visualizacion-recepcion-controller.js?v="+version+"'><\/script>");
+        document.write("<script src='js/pages/localizacion-de-articulos/localizacion-de-articulos-controller.js?v="+version+"'><\/script>");
         
         /* Services */
         document.write("<script src='js/services/artisteril-auth-service.js?v="+version+"'><\/script>");

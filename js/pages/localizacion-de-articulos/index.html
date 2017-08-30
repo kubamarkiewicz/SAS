@@ -1,0 +1,65 @@
+
+<div class="container">
+
+	<section class="search-article">
+			
+		<h2>BUSCAR ARTÍCULO</h2>
+
+		<form name="searchForm" ng-submit="searchArticle()">
+
+					
+			<p>
+				<label>Tipo</label>
+				<md-input-container md-no-float>
+					<md-select ng-model="type" placeholder="Seleccionar tipo" required md-no-asterisk>
+						<md-option value="EMBALAJE">EMBALAJE</md-option>
+						<md-option value="CABLE">CABLE</md-option>
+					</md-select>
+				</md-input-container>
+			</p>
+
+			<p>
+				<label>Referencia</label>
+				<md-input-container md-no-float>
+			        <input type="text" name="ref" ng-model="ref" placeholder="Introducir referencia artículo" required>
+			    </md-input-container>
+			</p>
+
+			<p>
+			    <md-button type="submit" class="md-raised md-primary btn-block search">Confirmar <md-progress-circular></md-progress-circular></md-button>
+			</p>
+
+		</form>
+
+
+		<hr>
+
+
+		<p>
+			<label>Ubicación</label>
+			<md-input-container md-no-float>
+				<input type="text" ng-model="article.Ubicacion">
+				Muestra La ubicación en el almacén.
+			</md-input-container>
+		</p>
+
+		<p>
+			<label>Recepción</label>
+			<md-input-container md-no-float>
+				<input type="text" ng-model="article.Recepcion">
+				Si ha sido recepcionado por el SGA pero pendiente de almacenar en ubicación del almacén HW_GLT.
+			</md-input-container>
+		</p>
+		
+		<p>
+			<label>AKL</label>
+			<md-input-container md-no-float>
+				<input type="text" ng-model="article.AKL">
+				Si estuvo almacenado en el almacén GLT y fue desubicado y pasado al almacén AKL y todavía no se ha recibido señal de consumo M1.
+			</md-input-container>
+		</p>
+
+
+	</section>	
+
+</div>

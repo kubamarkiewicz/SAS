@@ -1,0 +1,11 @@
+{
+    "search_articleResult" :
+    {
+    	"Result": true,
+    	"Message": "Se ha encontrado un articulo",
+    	
+		"Ubicacion": "31103",
+		"Recepcion": true,
+		"AKL": false
+    }
+}

@@ -202,3 +202,10 @@ get_parameters()
 save_parameters(parameters)
 
 parameters_get_pause_status()
+
+
+
+
+PANTALLA LOCALIZACIÓN DE ARTÍCULOS
+
+search_article(type, ref)

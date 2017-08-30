@@ -63,6 +63,8 @@ window.config.webservice = {
         "vis_reception_get_glt_incoming"    : "dummy-webservice/vis_reception_get_glt_incoming.json",
         "vis_reception_generate_notification" : "dummy-webservice/vis_reception_generate_notofication.json",
 
+        "localizacion_articulos_search_article" : "dummy-webservice/localizacion_articulos_search_article.json",
+
         "enter_Login"                   : "dummy-webservice/enter.json",
         "enter_Data"                    : "dummy-webservice/enter.json",
         "enter_Reception"               : "dummy-webservice/enter.json",

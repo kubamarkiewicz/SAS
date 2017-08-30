@@ -7,6 +7,7 @@
 	    "Bloqueos" 						: true,
 	    "Recepcion_de_productos" 		: true,
 	    "Modo_manual" 					: true,
-	    "Visualizacion_recepcion" 		: true
+	    "Visualizacion_recepcion" 		: true,
+	    "Localizacion_de_articulos" 	: true
 	}
 }
