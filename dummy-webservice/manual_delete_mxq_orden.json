@@ -1,0 +1,7 @@
+{
+    "delete_mxq_ordenResult" :
+    {
+    	"Result": true,
+    	"Message": "Se ha eliminado la orden"
+    }
+}

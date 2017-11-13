@@ -53,6 +53,8 @@ window.config.webservice = {
         "upload_actions_file"           : "dummy-webservice/upload_actions_file.json",
         "manual_get_notification_actions"        : "dummy-webservice/manual_get_notification_actions.json",
         "manual_generate_notification"           : "dummy-webservice/manual_generate_notification.json",
+        "manual_get_mxq_ordenes"        : "dummy-webservice/manual_get_mxq_ordenes.json",
+        "manual_delete_mxq_orden"       : "dummy-webservice/manual_delete_mxq_orden.json",
 
         "get_parameters"                : "dummy-webservice/get_parameters.json",
         "save_parameters"               : "dummy-webservice/empty.json",

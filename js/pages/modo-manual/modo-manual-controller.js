@@ -311,4 +311,53 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
 
 
 
+
+    // get MXQ ordenes
+
+    $scope.mxqOrdenesData = [];
+
+    $scope.getMxqOrdenesData = function()
+    {
+        $http({
+            method  : 'GET',
+            url     : config.webservice.urls.manual_get_mxq_ordenes
+         })
+        .then(function(response) {
+            $scope.mxqOrdenesData = response.data.get_mxq_ordenesResult;
+        });
+    }
+    // $scope.getMxqOrdenesData();
+    ArtisterilIntervalService.start($scope.getMxqOrdenesData, 5000);
+
+
+
+    $scope.eliminarOrden = function(id)
+    {        
+        if (!confirm("Estas seguro que quieres eliminar esta orden?")) {
+            return;
+        }
+
+        $http({
+            method  : 'GET',
+            url     : config.webservice.urls.manual_delete_mxq_orden,
+            params  : {
+                "Id" : id 
+            }
+         })
+        .then(function(response) {
+            $rootScope.toast.content(response.data["delete_mxq_ordenResult"].Message);
+            if (response.data["delete_mxq_ordenResult"].Result === true) {
+                $rootScope.toast.toastClass('toast-success');
+            }
+            else {
+                $rootScope.toast.toastClass('toast-error');
+            }
+            $mdToast.show($rootScope.toast);
+
+            $scope.getMxqOrdenesData();
+        });
+    } 
+
+
+
 });

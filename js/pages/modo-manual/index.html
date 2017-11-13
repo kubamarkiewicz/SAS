@@ -157,6 +157,47 @@
 
 
 		</md-tab>
+    	
+    	<md-tab label="Ordenes de MX-Q">
+
+    		<section id="mxq-ordenes">
+
+    			<table class="scroll-table">
+
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Numero NEFAB</th>
+							<th>Pasillo</th>
+							<th>Distancia</th>
+							<th>Altura</th>
+							<th>MX-Q asignada</th>
+							<th>Tipo de orden</th>
+							<th>Tipo de entrada</th>
+							<th> </th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr ng-repeat="item in mxqOrdenesData">
+							<td>{{ item.Id }}</td>
+							<td>{{ item.Nefab }}</td>
+							<td>{{ item.Pasillo }}</td>
+							<td>{{ item.Distancia }}</td>
+							<td>{{ item.Altura }}</td>
+							<td>{{ item.AgvAsignado }}</td>
+							<td>{{ item.TipoOrden }}</td>
+							<td>{{ item.TipoEntrada }}</td>
+							<td class="actions">
+								<md-button class="clear" ng-click="eliminarOrden(item.Id)"><md-tooltip md-direction="top">Eliminar</md-tooltip></md-button>
+							</td>
+						</tr>
+					</tbody>
+
+				</table>
+    		</section>
+
+		</md-tab>
 
 	</md-tabs>
 
