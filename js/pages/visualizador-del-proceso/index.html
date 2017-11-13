@@ -1,9 +1,10 @@
 
 <!-- popup alerts -->
-<section class="popup-alerts closed" ng-class="{hide: !popupAlertsData}">
+<section class="popup-alerts" ng-class="{hide: !popupAlertsData}">
 	<div class="alerts">
 		<a class="close">←</a>
-		<div ng-repeat="item in popupAlertsData" class="alert alert-{{ item.Color }}">
+		<div ng-repeat="item in popupAlertsData" class="alert alert-{{ item.Color }}" data-id="{{ item.Id }}">
+			<a class="delete" ng-show="item.Id" ng-click="deleteAlert(item.Id)" title="Eliminar">✕</a>
 			<h3>{{ item.Title }}</h3>
 			<main>{{ item.Message }}</main>
 		</div>

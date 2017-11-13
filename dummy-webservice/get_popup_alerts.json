@@ -7,6 +7,7 @@
 			"Color": "danger"
 		},
 		{
+			"Id": "1",
 			"Title": "Sed do eiusmod tempor",
 			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
 			"Color": "primary"
@@ -17,6 +18,7 @@
 			"Color": "success"
 		},
 		{
+			"Id": "2",
 			"Title": "Sed do eiusmod tempor 2",
 			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
 			"Color": "info"
@@ -27,81 +29,19 @@
 			"Color": "warning"
 		},
 		{
+			"Id": "3",
 			"Title": "Sed do eiusmod tempor 3",
 			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
 			"Color": "muted"
 		},
 		{
+			"Id": "4",
 			"Title": "Lorem ipsum 4",
 			"Message": "dolor sit amet, consectetur adipiscing elit",
 			"Color": "white"
 		},
 		{
 			"Title": "Sed do eiusmod tempor 4",
-			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-		},
-		{
-			"Title": "Lorem ipsum 5",
-			"Message": "dolor sit amet, consectetur adipiscing elit"
-		},
-		{
-			"Title": "Sed do eiusmod tempor 5",
-			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-		},
-		{
-			"Title": "Lorem ipsum 6",
-			"Message": "dolor sit amet, consectetur adipiscing elit"
-		},
-		{
-			"Title": "Sed do eiusmod tempor 6",
-			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-		},
-		{
-			"Title": "2 Lorem ipsum",
-			"Message": "dolor sit amet, consectetur adipiscing elit"
-		},
-		{
-			"Title": "2 Sed do eiusmod tempor",
-			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-		},
-		{
-			"Title": "2 Lorem ipsum 2",
-			"Message": "dolor sit amet, consectetur adipiscing elit"
-		},
-		{
-			"Title": "2 Sed do eiusmod tempor 2",
-			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-		},
-		{
-			"Title": "2 Lorem ipsum 3",
-			"Message": "dolor sit amet, consectetur adipiscing elit"
-		},
-		{
-			"Title": "2 Sed do eiusmod tempor 3",
-			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-		},
-		{
-			"Title": "2 Lorem ipsum 4",
-			"Message": "dolor sit amet, consectetur adipiscing elit"
-		},
-		{
-			"Title": "2 Sed do eiusmod tempor 4",
-			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-		},
-		{
-			"Title": "2 Lorem ipsum 5",
-			"Message": "dolor sit amet, consectetur adipiscing elit"
-		},
-		{
-			"Title": "2 Sed do eiusmod tempor 5",
-			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-		},
-		{
-			"Title": "2 Lorem ipsum 6",
-			"Message": "dolor sit amet, consectetur adipiscing elit"
-		},
-		{
-			"Title": "2 Sed do eiusmod tempor 6",
 			"Message": "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
 		}
 	]

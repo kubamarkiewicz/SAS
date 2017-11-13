@@ -14,6 +14,7 @@ window.config.webservice = {
         "get_blocked_products"          : "http://10.12.1.233:8888/SAS/Data/api/get_blocked_products",
         "get_blocked_products"          : "http://10.12.1.233:8888/SAS/Data/api/get_blocked_products",
         "data_get_popup_alerts"         : "http://10.12.1.233:8888/SAS/Data/api/get_popup_alerts",
+        "data_delete_popup_alert"       : "dummy-webservice/empty.json",
         "data_get_signals_L9_flow"      : "http://10.12.1.233:8888/SAS/Data/api/data_get_signals_L9_flow",
         "data_get_signals_M1_flow"      : "http://10.12.1.233:8888/SAS/Data/api/data_get_signals_M1_flow",
         "data_get_edi_files_flow"       : "http://10.12.1.233:8888/SAS/Data/api/data_get_edi_files_flow",

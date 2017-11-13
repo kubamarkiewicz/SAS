@@ -464,6 +464,7 @@ section.popup-alerts .alert {
 	visibility: visible;
   	opacity: 1;
 	transition: visibility 0s linear 0, opacity 0.35s ease-out;
+	position: relative;;
 }
 section.popup-alerts.closed .alert {
 	visibility: hidden;
@@ -477,6 +478,26 @@ section.popup-alerts .alert h3 {
 }
 section.popup-alerts .alert main {
 	font-size: 14px;
+}
+section.popup-alerts .alert a.delete {
+	position: absolute;
+	font-weight: bold;
+	right: 8px;
+	top: 4px;
+	font-size: 16px;
+	cursor: pointer;;;
+}
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+section.popup-alerts .alert a.delete.loading {
+	opacity: 0.8;
+	animation: rotating 2s linear infinite;
 }
 section.popup-alerts .close {
 	color: #ffffff;

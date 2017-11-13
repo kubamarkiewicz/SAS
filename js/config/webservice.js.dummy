@@ -13,6 +13,7 @@ window.config.webservice = {
         "get_alerts"                    : "dummy-webservice/get_alerts.json",
         "get_blocked_products"          : "dummy-webservice/get_blocked_products.json",
         "data_get_popup_alerts"         : "dummy-webservice/get_popup_alerts.json",
+        "data_delete_popup_alert"       : "dummy-webservice/empty.json",
         "data_get_signals_L9_flow"      : "dummy-webservice/data_get_signals_L9_flow.json",
         "data_get_signals_M1_flow"      : "dummy-webservice/data_get_signals_M1_flow.json",
         "data_get_edi_files_flow"       : "dummy-webservice/data_get_edi_files_flow.json",

@@ -34,6 +34,23 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
     }
 
 
+    $scope.deleteAlert = function(Id)
+    {
+        $("section.popup-alerts .alert[data-id='" + Id + "'] a.delete").addClass('loading');
+        $http({
+            method  : 'GET',
+            url     : config.webservice.urls.data_delete_popup_alert,
+            params  : {
+                "Id"   : Id
+            }
+         })
+        .then(function(response) {
+        });
+    } 
+
+    
+
+
 
     // Signals flow
 
@@ -49,7 +66,7 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
             $scope.signalsFlowL9Data = response.data.get_signals_L9Result;
         });
     }
-    ArtisterilIntervalService.start($scope.getSignalsFlowL9Data);
+    ArtisterilIntervalService.start($scope.getSignalsFlowL9Data, 10000);
 
 
 
@@ -65,7 +82,7 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
             $scope.signalsFlowM1Data = response.data.get_signals_M1Result;
         });
     }
-    ArtisterilIntervalService.start($scope.getSignalsFlowM1Data);
+    ArtisterilIntervalService.start($scope.getSignalsFlowM1Data, 10000);
 
 
 
@@ -86,7 +103,7 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
             }
         });
     }
-    ArtisterilIntervalService.start($scope.getEDIFilesFlowData);
+    ArtisterilIntervalService.start($scope.getEDIFilesFlowData, 10000);
 
 
 
@@ -105,27 +122,7 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
             $scope.GTLWiresFlowData = response.data.get_glt_wiresResult;
         });
     }
-    ArtisterilIntervalService.start($scope.getGTLWiresFlowData);
-
-
-
-
-    // Alerts
-
-	$scope.alertsData = [];
-    
-    $scope.getAlertsData = function()
-    {
-        $http({
-            method  : 'GET',
-            url     : config.webservice.urls.get_alerts
-         })
-        .then(function(response) {
-            $scope.alertsData = response.data.get_alertsResult;
-        });
-    }
-    ArtisterilIntervalService.start($scope.getAlertsData);
-    // $scope.getAlertsData();
+    ArtisterilIntervalService.start($scope.getGTLWiresFlowData, 10000);
 
 
 
@@ -144,7 +141,7 @@ app.controller('DatosDelSGAController', function($scope, $rootScope, $http, $rou
             $scope.blockedProductsData = response.data.get_blocked_productsResult;
         });
     }
-    ArtisterilIntervalService.start($scope.getBlockedProductsData);
+    ArtisterilIntervalService.start($scope.getBlockedProductsData, 10000);
     // $scope.getBlockedProductsData();
 
 });

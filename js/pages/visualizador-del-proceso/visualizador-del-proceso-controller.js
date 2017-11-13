@@ -38,6 +38,21 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
     }
 
 
+    $scope.deleteAlert = function(Id)
+    {
+        $("section.popup-alerts .alert[data-id='" + Id + "'] a.delete").addClass('loading');
+        $http({
+            method  : 'GET',
+            url     : config.webservice.urls.data_delete_popup_alert,
+            params  : {
+                "Id"   : Id
+            }
+         })
+        .then(function(response) {
+        });
+    } 
+
+
 
 	/* mapa *********************************************************************************/
 

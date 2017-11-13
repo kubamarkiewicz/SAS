@@ -23,14 +23,7 @@ user_has_access (user)
 PANTALLA VISUALIZADOR DEL PROCESO
 
 get_alerts
-    return:             //List
-    [
-        {
-            title: string,
-            message: number
-        }
-    ]
-
+delete_alert(Id)
 
 get_agvs()
     return:             //List<AGV>
