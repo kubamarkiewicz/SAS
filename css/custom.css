@@ -82,6 +82,9 @@ hr {
 	border-color: #0276af;
 	overflow: hidden;
 }
+.text-center {
+	text-align: center;
+}
 
 
 /* mobile */
@@ -296,7 +299,7 @@ body > footer {
 		height: 80px;
 	}
 	body > main {
-		height: calc(100vh - 110px);
+		height: calc(100vh - 120px);
 		padding: 25px 30px;
 	}
 	body > footer {
@@ -311,6 +314,7 @@ body > footer {
 /***************************************************************************************************/
 /* Components	               		                                                               */
 /***************************************************************************************************/
+
 
 
 body.loading {

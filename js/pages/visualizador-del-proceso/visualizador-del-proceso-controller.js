@@ -429,4 +429,21 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
         });
     }
 
+
+    /* AGVs status *********************************************************************************/
+
+    $scope.AGVStatusData = [];
+
+    $scope.loadAGVStatusData = function()
+    {
+        $http({
+            method  : 'GET',
+            url     : config.webservice.urls.process_get_agvs_status
+         })
+        .then(function(response) {
+            $scope.AGVStatusData = response.data.get_agvs_statusResult;
+        });
+    }
+    ArtisterilIntervalService.start($scope.loadAGVStatusData, 1000);
+
 });

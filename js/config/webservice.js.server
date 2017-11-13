@@ -28,6 +28,7 @@ window.config.webservice = {
         "get_transport_belts"           : "http://10.12.1.233:8888/SAS/Process/api/get_transport_belts",
         "update_transport_belt"         : "http://10.12.1.233:8888/SAS/Process/api/update_transport_belt",
         "process_get_popup_alerts"      : "http://10.12.1.233:8888/SAS/Process/api/get_popup_alerts",
+        "process_get_agvs_status"       : "dummy-webservice/process_get_agvs_status.json",
                 
         "get_readers_for_blocking"      : "http://10.12.1.233:8888/SAS/Lockings/api/get_readers",
         "blockings_get_blocked_products": "http://10.12.1.233:8888/SAS/Lockings/api/get_blocked_products",

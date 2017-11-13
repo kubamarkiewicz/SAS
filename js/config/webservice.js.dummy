@@ -27,6 +27,7 @@ window.config.webservice = {
         "get_transport_belts"           : "dummy-webservice/get_transport_belts.json",
         "update_transport_belt"         : "dummy-webservice/empty.json",
         "process_get_popup_alerts"      : "dummy-webservice/get_popup_alerts.json",
+        "process_get_agvs_status"       : "dummy-webservice/process_get_agvs_status.json",
 
         "get_readers_for_blocking"      : "dummy-webservice/get_readers.json",
         "blockings_get_blocked_products": "dummy-webservice/get_blocked_products.json",

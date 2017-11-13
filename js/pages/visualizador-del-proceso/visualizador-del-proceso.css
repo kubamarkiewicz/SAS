@@ -217,3 +217,13 @@ use.ic-1 {
 svg path {
     fill: inherit;
 }
+
+
+#estado-maquinas-grandes {
+	position: absolute;
+	z-index: 50;
+	background-color: #f0f0f0;
+	left: 0;
+	bottom: 0;
+	padding: 6px;;;;;;
+}

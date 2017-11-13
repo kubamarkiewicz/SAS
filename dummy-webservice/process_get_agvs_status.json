@@ -1,0 +1,32 @@
+{
+    "get_agvs_statusResult" :
+	[
+		{
+			"Numero"		: "1",
+			"Conectado"		: true,
+			"Modo"			: "Automatico",
+			"Orden"			: "ABCDEF",
+			"Status" 		: "123456789012",
+			"Pasillo" 		: 3,
+			"Error" 		: "12345678901234567890"
+		},
+		{
+			"Numero"		: "2",
+			"Conectado"		: false,
+			"Modo"			: "Manual",
+			"Orden"			: "ABCDEF",
+			"Status" 		: "123456789012",
+			"Pasillo" 		: 2,
+			"Error" 		: "12345678901234567890"
+		},
+		{
+			"Numero"		: "3",
+			"Conectado"		: true,
+			"Modo"			: "Automatico",
+			"Orden"			: "ABCDEF",
+			"Status" 		: "123456789012",
+			"Pasillo" 		: 1,
+			"Error" 		: "12345678901234567890"
+		}
+	]
+}

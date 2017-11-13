@@ -53,6 +53,38 @@
 </div>
 
 
+<!-- estado de AVGs grandes -->
+<div id="estado-maquinas-grandes">
+	<table class="my-table">
+
+		<thead>
+			<tr>
+				<th>Numero AGV</th>
+				<th>Conectado</th>
+				<th>Modo</th>
+				<th>Orden</th>
+				<th>Status</th>
+				<th>Pasillo</th>
+				<th>Error</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr ng-repeat="avg in AGVStatusData">
+				<td class="text-center">{{ avg.Numero }}</td>
+				<td class="text-center">{{ avg.Conectado ? 'Si' : 'No' }}</td>
+				<td>{{ avg.Modo }}</td>
+				<td>{{ avg.Orden }}</td>
+				<td>{{ avg.Status }}</td>
+				<td class="text-center">{{ avg.Pasillo }}</td>
+				<td>{{ avg.Error }}</td>
+			</tr>
+		</tbody>
+
+	</table>
+</div>
+
+
 
 <!-- map container -->
 <div id="mapa">
