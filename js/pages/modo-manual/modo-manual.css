@@ -57,6 +57,10 @@ body.page-modo-manual > main p.product-id button.clear {
 	margin: 0;
 }
 
+body.page-modo-manual > main p.localization  md-input-container input {
+	width: 114px;
+}
+
 body.page-modo-manual > main form.fileForm p md-input-container {
 	width: 100%;
 }

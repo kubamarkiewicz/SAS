@@ -73,19 +73,13 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
                 // do not repeat reading
                 if ($scope.lastReading 
                         && ($scope.lastReading.Nefab == response.data.get_reader_readingResult.Nefab)
-                        && ($scope.lastReading.Cable1 == response.data.get_reader_readingResult.Cable1)
-                        && ($scope.lastReading.Cable2 == response.data.get_reader_readingResult.Cable2)
-                        && ($scope.lastReading.Cable3 == response.data.get_reader_readingResult.Cable3)
-                        && ($scope.lastReading.Cable4 == response.data.get_reader_readingResult.Cable4)
+                        && ($scope.lastReading.Cable == response.data.get_reader_readingResult.Cable)
                     ) {
                     return;
                 }
 
                 $scope.nefab = response.data.get_reader_readingResult.Nefab;
-                $scope.cable1 = response.data.get_reader_readingResult.Cable1;
-                $scope.cable2 = response.data.get_reader_readingResult.Cable2;
-                $scope.cable3 = response.data.get_reader_readingResult.Cable3;
-                $scope.cable4 = response.data.get_reader_readingResult.Cable4;
+                $scope.cable = response.data.get_reader_readingResult.Cable;
 
                 // stop interval
                 // ArtisterilIntervalService.stop('getReaderReading');
@@ -106,11 +100,16 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
         }
 
         $('button.execute-acton').attr("disabled", true).addClass('loading');
-        
-        if (!$scope.cable2) $scope.cable2 = '0000000000';
-        if (!$scope.cable3) $scope.cable3 = '0000000000';
-        if (!$scope.cable4) $scope.cable4 = '0000000000';
 
+        if ($scope.pasillo) {
+            var pasillo = $scope.pasillo.toString();
+            var posicion = $scope.posicion.toString();
+            var altura = $scope.altura.toString();
+            if (pasillo.length == 1) pasillo = "0" + pasillo;
+            if (posicion.length == 1) posicion = "0" + posicion;
+            if (altura.length == 1) altura = "0" + altura;
+        }
+        
         $http({
             method  : 'GET',
             url     : config.webservice.urls.select_action,
@@ -119,10 +118,10 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
                 "reader" : $scope.readerId, 
                 "product" : $scope.action == $scope.pdfAction ? $scope.cable : JSON.stringify([
                     $scope.nefab, 
-                    $scope.cable1,
-                    $scope.cable2,
-                    $scope.cable3,
-                    $scope.cable4
+                    $scope.cable,
+                    pasillo,
+                    posicion,
+                    altura
                 ])
             }
          })
@@ -141,12 +140,11 @@ app.controller('ModoManualProductosController', function($scope, $rootScope, $ht
             // reset fields
             // $scope.action = null;
             // $scope.readerId = null;
-            $scope.nefab = '';
-            $scope.cable1 = '';
-            $scope.cable2 = '';
-            $scope.cable3 = '';
-            $scope.cable4 = '';
-            $scope.cable = '';
+            $scope.nefab    = '';
+            $scope.cable    = '';
+            $scope.pasillo  = '';
+            $scope.posicion = '';
+            $scope.altura   = '';
 
             // reset form and disable error messages
             $scope.actionForm.$setPristine();

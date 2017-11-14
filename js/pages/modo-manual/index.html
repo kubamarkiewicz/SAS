@@ -48,30 +48,26 @@
 							<p class="product-id">
 								<label>LECTURA CABLES (opcionalmente manual)</label>
 								<md-input-container md-no-float>
-							        <input type="text" name="cable1" ng-model="cable1" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}" ng-required="action != pdfAction">
+							        <input type="text" name="cable" ng-model="cable" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}" ng-required="action != pdfAction">
 							        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
 							    </md-input-container>
 							</p>
 							
-							<p class="product-id">
-								<md-input-container md-no-float>
-							        <input type="text" name="cable2" ng-model="cable2" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
-							        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
-							    </md-input-container>
-							</p>
 							
-							<p class="product-id">
+							<p class="localization">
+								<label>LOCALIZACIÓN DE LA ESTANTERÍA</label>
+
 								<md-input-container md-no-float>
-							        <input type="text" name="cable3" ng-model="cable3" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
-							        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
+							        <input type="number" min="1" name="pasillo" ng-model="pasillo" placeholder="Pasillo" ng-required="(action != pdfAction) && (posicion || altura)">
 							    </md-input-container>
-							</p>
-							
-							<p class="product-id">
 								<md-input-container md-no-float>
-							        <input type="text" name="cable4" ng-model="cable4" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}">
-							        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
+							        <input type="number" min="1" name="posicion" ng-model="posicion" placeholder="Posición" ng-required="(action != pdfAction) && (pasillo || altura)">
 							    </md-input-container>
+								<md-input-container md-no-float>
+							        <input type="number" min="1" name="altura" ng-model="altura" placeholder="Altura" ng-required="(action != pdfAction) && (posicion || pasillo)">
+							    </md-input-container>
+						        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
+
 							</p>
 
 						</div>
