@@ -1,4 +1,4 @@
-
+﻿
 <div class="container">
 
 	<md-tabs md-dynamic-height md-border-bottom>
@@ -40,7 +40,7 @@
 							<p class="product-id">
 								<label>LECTURA NEFAB (opcionalmente manual)</label>
 								<md-input-container md-no-float>
-							        <input type="text" name="nefab" ng-model="nefab" placeholder="Código de nefab" maxlength="{{ nefab_code_length }}" minlength="{{ nefab_code_length }}" ng-required="action != pdfAction">
+							        <input type="text" name="nefab" ng-model="nefab" placeholder="Código de nefab" maxlength="{{ nefab_code_length }}" minlength="{{ nefab_code_length }}" >
 							        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
 							    </md-input-container>
 							</p>
@@ -48,7 +48,7 @@
 							<p class="product-id">
 								<label>LECTURA CABLES (opcionalmente manual)</label>
 								<md-input-container md-no-float>
-							        <input type="text" name="cable" ng-model="cable" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}" ng-required="action != pdfAction">
+							        <input type="text" name="cable" ng-model="cable" placeholder="Código de cable" maxlength="{{ cable_code_length }}" minlength="{{ cable_code_length }}" >
 							        <md-button class="clear"><md-tooltip md-direction="top">Borrar</md-tooltip></md-button>
 							    </md-input-container>
 							</p>
@@ -169,7 +169,7 @@
 							<th>Altura</th>
 							<th>MX-Q asignada</th>
 							<th>Tipo de orden</th>
-							<th>Tipo de entrada</th>
+							<th>Tipo de salida</th>
 							<th> </th>
 						</tr>
 					</thead>

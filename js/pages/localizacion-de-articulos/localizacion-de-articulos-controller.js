@@ -12,7 +12,7 @@ app.controller('LocalizacionDeArticulosController', function($scope, $rootScope,
             url     : config.webservice.urls.localizacion_articulos_search_article,
             params  : {
                 "type"  : $scope.type,
-                "ref"   : $scope.ref
+                "articleref"   : $scope.articleref
             }
          })
         .then(function(response) {
