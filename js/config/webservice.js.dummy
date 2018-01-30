@@ -21,7 +21,7 @@ window.config.webservice = {
 
         "get_agvs"                      : "dummy-webservice/get_agvs.json",
         "update_agv"                    : "dummy-webservice/empty.json",
-        "get_storage_position_niches"   : "dummy-webservice/get_storage_position_niches.json",
+        "get_storage_position_niches"   : "dummy-webservice/visualizador-del-proceso/get_storage_position_niches.json",
         "get_semaphores"                : "dummy-webservice/get_semaphores.json",
         "update_semaphore"              : "dummy-webservice/empty.json",
         "get_transport_belts"           : "dummy-webservice/get_transport_belts.json",

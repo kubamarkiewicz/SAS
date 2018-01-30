@@ -45,10 +45,10 @@
 
 <!-- storage position popup -->
 <div id="position-popup" class="popup" md-theme="dark">
-	<h3>POSICIÓN {{ selectedPosition.Id }}</h3>
-	<p ng-repeat="niche in selectedPosition.Niches">
-		Altura: {{ niche.Height }}
-		<span><br>Producto: {{ niche.Product }}</span>
+	<h3>POSICIÓN {{ selectedPositionId }}</h3>
+	<p ng-repeat="niche in storagePositionNichesData">
+		Nicho {{ niche.Id }}
+		<span><br>{{ niche.Product ? 'Producto ' + niche.Product : '-' }}</span>
 	</p>
 </div>
 
@@ -123,13 +123,11 @@
 
 	<!-- storage positions -->
 	<div 
-		ng-repeat="position in storagePositionData"  
-		ng-init="$last && onStoragePositionsRendered()"
+		ng-repeat="(id, coordinates) in storagePositionsCoordinates"  
+		id="position-{{ id }}"
 		class="position" 
-		id="position-{{ position.Id }}"
-		data-storage-position-id="{{ position.Id }}"
-		style="left: {{ storagePositionsCoordinates[position.Id].x }}%; top: {{ storagePositionsCoordinates[position.Id].y }}%"
-		ng-click="openPositionPopup($event, position)">
+		style="left: {{ storagePositionsCoordinates[id].X }}%; top: {{ storagePositionsCoordinates[id].Y }}%"
+		ng-click="openPositionPopup($event, id)">
 	</div>
 
 	<!-- map image -->

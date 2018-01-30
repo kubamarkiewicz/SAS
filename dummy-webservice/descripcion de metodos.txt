@@ -19,7 +19,7 @@ PANTALLA VISUALIZADOR DEL PROCESO
     update_semaphore(id, action)
     get_transport_belts()
     update_transport_belt(id, action) 
-    get_storage_position_niches()
+    get_storage_position_niches(storage_position_id)
 
 
 

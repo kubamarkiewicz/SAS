@@ -133,6 +133,10 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
         console.log($scope.pxToPercentsX(event.offsetX) + ' : ' + $scope.pxToPercentsY(event.offsetY));
     });
 
+    
+
+    var mainPos = $('body.page-visualizador-del-proceso > main').offset();
+
 
     $scope.deselectAllObjects = function() 
     {
@@ -182,7 +186,6 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
     {
         return 180 - parseFloat(angle);
     }
-
 
 
     /* AGVs *********************************************************************************/
@@ -376,32 +379,6 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
 
 	/* Storage Positions *********************************************************************************/
 
-    $scope.loadStoragePositionData = function()
-    {
-        $scope.storagePositionData = {};
-        $http({
-            method  : 'GET',
-            url     : config.webservice.urls.get_storage_position_niches
-         })
-        .then(function(response) {
-            $scope.storagePositionData = {};
-            for (i in response.data.get_storage_position_nichesResult) {
-                var position = response.data.get_storage_position_nichesResult[i];
-                if (!$scope.storagePositionData[position.Id]) {
-                    $scope.storagePositionData[position.Id] = {
-                        "Id": position.Id,
-                        "Niches": []
-                    };
-                }
-                $scope.storagePositionData[position.Id].Niches.push(position);
-            }
-        });
-    }
-    // ArtisterilIntervalService.start($scope.loadStoragePositionData);
-    $scope.loadStoragePositionData();
-
-
-
     // load storage positions coordinates
     $http({
         method  : 'GET',
@@ -413,21 +390,38 @@ app.controller('VisualizadorDelProcesoController', function($scope, $rootScope, 
 
 
 
-    $scope.onStoragePositionsRendered = function() 
-    {
-        $("#mapa .position").on('click touchend', function(event) {
-            event.stopPropagation();
-            $scope.deselectAllObjects();
-            var target = $(event.target);
-            target.addClass('selected');
 
-        	$scope.selectedPosition = $scope.storagePositionData[target.data('storage-position-id')];
-        	var popup = $('body.page-visualizador-del-proceso #position-popup');
-            popup.addClass('open')
-        		.css('left', target.offset().left + event.target.getBoundingClientRect().width + 'px')
-        		.css('top', (target.offset().top - $('body.page-visualizador-del-proceso > main').offset().top) + 'px');
+    $scope.openPositionPopup = function(event, id) 
+    {
+        event.stopPropagation();
+        $scope.deselectAllObjects();
+        var target = $(event.target);
+        target.addClass('selected');
+
+        $scope.selectedPositionId = id;
+        var popup = $('body.page-visualizador-del-proceso #position-popup');
+        popup.addClass('open')
+            .css('left', target.offset().left + event.target.getBoundingClientRect().width + 'px')
+            .css('top', (target.offset().top - mainPos.top) + 'px');
+
+        $scope.loadStoragePositionNichesData(id);
+    }
+
+
+    $scope.loadStoragePositionNichesData = function(storage_position_id)
+    {
+        $scope.storagePositionNichesData = [];
+        $http({
+            method  : 'GET',
+            url     : config.webservice.urls.get_storage_position_niches,
+            params  : {'storage_position_id' : storage_position_id}
+         })
+        .then(function(response) {
+            $scope.storagePositionNichesData = response.data.get_storage_position_nichesResult;
         });
     }
+
+
 
 
     /* AGVs status *********************************************************************************/
