@@ -5,7 +5,6 @@
 
 body.page-visualizador-del-proceso > main {
 	padding: 0;
-	overflow-y: visible !important;
 }
 body.page-visualizador-del-proceso #mapa {;
 	position: relative;
