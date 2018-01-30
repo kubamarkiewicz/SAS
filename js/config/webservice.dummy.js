@@ -13,12 +13,13 @@ window.config.webservice = {
         "get_alerts"                    : "dummy-webservice/get_alerts.json",
         "get_blocked_products"          : "dummy-webservice/get_blocked_products.json",
         "data_get_popup_alerts"         : "dummy-webservice/get_popup_alerts.json",
+        "data_delete_popup_alert"       : "dummy-webservice/empty.json",
         "data_get_signals_L9_flow"      : "dummy-webservice/data_get_signals_L9_flow.json",
         "data_get_signals_M1_flow"      : "dummy-webservice/data_get_signals_M1_flow.json",
         "data_get_edi_files_flow"       : "dummy-webservice/data_get_edi_files_flow.json",
         "data_get_glt_wires_flow"       : "dummy-webservice/data_get_glt_wires_flow.json",
 
-        "get_agvs"                      : "dummy-webservice/get_agvs.json",
+        "get_agvs"                      : "dummy-webservice/visualizador-del-proceso/get_agvs.json",
         "update_agv"                    : "dummy-webservice/empty.json",
         "get_storage_position_niches"   : "dummy-webservice/get_storage_position_niches.json",
         "get_semaphores"                : "dummy-webservice/get_semaphores.json",
@@ -26,6 +27,7 @@ window.config.webservice = {
         "get_transport_belts"           : "dummy-webservice/get_transport_belts.json",
         "update_transport_belt"         : "dummy-webservice/empty.json",
         "process_get_popup_alerts"      : "dummy-webservice/get_popup_alerts.json",
+        "process_get_agvs_status"       : "dummy-webservice/process_get_agvs_status.json",
 
         "get_readers_for_blocking"      : "dummy-webservice/get_readers.json",
         "blockings_get_blocked_products": "dummy-webservice/get_blocked_products.json",
@@ -51,6 +53,8 @@ window.config.webservice = {
         "upload_actions_file"           : "dummy-webservice/upload_actions_file.json",
         "manual_get_notification_actions"        : "dummy-webservice/manual_get_notification_actions.json",
         "manual_generate_notification"           : "dummy-webservice/manual_generate_notification.json",
+        "manual_get_mxq_ordenes"        : "dummy-webservice/manual_get_mxq_ordenes.json",
+        "manual_delete_mxq_orden"       : "dummy-webservice/manual_delete_mxq_orden.json",
 
         "get_parameters"                : "dummy-webservice/get_parameters.json",
         "save_parameters"               : "dummy-webservice/empty.json",
@@ -62,6 +66,8 @@ window.config.webservice = {
         "vis_reception_get_alerts"          : "dummy-webservice/vis_reception_get_alerts.json",
         "vis_reception_get_glt_incoming"    : "dummy-webservice/vis_reception_get_glt_incoming.json",
         "vis_reception_generate_notification" : "dummy-webservice/vis_reception_generate_notofication.json",
+
+        "localizacion_articulos_search_article" : "dummy-webservice/localizacion_articulos_search_article.json",
 
         "enter_Login"                   : "dummy-webservice/enter.json",
         "enter_Data"                    : "dummy-webservice/enter.json",
