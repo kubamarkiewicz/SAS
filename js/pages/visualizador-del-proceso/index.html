@@ -93,7 +93,7 @@
 	<div 
 		ng-repeat="agv in AGVData"  
 		ng-init="$last && onAGVsRendered()"
-		class="agv" 
+		class="agv {{ agv.Color }}" 
 		id="agv-{{ agv.Id }}"
 		data-agv-id="{{ agv.Id }}"
 		style="transform: translate({{ metersToPxX(agv.Y) }}px, {{ metersToPxY(agv.X) }}px) rotate({{ calculateRotation(agv.Orientation) }}deg)">

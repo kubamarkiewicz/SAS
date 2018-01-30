@@ -1,77 +1,25 @@
 
-Todos los metodos usan HTTP GET.
+Todos los metodos usan HTTP GET
 
 
 LOGIN DE USUARIOS
  
-user_login (user, password)
-    return: boolean
-
- 
-user_has_access (user)
-    return:            //Object Access
-    {
-        "visualisador-del-proceso" : true,
-        "datos-del-sga" : true,
-        "configuracion-de-parametros" : true,
-        "bloqueos" : true,
-        "modo-manual" : true
-    }
+    user_login (user, password) return: boolean
+    user_has_access (user)
 
 
 
 PANTALLA VISUALIZADOR DEL PROCESO
 
-get_alerts
-delete_alert(Id)
-
-get_agvs()
-    return:             //List<AGV>
-    [
-        {
-            id: string,
-            x: number,
-            y: number,
-            orientation: number (degrees),
-            state: string
-        }
-    ]
-
-
-update_agv(id, action)
-
-get_semaphores()
-    return:             //List<Semaphore>
-    [
-        {
-            id: string,
-            state: string
-        }
-    ]
-
-update_semaphore(id, action)
-
-get_transport_belts()
-    return:             //List<TransportBelt>
-    [
-        {
-            id: string,
-            state: string
-        }
-    ]
-
-update_transport_belt(id, action) 
-
-
-get_storage_position_niches()
-    return:             //List<StoragePositionNiche>
-    [
-        {
-            Id: string,
-            Height: string,
-            Product: array
-        }
-    ]
+    get_alerts
+    delete_alert(Id)
+    get_agvs() // possible colors: rojo, violeta, amarillo, verde
+    update_agv(id, action)
+    get_semaphores()
+    update_semaphore(id, action)
+    get_transport_belts()
+    update_transport_belt(id, action) 
+    get_storage_position_niches()
 
 
 
@@ -79,126 +27,67 @@ get_storage_position_niches()
 
 PANTALLA DATOS DEL SGA
   
-get_alerts()
-    return: 			//array<Alert>
-    [
-        {
-            "Title": "string",
-            "Message": "string",
-            "Color": "danger"   // possible values: danger, primary, success, info, warning, muted, white 
-        }
-	]
-
-get_blocked_products()
-    return: 			//array
-    [
-        "string"
-    ]
-
-data_get_signals_flow()
-data_get_edi_files_flow()
-data_get_glt_wires_flow()    
+    get_alerts()
+    get_blocked_products()
+    data_get_signals_flow()
+    data_get_edi_files_flow()
+    data_get_glt_wires_flow()    
 
 
 
 PANTALLA DE BLOQUEO DE PRODUCTOS
 
-get_blocked_products() - es el mismo metodo que en la PANTALLA DATOS DEL SGA
-
-block_products(productlist)
-    parameters: productlist - JSON string containig array of strings eg.: ['aaa','bbb']
-    
-unblock_products(productlist)
-    parameters: productlist - JSON string containig array of strings eg.: ['aaa','bbb']
-
-get_readers()
-    return: [string]            //array of strings
-
-select_reader_for_blocking(id)   
-
-select_reader_for_unblocking(id)
-
-block_products_from_file(productlist)
-
-unblock_products_from_file(productlist)
-    
-
-
+    get_blocked_products() - es el mismo metodo que en la PANTALLA DATOS DEL SGA
+    block_products(productlist) parameters: productlist - JSON string containig array of strings eg.: ['aaa','bbb']
+    unblock_products(productlist) parameters: productlist - JSON string containig array of strings eg.: ['aaa','bbb']
+    get_readers()
+    select_reader_for_blocking(id)   
+    select_reader_for_unblocking(id)
+    block_products_from_file(productlist)
+    unblock_products_from_file(productlist)
 
 
 
 PANTALLA DE RECEPCIÓN DE PRODUCTOS
 
-receive_products(productlist)
-    parameters: productlist - string containig JSON array of strings eg.: ['aaa','bbb']
-    
-select_reader_for_receiving(id)
-
-get_reader_reading()
-    return:             //List
-    [
-        string product
-    ]
-
-receive_products_from_file(productlist)
-
-
+    receive_products(productlist) parameters: productlist - string containig JSON array of strings eg.: ['aaa','bbb']
+    select_reader_for_receiving(id)
+    get_reader_reading()
+    receive_products_from_file(productlist)
 
 
 PANTALLA VISUALIZACION DE RECEPCIÓN
     
-get_glt_in_asn(asn)
-get_asn()
-get_read_in_process()
-get_alerts()
-get_glt_incoming()
-generate_notofication()
-
+    get_glt_in_asn(asn)
+    get_asn()
+    get_read_in_process()
+    get_alerts()
+    get_glt_incoming()
+    generate_notofication()
 
 
 
 
 PANTALLA MODO MANUAL
 
-
-get_actions()
-    return: [string]            //array of strings
-
-select_reader_for_manual_mode(id)
-
-select_action(action, reader, product) 
-
-
-manual_get_file_actions()
-upload_actions_file(actionlist)
-    
-manual_get_notification_actions()
-manual_generate_notification(action)
-
-
+    get_actions() return: [string]            //array of strings
+    select_reader_for_manual_mode(id)
+    select_action(action, reader, product) 
+    manual_get_file_actions()
+    upload_actions_file(actionlist)
+    manual_get_notification_actions()
+    manual_generate_notification(action)
 
 
 
 PANTALLA CONFIGURACIÓN DE PARÁMETROS
 
-
-get_parameters()
-    return:             //Object
-    {
-        'parameter_name' : {  
-            'Options' : [array],
-            'Values' : [array],
-            'Type' : string (RadioButton/TextBox/Checkbox/NumericUpDown/Combobox)
-         }
-    }
-
-save_parameters(parameters)
-
-parameters_get_pause_status()
-
+    get_parameters()
+    save_parameters(parameters)
+    parameters_get_pause_status()
 
 
 
 PANTALLA LOCALIZACIÓN DE ARTÍCULOS
 
-search_article(type, ref)
+    search_article(type, ref)

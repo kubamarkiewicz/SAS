@@ -7,24 +7,20 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title ng-bind="pageTitle + ' - SAS Automtotive Systems'">SAS Automtotive Systems</title>
     
-    <script>
-        var version = "8";
-    </script>
-
     <!-- Le styles -->
     <link href="js/libraries/angular-material/angular-material.min.css" rel="stylesheet">
-    <script>
-        document.write("<link href='css/custom.css?v="+version+"' rel='stylesheet'>");
-        document.write("<link href='js/pages/login/login.css?v="+version+"' rel='stylesheet'>");
-        document.write("<link href='js/pages/visualizador-del-proceso/visualizador-del-proceso.css?v="+version+"' rel='stylesheet'>");
-        document.write("<link href='js/pages/datos-del-sga/datos-del-sga.css?v="+version+"' rel='stylesheet'>");
-        document.write("<link href='js/pages/bloqueo-de-productos/bloqueo-de-productos.css?v="+version+"' rel='stylesheet'>");
-        document.write("<link href='js/pages/modo-manual/modo-manual.css?v="+version+"' rel='stylesheet'>");
-        document.write("<link href='js/pages/recepcion-de-productos/recepcion-de-productos.css?v="+version+"' rel='stylesheet'>");
-        document.write("<link href='js/pages/configuracion-de-parametros/configuracion-de-parametros.css?v="+version+"' rel='stylesheet'>");
-        document.write("<link href='js/pages/visualizacion-recepcion/visualizacion-recepcion.css?v="+version+"' rel='stylesheet'>");
-        document.write("<link href='js/pages/localizacion-de-articulos/localizacion-de-articulos.css?v="+version+"' rel='stylesheet'>");
-    </script>    
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Pages -->
+    <link href="js/pages/login/login.css" rel="stylesheet">
+    <link href="js/pages/visualizador-del-proceso/visualizador-del-proceso.css" rel="stylesheet">
+    <link href="js/pages/datos-del-sga/datos-del-sga.css" rel="stylesheet">
+    <link href="js/pages/bloqueo-de-productos/bloqueo-de-productos.css" rel="stylesheet">
+    <link href="js/pages/modo-manual/modo-manual.css" rel="stylesheet">
+    <link href="js/pages/recepcion-de-productos/recepcion-de-productos.css" rel="stylesheet">
+    <link href="js/pages/configuracion-de-parametros/configuracion-de-parametros.css" rel="stylesheet">
+    <link href="js/pages/visualizacion-recepcion/visualizacion-recepcion.css" rel="stylesheet">
+    <link href="js/pages/localizacion-de-articulos/localizacion-de-articulos.css" rel="stylesheet">
     
     <link rel="shortcut icon" href="images/favicon.ico">
 </head>
@@ -102,32 +98,28 @@
     <script src="js/libraries/angular-messages/angular-messages.min.js"></script>
     <script src="js/libraries/angular-material/angular-material.min.js"></script>
 
-    <script>
+    <!-- Angular Application -->
+    <script src="js/config/config.js"></script>
+    <script src="js/config/webservice.js"></script>
+    <script src="js/app.js"></script>
 
-        /* Angular Application */
-        document.write("<script src='js/config/config.js?v="+version+"'><\/script>");
-        document.write("<script src='js/config/webservice.js?v="+version+"'><\/script>");
-        document.write("<script src='js/app.js?v="+version+"'><\/script>");
+    <!-- Pages Controllers -->
+    <script src="js/pages/login/login-controller.js"></script>
+    <script src="js/pages/visualizador-del-proceso/visualizador-del-proceso-controller.js"></script>
+    <script src="js/pages/visualizador-del-proceso/config.js"></script>
+    <script src="js/pages/datos-del-sga/datos-del-sga-controller.js"></script>
+    <script src="js/pages/bloqueo-de-productos/bloqueo-de-productos-controller.js"></script>
+    <script src="js/pages/recepcion-de-productos/recepcion-de-productos-controller.js"></script>
+    <script src="js/pages/modo-manual/modo-manual-controller.js"></script>
+    <script src="js/pages/configuracion-de-parametros/configuracion-de-parametros-controller.js"></script>
+    <script src="js/pages/visualizacion-recepcion/visualizacion-recepcion-controller.js"></script>
+    <script src="js/pages/localizacion-de-articulos/localizacion-de-articulos-controller.js"></script>
+    
+    <!-- Angular Services -->
+    <script src="js/services/artisteril-auth-service.js"></script>
+    <script src="js/services/artisteril-interval-service.js"></script>
 
-        /* Pages Controllers */
-        document.write("<script src='js/pages/login/login-controller.js?v="+version+"'><\/script>");
-        document.write("<script src='js/pages/visualizador-del-proceso/visualizador-del-proceso-controller.js?v="+version+"'><\/script>");
-        document.write("<script src='js/pages/visualizador-del-proceso/config.js?v="+version+"'><\/script>");
-        document.write("<script src='js/pages/datos-del-sga/datos-del-sga-controller.js?v="+version+"'><\/script>");
-        document.write("<script src='js/pages/bloqueo-de-productos/bloqueo-de-productos-controller.js?v="+version+"'><\/script>");
-        document.write("<script src='js/pages/recepcion-de-productos/recepcion-de-productos-controller.js?v="+version+"'><\/script>");
-        document.write("<script src='js/pages/modo-manual/modo-manual-controller.js?v="+version+"'><\/script>");
-        document.write("<script src='js/pages/configuracion-de-parametros/configuracion-de-parametros-controller.js?v="+version+"'><\/script>");
-        document.write("<script src='js/pages/visualizacion-recepcion/visualizacion-recepcion-controller.js?v="+version+"'><\/script>");
-        document.write("<script src='js/pages/localizacion-de-articulos/localizacion-de-articulos-controller.js?v="+version+"'><\/script>");
-        
-        /* Services */
-        document.write("<script src='js/services/artisteril-auth-service.js?v="+version+"'><\/script>");
-        document.write("<script src='js/services/artisteril-interval-service.js?v="+version+"'><\/script>");
-
-    </script>
-
-    <!-- more libraries -->
+    <!-- More libraries -->
     <script src="js/libraries/jquery.panzoom/dist/jquery.panzoom.min.js"></script>
 
 </body>

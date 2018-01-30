@@ -113,6 +113,18 @@ body.page-visualizador-del-proceso .agv {
 	border-radius: 0 0 0.25vw 0.25vw;
 	letter-spacing: -0.1em;
 }
+body.page-visualizador-del-proceso .agv.rojo {
+	background-color: #a50f10;
+}
+body.page-visualizador-del-proceso .agv.violeta {
+	background-color: #785cb4;
+}
+body.page-visualizador-del-proceso .agv.amarillo {
+	background-color: #fbd533;
+}
+body.page-visualizador-del-proceso .agv.verde {
+	background-color: #7dbe02;
+}
 body.page-visualizador-del-proceso .agv::before,
 body.page-visualizador-del-proceso .agv::after {
 	content: "";
