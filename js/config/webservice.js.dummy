@@ -19,7 +19,7 @@ window.config.webservice = {
         "data_get_edi_files_flow"       : "dummy-webservice/data_get_edi_files_flow.json",
         "data_get_glt_wires_flow"       : "dummy-webservice/data_get_glt_wires_flow.json",
 
-        "get_agvs"                      : "dummy-webservice/get_agvs.json",
+        "get_agvs"                      : "dummy-webservice/visualizador-del-proceso/get_agvs.json",
         "update_agv"                    : "dummy-webservice/empty.json",
         "get_storage_position_niches"   : "dummy-webservice/visualizador-del-proceso/get_storage_position_niches.json",
         "get_semaphores"                : "dummy-webservice/get_semaphores.json",
